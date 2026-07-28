@@ -42,30 +42,45 @@ html<!DOCTYPE html>
         }
 
         main {
-            max-width: 800px;
+            max-width: 1200px; /* Rozšírené pre dva stĺpce vedľa seba */
             margin: 0 auto;
             padding: 20px;
         }
 
         .story-section {
             text-align: justify;
-            margin-bottom: 40px;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
             font-size: 1.05rem;
         }
 
-        /* Luxusné priame zobrazenie technického listu */
+        /* Dvojstĺpcový Grid pre Tech Packy vedľa seba */
+        .techpack-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0 60px 0;
+        }
+
         .techpack-image-container {
             text-align: center;
-            margin: 20px 0 50px 0;
-            padding: 10px;
+            padding: 15px;
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
+        }
+
+        .techpack-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #6E5A4F;
+            font-weight: bold;
         }
 
         .techpack-display {
             width: 100%;
             height: auto;
-            max-width: 760px;
             display: block;
             margin: 0 auto;
             border: 1px solid #C6B9A8;
@@ -76,6 +91,9 @@ html<!DOCTYPE html>
             grid-template-columns: 1fr;
             gap: 40px;
             margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .product-card {
@@ -124,12 +142,43 @@ html<!DOCTYPE html>
             margin-top: 10px;
         }
 
+        /* Tlačidlo Späť na hlavný web */
+        .back-container {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 1px solid #2B1E17;
+            color: #2B1E17;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2B1E17;
+            color: #FDFBF7;
+        }
+
         footer {
             text-align: center;
             padding: 60px 20px;
             font-size: 0.8rem;
             letter-spacing: 2px;
             color: #8A766A;
+        }
+
+        /* Responzivita: Na mobile pôjdu pod seba */
+        @media (max-width: 768px) {
+            .techpack-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -148,15 +197,26 @@ html<!DOCTYPE html>
             </p>
         </section>
 
-        <!-- PRIAME ZOBRAZENIE TVOJHO TECHNICKÉHO LISTU AKO OBRAZU -->
-        <div class="techpack-image-container">
-            <img src="./trutoar_techpack.jpg" alt="The Trotuár Promenade Technical Blueprint" class="techpack-display">
+        <!-- GRID PRE DVA TECH PACKY VEDĽA SEBA -->
+        <div class="techpack-grid">
+            
+            <!-- 1. PÁNSKA KOLEKCIA -->
+            <div class="techpack-image-container">
+                <div class="techpack-title">[ Men's Collection Blueprint ]</div>
+                <img src="./trutoar_techpack.jpg" alt="Men's Technical Blueprint" class="techpack-display">
+            </div>
+
+            <!-- 2. DÁMSKA KOLEKCIA (NOVÁ) -->
+            <div class="techpack-image-container">
+                <div class="techpack-title">[ Women's Collection Blueprint ]</div>
+                <img src="./Women's_Trotuar_Collection.jpg" alt="Women's Technical Blueprint" class="techpack-display">
+            </div>
+
         </div>
 
         <div class="divider"></div>
 
         <div class="gallery-container">
-            <!-- PRODUKT 1 -->
             <div class="product-card">
                 <div class="image-placeholder">[ Editorial Campaign Photo I - Pending ]</div>
                 <div class="product-title">I. The Burgundy Promenade</div>
@@ -166,7 +226,6 @@ html<!DOCTYPE html>
                 <div class="tech-tag">Tech Pack Ready</div>
             </div>
 
-            <!-- PRODUKT 2 -->
             <div class="product-card">
                 <div class="image-placeholder">[ Heritage Bobbin Lace Jewelry For Natalie - Pending ]</div>
                 <div class="product-title">II. The Heritage Lace For Natalie</div>
@@ -176,11 +235,13 @@ html<!DOCTYPE html>
                 <div class="tech-tag">Handcrafted Origin</div>
             </div>
         </div>
-    </main>
- <!-- Tlačidlo Späť na hlavný web -->
-        <div style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
-            <a href="../" style="display: inline-block; padding: 10px 25px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; transition: all 0.3s ease;">[ Back to Atelier Home ]</a>
+
+        <!-- Tlačidlo Späť -->
+        <div class="back-container">
+            <a href="../" class="back-button">[ Back to Atelier Home ]</a>
         </div>
+    </main>
+
     <footer>
         © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED. <br>
         DESIGNED & CRAFTED IN EUROPE.
