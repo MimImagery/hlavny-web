@@ -49,33 +49,26 @@ html<!DOCTYPE html>
 
         .story-section {
             text-align: justify;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             font-size: 1.05rem;
         }
 
-        /* Sekcia pre hlavné Tech Pack tlačidlo */
-        .techpack-container {
+        /* Luxusné priame zobrazenie technického listu */
+        .techpack-image-container {
             text-align: center;
-            margin: 40px 0 60px 0;
+            margin: 20px 0 50px 0;
+            padding: 10px;
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
         }
 
-        .techpack-button {
-            display: inline-block;
-            padding: 15px 35px;
-            border: 1px solid #2B1E17;
-            background-color: #2B1E17;
-            color: #FDFBF7;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .techpack-button:hover {
-            background-color: transparent;
-            color: #2B1E17;
+        .techpack-display {
+            width: 100%;
+            height: auto;
+            max-width: 760px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #C6B9A8;
         }
 
         .gallery-container {
@@ -155,9 +148,9 @@ html<!DOCTYPE html>
             </p>
         </section>
 
-        <!-- LUXUSNÉ KLIKACIE TLAČIDLO PRE TVOJ TECHNICKÝ LIST -->
-        <div class="techpack-container">
-            <a href="./trutoar_techpack.jpg" class="techpack-button" target="_blank">[ Open Technical Blueprint & Line Sheet ]</a>
+        <!-- PRIAME ZOBRAZENIE TVOJHO TECHNICKÉHO LISTU AKO OBRAZU -->
+        <div class="techpack-image-container">
+            <img src="./trutoar_techpack.jpg" alt="The Trotuár Promenade Technical Blueprint" class="techpack-display">
         </div>
 
         <div class="divider"></div>
