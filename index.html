@@ -30,10 +30,7 @@
             word-break: keep-all;
         }
 
-        .brand-name {
-            display: inline-block;
-            white-space: nowrap;
-        }
+        .brand-name { display: inline-block; white-space: nowrap; }
 
         header p {
             font-size: 0.95rem;
@@ -44,7 +41,6 @@
             margin-bottom: 40px;
         }
 
-        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -87,159 +83,61 @@
             transition: color 0.3s ease;
         }
 
-        .nav-button-client:hover {
-            color: #C6A77A;
-        }
+        .nav-button-client:hover { color: #C6A77A; }
+        .nav-icon { width: 130px; height: auto; opacity: 0.85; display: inline-block; }
+        .divider { width: 80px; height: 1px; background-color: #C6A77A; margin: 50px auto; }
+        
+        main { max-width: 940px; margin: 0 auto; padding: 20px; }
+        .section-title { text-align: center; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 5px; margin: 60px 0 35px 0; color: #C6A77A; font-weight: 400; }
 
-        .nav-icon {
-            width: 130px;
-            height: auto;
-            opacity: 0.85;
-            display: inline-block;
-        }
-
-        .divider {
-            width: 80px;
-            height: 1px;
-            background-color: #C6A77A;
-            margin: 50px auto;
-        }
-
-        main {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 60px 0 35px 0;
-            color: #C6A77A;
-            font-weight: 400;
-        }
-
-        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
-        .photography-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .photo-card-link {
-            text-decoration: none;
-            display: block;
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .photo-card-link:hover {
-            transform: translateY(-3px);
-            border-color: #C6A77A;
-        }
-
-        .photo-display {
-            width: 100%;
-            border: 1px solid #C6B9A8;
-            display: block;
-        }
-
+        /* VZDUŠNÁ FOTOGALÉRIA */
+        .photography-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; }
+        .photo-card-link { text-decoration: none; display: block; background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; }
+        .photo-display { width: 100%; border: 1px solid #C6B9A8; display: block; }
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
 
         /* INTERIÉROVÝ GRID */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .portfolio-card {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 18px;
-            text-align: center;
-            text-decoration: none;
-            color: #2B1E17;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            border-color: #C6A77A;
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 18px;
-        }
-
-        .portfolio-card h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 10px 0 5px 0;
-            font-weight: 400;
-        }
-
-        .portfolio-card p {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #8A766A;
-            margin: 0 0 10px 0;
-        }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; block; }
+        .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
+        .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
+        .portfolio-card p { font-size: 0.85rem; font-style: italic; color: #8A766A; margin: 0 0 10px 0; }
 
         /* PALIČKOVANIE */
-        .lace-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+        .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 80px auto; }
+        .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
+        .lace-image { width: 100%; height: 420px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
+
+        /* STRIGNE ZABEZPEČENÉ INTERNÉ VIP SEKCE (PRVOTNE SKRYTÉ) */
+        .secret-client-zone {
+            display: none;
             max-width: 900px;
-            margin: 0 auto 80px auto;
-        }
-
-        .lace-item {
+            margin: 30px auto;
             background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
+            border: 1px solid #C6A77A;
+            padding: 40px 20px;
             text-align: center;
         }
+        .secret-title { font-size: 1.8rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; }
+        .secret-subtitle { font-size: 0.95rem; font-style: italic; color: #8A766A; margin-bottom: 30px; }
+        .secret-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .secret-item { background-color: #FDFBF7; border: 1px solid #EAE1D4; padding: 15px; }
+        .secret-img { width: 100%; height: 400px; object-fit: contain; border: 1px solid #C6B9A8; cursor: zoom-in; }
+        .secret-caption { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #8A766A; margin-top: 10px; font-weight: bold; }
+        
+        /* ZVÄČŠOVACIE OKNO (LIGHTBOX) */
+        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
+        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
 
-        .lace-image {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 18px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 80px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-            border-top: 1px solid #EAE1D4;
-        }
+        footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
 
         @media (max-width: 850px) {
-            .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; }
-            .img-portrait { height: 500px; }
-            .img-landscape { height: 280px; }
-            .portfolio-image, .lace-image { height: 320px; }
+            .photography-grid, .portfolio-grid, .lace-container, .secret-grid { grid-template-columns: 1fr; }
+            .img-portrait { height: 500px; } .img-landscape { height: 280px; }
+            .portfolio-image, .lace-image, .secret-img { height: 320px; }
             .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
-            header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -255,21 +153,43 @@
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portals ]</div>
             <div class="nav-links">
-                <button class="nav-button-client" onclick="secureAccess('paul')">Paul Wesley</button>
+                <button class="nav-button-client" onclick="openSecretZone('paul')">Paul Wesley</button>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
-                <button class="nav-button-client" onclick="secureAccess('ian')">Ian Somerhalder</button>
+                <button class="nav-button-client" onclick="openSecretZone('ian')">Ian Somerhalder</button>
             </div>
         </div>
     </header>
+
+    <!-- 🦊 PRIVÁTNA ZÓNA PRE PAULA (ZOBRAZÍ SA LEN PO ZADANÍ HESLA) -->
+    <div id="paul-zone" class="secret-client-zone">
+        <div class="secret-title">The Trotuár Promenade Collection</div>
+        <div class="secret-subtitle">Specially Crafted for Paul Wesley & Natalie</div>
+        <div class="secret-grid">
+            <div class="secret-item"><div class="secret-caption">[ Men's Tech Pack ]</div><img src="./Paul/paul77/paul-techpack.jpg" class="secret-img" onclick="zoomImg(this.src)"></div>
+            <div class="secret-item"><div class="secret-caption">[ Women's Tech Pack ]</div><img src="./Paul/paul77/women-techpack.jpg" class="secret-img" onclick="zoomImg(this.src)"></div>
+            <div class="secret-item"><div class="secret-caption">[ Campaign Editorial ]</div><img src="./Paul/paul77/zeny.jpg" class="secret-img" onclick="zoomImg(this.src)"></div>
+        </div>
+    </div>
+
+    <!-- 🦊 PRIVÁTNA ZÓNA PRE IANA -->
+    <div id="ian-zone" class="secret-client-zone">
+        <div class="secret-title">The Kiss The Ground Capsule</div>
+        <div class="secret-subtitle">Specially Crafted for Ian Somerhalder</div>
+        <div class="secret-grid">
+            <div class="secret-item"><div class="secret-caption">[ Men's Tech Pack ]</div><img src="./ian77/ian-techpack.jpg" class="secret-img" onclick="zoomImg(this.src)"></div>
+            <div class="secret-item"><div class="secret-caption">[ Women's Tech Pack ]</div><img src="./ian77/women-ian-techpack.jpg" class="secret-img" onclick="zoomImg(this.src)"></div>
+            <div class="secret-item"><div class="secret-caption">[ Campaign Editorial ]</div><div style="height:400px; background-color:#EFEBE4; display:flex; align-items:center; justify-content:center; color:#8A766A; font-style:italic;">[ Pending ]</div></div>
+        </div>
+    </div>
 
     <main>
         <!-- Fine-Art Photography -->
         <div class="section-title">Fine-Art Photography</div>
         <div class="photography-grid">
-            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></a>
-            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></a>
-            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></a>
-            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></a>
+            <div class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></div>
+            <div class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></div>
+            <div class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></div>
+            <div class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></div>
         </div>
 
         <div class="divider"></div>
@@ -277,42 +197,6 @@
         <!-- Interior Architecture -->
         <div class="section-title">Interior Architecture</div>
         <div class="portfolio-grid">
-            <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3></a>
-            <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3></a>
-            <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3></a>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- Traditional Craft -->
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="lace-container">
-            <div class="lace-item"><img src="./lace-bobbins.jpg" class="lace-image"></div>
-            <div class="lace-item"><img src="./lace-detail.jpg" class="lace-image"></div>
-        </div>
-    </main>
-
-    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
-
-    <!-- POISTNÝ SKRIPT S PRESOVNE UPRAVENÝMI TRASAMI PODĽA SERVERA -->
-    <script>
-        function secureAccess(client) {
-            let key = prompt("Enter your Private Client Access Key:");
-            if (key !== null && key !== "") {
-                let cleanKey = key.trim().toLowerCase();
-                if (client === 'paul' && cleanKey === 'paul77') {
-                    // Paul leží v tejto podzložke, ktorú si mi fotila
-                    window.location.href = "https://github.io";
-                } else if (client === 'ian' && cleanKey === 'ian77') {
-                    // Ian leží priamo v tejto zložke, ktorú sme overili
-                    window.location.href = "https://github.io";
-                } else {
-                    alert("Access Denied. Invalid Client Key.");
-                }
-            }
-        }
-    </script>
-
-</body>
-</html>
+            <div class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3></div>
+            <div class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3></div>
 
