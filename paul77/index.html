@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trotuár Promenade | MIM IMAGERY</title>
+    <style>
+        body { 
+            background-color: #FDFBF7; 
+            color: #2B1E17; 
+            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+        }
+        header { 
+            text-align: center; 
+            padding: 60px 20px 20px 20px; 
+            letter-spacing: 4px; 
+        }
+        header h1 { 
+            font-size: 2.2rem; 
+            font-weight: 300; 
+            margin: 0; 
+            text-transform: uppercase; 
+        }
+        header p { 
+            font-size: 0.9rem; 
+            font-style: italic; 
+            color: #8A766A; 
+            margin-top: 10px; 
+        }
+        .divider { 
+            width: 60px; 
+            height: 1px; 
+            background-color: #C6A77A; 
+            margin: 30px auto; 
+        }
+        main { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .story-section { 
+            text-align: justify; 
+            max-width: 800px; 
+            margin: 0 auto 40px auto; 
+            font-size: 1.05rem; 
+        }
+        .collection-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 25px; 
+            margin: 40px 0 60px 0; 
+        }
+        .collection-item { 
+            background-color: #FAF6F0; 
+            border: 1px solid #EAE1D4; 
+            padding: 15px; 
+            text-align: center; 
+        }
+        .collection-title { 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin-bottom: 15px; 
+            color: #8A766A; 
+            font-weight: bold; 
+        }
+        
+        /* Luxusný klikateľný obrázok s kurzorom lupy */
+        .collection-image { 
+            width: 100%; 
+            height: 450px; 
+            object-fit: contain; 
+            display: block; 
+            margin: 0 auto; 
+            border: 1px solid #C6B9A8; 
+            cursor: zoom-in; 
+            transition: opacity 0.3s; 
+        }
+        .collection-image:hover { 
+            opacity: 0.9; 
+        }
+        .image-placeholder { 
+            width: 100%; 
+            height: 450px; 
+            background-color: #EFEBE4; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #8A766A; 
+            font-style: italic; 
+            font-size: 0.9rem; 
+            letter-spacing: 1px; 
+            border: 1px dashed #C6B9A8; 
+        }
+        .back-container { 
+            text-align: center; 
+            margin-top: 60px; 
+            margin-bottom: 20px; 
+        }
+        .back-button { 
+            display: inline-block; 
+            padding: 10px 25px; 
+            border: 1px solid #2B1E17; 
+            color: #2B1E17; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
+            letter-spacing: 2px; 
+            transition: all 0.3s ease; 
+        }
+        .back-button:hover { 
+            background-color: #2B1E17; 
+            color: #FDFBF7; 
+        }
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            font-size: 0.8rem; 
+            letter-spacing: 2px; 
+            color: #8A766A; 
+        }
+
+        /* LIGHTBOX VYSKAKOVACIE OKNO PRE TRIEDA CHLAPCOV */
+        .lightbox { 
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(43, 30, 23, 0.96); 
+            align-items: center; 
+            justify-content: center; 
+            cursor: zoom-out; 
+        }
+        .lightbox img { 
+            max-width: 95%; 
+            max-height: 95%; 
+            object-fit: contain; 
+            border: 1px solid #C6A77A; 
+        }
+
+        @media (max-width: 900px) {
+            .collection-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .collection-image, .image-placeholder { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>M I M &nbsp; I M A G E R Y</h1>
+        <p>The Trotuár Promenade Collection — Specially Crafted for Paul Wesley</p>
+        <div class="divider"></div>
+    </header>
+
+    <main>
+        <section class="story-section">
+            <p>This exclusive limited-edition capsule represents the seamless connection between historical European craftsmanship and contemporary structural design. Inspired by personal encounters and the timeless textures of traditional Slovak bobbin lace, each piece is designed for the modern gentleman who appreciates slow-fashion intentionality and deep narrative roots.</p>
+        </section>
+
+        <!-- Trojstĺpcový grid s interaktívnym zväčšením -->
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">[ Men's Tech Pack ]</div>
+                <img src="./trutoar_techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Men's Technical Blueprint">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tech Pack ]</div>
+                <img src="./Women's_Trotuar_Collection.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Technical Blueprint">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Campaign Editorial ]</div>
+                <div class="image-placeholder">[ Heritage Lace For Natalie - Pending ]</div>
+            </div>
+        </div>
+
+        <div class="back-container">
+            <a href="../" class="back-button">[ Back to Atelier Home ]</a>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.
+    </footer>
+
+    <!-- Okno na zväčšenie fotky -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
+
+    <script>
+        function openLightbox(src) { 
+            document.getElementById('lightbox-img').src = src; 
+            document.getElementById('lightbox').style.display = 'flex'; 
+        }
+        function closeLightbox() { 
+            document.getElementById('lightbox').style.display = 'none'; 
+        }
+    </script>
+</body>
+</html>
