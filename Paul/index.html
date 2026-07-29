@@ -54,7 +54,7 @@
             font-size: 1.05rem;
         }
 
-        /* Profesionálny trojstĺpcový grid pre zjednotenie vizuálu */
+        /* Trojstĺpcový grid pre počítače */
         .collection-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -132,9 +132,14 @@
             color: #8A766A;
         }
 
+        /* Responzivita: Vynútenie 2 stĺpcov vedľa seba na mobile */
         @media (max-width: 900px) {
             .collection-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr; /* Dva stĺpce pre mobil */
+                gap: 15px;
+            }
+            .collection-image, .image-placeholder {
+                height: 280px; /* Prispôsobená výška pre menšie displeje */
             }
         }
     </style>
@@ -154,13 +159,12 @@
             </p>
         </section>
 
-        <!-- DOKONALÝ TROJSTĹPCOVÝ GRID BEZ CHÝB -->
         <div class="collection-grid">
             
-            <!-- 1. PÁNSKY TECH PACK -->
+            <!-- 1. PÁNSKY TECH PACK (OPRAVENÝ NÁZOV S K) -->
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="./trutoar_techpac.jpg" alt="Men's Technical Blueprint" class="collection-image">
+                <img src="./trutoar_techpack.jpg" alt="Men's Technical Blueprint" class="collection-image">
             </div>
 
             <!-- 2. DÁMSKY TECH PACK -->
@@ -169,7 +173,7 @@
                 <img src="./Women's_Trotuar_Collection.jpg" alt="Women's Technical Blueprint" class="collection-image">
             </div>
 
-            <!-- 3. MIESTO PRE ĎALŠIU FOTKU / ŠPERK -->
+            <!-- 3. CAMPAIGN EDITORIAL -->
             <div class="collection-item">
                 <div class="collection-title">[ Campaign Editorial ]</div>
                 <div class="image-placeholder">[ Heritage Lace For Natalie - Pending ]</div>
