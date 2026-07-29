@@ -5,173 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px 40px 20px;
-            letter-spacing: 6px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            margin: 0;
-            text-transform: uppercase;
-            color: #2B1E17;
-            white-space: normal;
-            word-break: keep-all;
-        }
-
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif; margin: 0; padding: 0; line-height: 1.7; }
+        header { text-align: center; padding: 80px 20px 40px 20px; letter-spacing: 6px; }
+        header h1 { font-size: 3rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #2B1E17; white-space: normal; word-break: keep-all; }
         .brand-name { display: inline-block; white-space: nowrap; }
-
-        header p {
-            font-size: 0.95rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #8A766A;
-            margin-top: 15px;
-            margin-bottom: 40px;
-        }
-
-        .exclusive-nav {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(43, 30, 23, 0.02);
-            border-radius: 2px;
-            box-sizing: border-box;
-        }
-
-        .nav-title {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #C6A77A;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .nav-links-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .access-input {
-            font-family: 'Didot', serif;
-            padding: 8px 15px;
-            border: 1px solid #EAE1D4;
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-align: center;
-            width: 220px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
+        header p { font-size: 0.95rem; letter-spacing: 3px; text-transform: uppercase; color: #8A766A; margin-top: 15px; margin-bottom: 40px; }
+        .exclusive-nav { max-width: 900px; margin: 0 auto; background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 25px; text-align: center; box-shadow: 0 4px 20px rgba(43, 30, 23, 0.02); border-radius: 2px; box-sizing: border-box; }
+        .nav-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 5px; color: #C6A77A; margin-bottom: 20px; font-weight: bold; }
+        .nav-links-form { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 0; padding: 0; border: none; }
+        .access-input { font-family: 'Didot', serif; padding: 8px 15px; border: 1px solid #EAE1D4; background-color: #FDFBF7; color: #2B1E17; font-size: 0.9rem; letter-spacing: 2px; text-align: center; width: 220px; outline: none; transition: border-color 0.3s; }
         .access-input:focus { border-color: #C6A77A; }
-
-        .access-btn {
-            font-family: 'Didot', serif;
-            padding: 8px 20px;
-            border: 1px solid #2B1E17;
-            background-color: #2B1E17;
-            color: #FDFBF7;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
+        .access-btn { font-family: 'Didot', serif; padding: 8px 20px; border: 1px solid #2B1E17; background-color: #2B1E17; color: #FDFBF7; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
         .access-btn:hover { background-color: transparent; color: #2B1E17; }
         .nav-icon { width: 130px; height: auto; opacity: 0.85; display: inline-block; margin: 0 20px; }
         .divider { width: 80px; height: 1px; background-color: #C6A77A; margin: 50px auto; }
         main { max-width: 940px; margin: 0 auto; padding: 20px; }
         .section-title { text-align: center; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 5px; margin: 60px 0 35px 0; color: #C6A77A; font-weight: 400; }
-
-        .photography-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .photo-card-link {
-            text-decoration: none;
-            display: block;
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
+        .photography-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; }
+        .photo-card-link { text-decoration: none; display: block; background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; transition: all 0.3s ease; }
         .photo-card-link:hover { transform: translateY(-3px); border-color: #C6A77A; }
         .photo-display { width: 100%; border: 1px solid #C6B9A8; display: block; }
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .portfolio-card {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 18px;
-            text-align: center;
-            text-decoration: none;
-            color: #2B1E17;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: #C6A77A; }
         .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
         .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
         .portfolio-card p { font-size: 0.85rem; font-style: italic; color: #8A766A; margin: 0 0 10px 0; }
-
-        .lace-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto 80px auto;
-        }
-
+        .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 80px auto; }
         .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .lace-image { width: 100%; height: 420px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
         footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
-
-        @media (max-width: 850px) {
-            .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; }
-            .img-portrait { height: 500px; } .img-landscape { height: 280px; }
-            .portfolio-image, .lace-image { height: 320px; }
-            .nav-links-form { flex-direction: column; gap: 15px; }
-            .exclusive-nav { max-width: 100%; }
-            header h1 { font-size: 2.2rem; }
-            .access-input { width: 100%; }
-        }
+        @media (max-width: 850px) { .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; } .img-portrait { height: 500px; } .img-landscape { height: 280px; } .portfolio-image, .lace-image { height: 320px; } .nav-links-form { flex-direction: column; gap: 15px; } .exclusive-nav { max-width: 100%; } header h1 { font-size: 2.2rem; } .access-input { width: 100%; } }
     </style>
 </head>
 <body>
@@ -179,13 +45,14 @@
     <header>
         <h1>
             <span class="brand-name">M I M</span> 
-            <span class="brand-name">I M A G E R Y</span>
+            <span class="brand-name">I M A G E RY</span>
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
-            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/'; } else if(v === 'ian77') { window.location.href = './ian77/'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
+            <!-- TU SMRUJEME ZADANIE KÓDOV NA NOVÉ ČISTÉ SÚBORY NA HLAVNEJ PLOCHE -->
+            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = 'paul.html'; } else if(v === 'ian77') { window.location.href = 'ian.html'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
                 <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
@@ -194,7 +61,6 @@
     </header>
 
     <main>
-        <!-- STOPERCENTNE SÚOSÉ PRELINKOVANIE PRE VŠETKY 4 STRÁNKY -->
         <div class="section-title">Fine-Art Photography</div>
         <div class="photography-grid">
             <a href="story1.html" class="photo-card-link"><img src="photo-portrait.jpg" class="photo-display img-portrait"></a>
@@ -227,4 +93,3 @@
 </body>
 </html>
 
- 
