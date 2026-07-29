@@ -44,7 +44,7 @@
             margin-bottom: 40px;
         }
 
-        /* UZAMKNUTÁ CLIENT LIŠTA */
+        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -140,7 +140,7 @@
             font-weight: 400;
         }
 
-        /* FOTOGALÉRIA */
+        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -201,6 +201,21 @@
             object-fit: cover;
             border: 1px solid #C6B9A8;
             margin-bottom: 18px;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 10px 0 5px 0;
+            font-weight: 400;
+        }
+
+        .portfolio-card p {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #8A766A;
+            margin: 0 0 10px 0;
         }
 
         /* PALIČKOVANIE */
@@ -299,23 +314,14 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
+    <!-- SAMOOPRAVNÝ KLIENTSKÝ SKRIPT - SKÚŠA VŠETKY MOŽNÉ ADRESY ZA SEBOU -->
     <script>
         function checkAccess() {
             let input = document.getElementById('clientKey').value;
             if (input !== null && input !== "") {
                 let cleanKey = input.trim().toLowerCase();
+                
                 if (cleanKey === 'paul77') {
-                    // Opravená priama cesta k súboru bez zbytočných lomítok naviac
-                    window.location.href = "https://github.io";
-                } else if (cleanKey === 'ian77') {
-                    window.location.href = "https://github.io";
-                } else {
-                    alert("Access Denied. Invalid Client Key.");
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+                    // Test č. 1: Skúsi priamy odkaz s malými písmenami
 
 
