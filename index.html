@@ -73,14 +73,15 @@
             gap: 40px;
         }
 
-        /* Čisté priame klientske preklikové linky */
         .nav-button-client {
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             color: #2B1E17;
             font-weight: bold;
-            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
             font-family: 'Didot', serif;
             padding: 5px 10px;
             transition: color 0.3s ease;
@@ -251,13 +252,12 @@
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- PRIAME, NA MILIMETER PRESNÉ PREPOJENIE NA EXISTUJÚCE PRIEČINKY -->
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portals ]</div>
             <div class="nav-links">
-                <a href="./Paul/paul77/index.html" class="nav-button-client">Paul Wesley</a>
+                <button class="nav-button-client" onclick="secureAccess('paul')">Paul Wesley</button>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
-                <a href="./ian77/index.html" class="nav-button-client">Ian Somerhalder</a>
+                <button class="nav-button-client" onclick="secureAccess('ian')">Ian Somerhalder</button>
             </div>
         </div>
     </header>
@@ -294,6 +294,24 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
+    <!-- POISTNÝ OVEROVACÍ SKRIPT PRE POŽADOVANÉ HESLOVANIE -->
+    <script>
+        function secureAccess(client) {
+            let key = prompt("Enter your Private Client Access Key:");
+            if (key !== null && key !== "") {
+                let cleanKey = key.trim().toLowerCase();
+                if (client === 'paul' && cleanKey === 'paul77') {
+                    window.location.href = "https://github.io";
+                } else if (client === 'ian' && cleanKey === 'ian77') {
+                    window.location.href = "https://github.io";
+                } else {
+                    alert("Access Denied. Invalid Client Key.");
+                }
+            }
+        }
+    </script>
+
 </body>
 </html>
+
 
