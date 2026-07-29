@@ -7,7 +7,7 @@
     <style>
         body {
             background-color: #FDFBF7;
-            color: #2B1E17;
+            color: #2B1E17; /* Naša luxusná hlboká zemitá čokoládová namiesto čiernej */
             font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
             margin: 0;
             padding: 0;
@@ -16,70 +16,79 @@
 
         header {
             text-align: center;
-            padding: 60px 20px 30px 20px;
+            padding: 80px 20px 40px 20px;
             letter-spacing: 6px;
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 300;
             margin: 0;
             text-transform: uppercase;
+            color: #2B1E17;
         }
 
         header p {
             font-size: 0.95rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #6E5A4F;
+            color: #8A766A; /* Tlmená zemito-okrová pre podnadpis */
             margin-top: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        /* Luxusné horné menu pre chlapcov */
+        /* NOVÁ EXKLUZÍVNA A VÝRAZNÁ LIŠTA PRE CHLAPCOV */
         .exclusive-nav {
-            max-width: 600px;
-            margin: 0 auto 20px auto;
-            border-top: 1px solid #EAE1D4;
-            border-bottom: 1px solid #EAE1D4;
-            padding: 15px 0;
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #FAF6F0; /* Luxusný podklad ateliéru */
+            border: 1px solid #C6A77A; /* Pevný okrový okraj, aby lišta nezanikala */
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(43, 30, 23, 0.03);
         }
 
         .nav-title {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            color: #8A766A;
-            margin-bottom: 10px;
-            font-style: italic;
+            color: #C6A77A; /* Krásna starozlatá okrová */
+            margin-bottom: 12px;
+            font-weight: bold;
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
         }
 
         .nav-link {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #2B1E17;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-weight: bold;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
         }
 
-        .nav-link.ian { color: #3E4A32; } /* Jemný olivový akcent pre Iana */
+        .nav-link.ian { 
+            color: #3E4A32; /* Ponechaný hlboký olivový tón pre Iana */
+        }
 
-        .nav-link:hover { color: #6E5A4F; }
+        .nav-link:hover { 
+            color: #C6A77A;
+            border-color: #C6A77A;
+        }
 
         .divider {
             width: 80px;
             height: 1px;
-            background-color: #2B1E17;
-            margin: 40px auto;
+            background-color: #C6A77A; /* Okrová línia */
+            margin: 50px auto;
         }
 
         main {
@@ -90,30 +99,31 @@
 
         .section-title {
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 60px 0 30px 0;
-            color: #2B1E17;
+            letter-spacing: 5px;
+            margin: 60px 0 35px 0;
+            color: #C6A77A; /* Všetky hlavné nadpisy sekcií sú teraz v teplej okrovej farbe */
+            font-weight: 400;
         }
 
-        /* 1. PILIER: FINE-ART PHOTOGRAPHY (Mriežka v štýle Pinterestu) */
+        /* 1. PILIER: FINE-ART PHOTOGRAPHY */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            gap: 30px;
             margin-bottom: 60px;
         }
 
         .photo-item {
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
-            padding: 15px;
+            padding: 20px;
         }
 
         .photo-display {
             width: 100%;
-            height: 500px;
+            height: 550px;
             object-fit: cover;
             border: 1px solid #C6B9A8;
         }
@@ -129,7 +139,7 @@
         .portfolio-card {
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
-            padding: 15px;
+            padding: 18px;
             text-align: center;
             text-decoration: none;
             color: #2B1E17;
@@ -139,15 +149,15 @@
 
         .portfolio-card:hover {
             transform: translateY(-5px);
-            border-color: #C6B9A8;
+            border-color: #C6A77A;
         }
 
         .portfolio-image {
             width: 100%;
-            height: 400px;
+            height: 420px;
             object-fit: cover;
             border: 1px solid #C6B9A8;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .portfolio-card h3 {
@@ -156,12 +166,13 @@
             letter-spacing: 2px;
             margin: 10px 0 5px 0;
             font-weight: 400;
+            color: #2B1E17;
         }
 
         .portfolio-card p {
             font-size: 0.85rem;
             font-style: italic;
-            color: #6E5A4F;
+            color: #8A766A;
             margin: 0 0 10px 0;
         }
 
@@ -177,23 +188,24 @@
         .lace-item {
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
         }
 
         .lace-image {
             width: 100%;
-            height: 400px;
+            height: 420px;
             object-fit: cover;
             border: 1px solid #C6B9A8;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .lace-caption {
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #6E5A4F;
+            color: #8A766A;
+            font-weight: bold;
         }
 
         footer {
@@ -209,10 +221,9 @@
             .photography-grid, .portfolio-grid, .lace-container {
                 grid-template-columns: 1fr;
             }
-            .photo-display { height: 350px; }
-            .portfolio-image { height: 300px; }
-            .lace-image { height: 300px; }
-            .nav-links { gap: 20px; }
+            .photo-display { height: 380px; }
+            .portfolio-image, .lace-image { height: 320px; }
+            .nav-links { gap: 25px; flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -222,12 +233,12 @@
         <h1>M I M I M A G E R Y</h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- PRIVÁTNA LIŠTA PRE CHLAPCOV UPROSTRED HLAVIČKY -->
+        <!-- PREPRACOVANÁ VÝRAZNÁ LIŠTA V ŠTÝLE TICHÉHO LUXUSU -->
         <div class="exclusive-nav">
-            <div class="nav-title">[ Exclusive Client Portals ]</div>
+            <div class="nav-title">[ Exclusive Private Client Portals ]</div>
             <div class="nav-links">
-                <a href="./Paul/" class="nav-link">Paul Wesley Portal</a>
-                <a href="./Ian/" class="nav-link ian">Ian Somerhalder Portal</a>
+                <a href="./Paul/" class="nav-link">Paul Wesley Premium Portal</a>
+                <a href="./Ian/" class="nav-link ian">Ian Somerhalder Eco Portal</a>
             </div>
         </div>
     </header>
