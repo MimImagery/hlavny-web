@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine-Art Photography | MIM IMAGERY</title>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2B1E17;
+            font-family: 'Didot', 'Bodoni MT', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px 20px;
+            letter-spacing: 4px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #8A766A;
+            margin-top: 10px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #C6A77A;
+            margin: 30px auto;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .philosophy-section {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px auto;
+            font-size: 1.1rem;
+            color: #2B1E17;
+        }
+
+        /* NEKONEČNÝ LUXUSNÝ GRID PRE TVOJE FOTKY */
+        .gallery-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            border-color: #C6A77A;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border: 1px solid #C6B9A8;
+            cursor: zoom-in;
+        }
+
+        .gallery-caption {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8A766A;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .back-container {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid #2B1E17;
+            color: #2B1E17;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2B1E17;
+            color: #FDFBF7;
+        }
+
+        /* LIGHTBOX PRE ZVÄČŠOVANIE FOTIEK */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(43, 30, 23, 0.97);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border: 1px solid #C6A77A;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #8A766A;
+            border-top: 1px solid #EAE1D4;
+        }
+
+        @media (max-width: 750px) {
+            .gallery-story-grid { grid-template-columns: 1fr; gap: 20px; }
+            .gallery-image { height: 450px; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fine-Art Photography</h1>
+        <p>Silent Narratives & Light Play</p>
+        <div class="divider"></div>
+    </header>
+
+    <main>
+        <section class="philosophy-section">
+            <p id="fineart-text">[ Tu zajtra spoločne napíšeme tvoje umelecké vyhlásenie o fotografii, zachytení svetla a emóciách, z ktorých naskočí husia koža ]</p>
+        </section>
+
+        <!-- TU SÚ TVOJE ŠTYRI STARÉ FOTKY + MIESTA NA AKÉKOĽVEK ĎALŠIE -->
+        <div class="gallery-story-grid">
+            <div class="gallery-item">
+                <img src="./photo-portrait.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">I. The Editorial Portrait</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./photo-lavender.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">II. Lavender Light</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./photo-rings.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">III. Tangible Memories</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./photo-baby.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">IV. Pure Connection</div>
+            </div>
+            
+            <!-- ➕ SEM MÔŽEŠ DAŤ ĎALŠIE SÚBORY, KTORÉ NAHRÁŠ NA HLAVNÚ PLOCHU -->
+            <!-- PREDPRIPRAVENÉ MIESTO PRE FOTKU ČÍSLO 5 -->
+            <!-- 
+            <div class="gallery-item">
+                <img src="./tvoja-nova-fotka.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">V. New Narrative Piece</div>
+            </div> 
+            -->
+        </div>
+
+        <div class="back-container">
+            <a href="./" class="back-button">[ Return to Atelier Home ]</a>
+        </div>
+    </main>
+
+    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
