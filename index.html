@@ -141,29 +141,16 @@
         }
 
         /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
-        .photography-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
+                <!-- PILIER 1: FINE-ART PHOTOGRAPHY (KLIKACIA STRUKTÚRA DO GALÉRIE) -->
+        <div class="section-title">Fine-Art Photography</div>
+        <div class="photography-grid">
+            <a href="./fine-art.html" class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></a>
+            <a href="./fine-art.html" class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></a>
+        </div>
+        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to view full gallery story ]</p>
 
-        .photo-card-link {
-            text-decoration: none;
-            display: block;
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-        }
-
-        .photo-display {
-            width: 100%;
-            border: 1px solid #C6B9A8;
-            display: block;
-        }
-
-        .img-portrait { height: 650px; object-fit: cover; }
-        .img-landscape { height: 380px; object-fit: cover; }
 
         /* INTERIÉROVÝ GRID */
         .portfolio-grid {
