@@ -7,7 +7,7 @@
     <style>
         body {
             background-color: #FDFBF7;
-            color: #2B1E17; /* Naša luxusná hlboká zemitá čokoládová namiesto čiernej */
+            color: #2B1E17;
             font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
             margin: 0;
             padding: 0;
@@ -32,62 +32,67 @@
             font-size: 0.95rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #8A766A; /* Tlmená zemito-okrová pre podnadpis */
+            color: #8A766A;
             margin-top: 15px;
             margin-bottom: 40px;
         }
 
-        /* NOVÁ EXKLUZÍVNA A VÝRAZNÁ LIŠTA PRE CHLAPCOV */
+        /* REDIZAJNOVANÁ LIŠTA V ŠTÝLE PINTEREST LUXURY ATELIER */
         .exclusive-nav {
-            max-width: 650px;
+            max-width: 750px;
             margin: 0 auto;
-            background-color: #FAF6F0; /* Luxusný podklad ateliéru */
-            border: 1px solid #C6A77A; /* Pevný okrový okraj, aby lišta nezanikala */
-            padding: 20px;
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
+            padding: 25px 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(43, 30, 23, 0.03);
+            box-shadow: 0 4px 20px rgba(43, 30, 23, 0.02);
+            border-radius: 2px;
         }
 
         .nav-title {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #C6A77A; /* Krásna starozlatá okrová */
-            margin-bottom: 12px;
+            letter-spacing: 5px;
+            color: #C6A77A; /* Starozlatá okrová */
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            align-items: center;
+            gap: 35px;
         }
 
         .nav-link {
             font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: #2B1E17;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: bold;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
+            padding: 5px 10px;
         }
 
-        .nav-link.ian { 
-            color: #3E4A32; /* Ponechaný hlboký olivový tón pre Iana */
+        /* Delikátna stredová ikona korunky od Mikiny */
+        .nav-icon {
+            width: 32px;
+            height: auto;
+            opacity: 0.85;
+            display: inline-block;
+            margin: 0 10px;
         }
 
         .nav-link:hover { 
             color: #C6A77A;
-            border-color: #C6A77A;
         }
 
         .divider {
             width: 80px;
             height: 1px;
-            background-color: #C6A77A; /* Okrová línia */
+            background-color: #C6A77A;
             margin: 50px auto;
         }
 
@@ -103,7 +108,7 @@
             text-transform: uppercase;
             letter-spacing: 5px;
             margin: 60px 0 35px 0;
-            color: #C6A77A; /* Všetky hlavné nadpisy sekcií sú teraz v teplej okrovej farbe */
+            color: #C6A77A;
             font-weight: 400;
         }
 
@@ -223,7 +228,8 @@
             }
             .photo-display { height: 380px; }
             .portfolio-image, .lace-image { height: 320px; }
-            .nav-links { gap: 25px; flex-direction: column; align-items: center; }
+            .nav-links { gap: 15px; flex-direction: column; align-items: center; }
+            .nav-icon { transform: rotate(90deg); margin: 10px 0; }
         }
     </style>
 </head>
@@ -233,12 +239,13 @@
         <h1>M I M I M A G E R Y</h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- PREPRACOVANÁ VÝRAZNÁ LIŠTA V ŠTÝLE TICHÉHO LUXUSU -->
+        <!-- LUXUSNÁ LIŠTA S KORUNKOU OD MIKINY UPROSTRED MENA CHLAPCOV -->
         <div class="exclusive-nav">
             <div class="nav-title">[ Exclusive Private Client Portals ]</div>
             <div class="nav-links">
-                <a href="./Paul/" class="nav-link">Paul Wesley Premium Portal</a>
-                <a href="./Ian/" class="nav-link ian">Ian Somerhalder Eco Portal</a>
+                <a href="./Paul/" class="nav-link">Paul Wesley</a>
+                <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
+                <a href="./Ian/" class="nav-link">Ian Somerhalder</a>
             </div>
         </div>
     </header>
