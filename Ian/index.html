@@ -43,7 +43,7 @@
         }
 
         main {
-            max-width: 1200px; /* Rozšírené pre dva stĺpce vedľa seba */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -55,23 +55,23 @@
             font-size: 1.05rem;
         }
 
-        /* Dvojstĺpcový Grid pre Ianove Tech Packy vedľa seba */
-        .techpack-grid {
+        /* Profesionálny trojstĺpcový grid zjednotený s Paulom */
+        .collection-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 20px 0 60px 0;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin: 40px 0 60px 0;
         }
 
-        .techpack-image-container {
-            text-align: center;
-            padding: 15px;
+        .collection-item {
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
+            padding: 15px;
+            text-align: center;
         }
 
-        .techpack-title {
-            font-size: 0.9rem;
+        .collection-title {
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 15px;
@@ -79,29 +79,13 @@
             font-weight: bold;
         }
 
-        .techpack-display {
+        .collection-image {
             width: 100%;
-            height: auto;
+            height: 450px;
+            object-fit: contain;
             display: block;
             margin: 0 auto;
             border: 1px solid #3E4A32;
-        }
-
-        .gallery-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-top: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .product-card {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            text-align: center;
         }
 
         .image-placeholder {
@@ -115,37 +99,9 @@
             font-style: italic;
             font-size: 0.9rem;
             letter-spacing: 1px;
-            margin-bottom: 20px;
             border: 1px dashed #C6B9A8;
         }
 
-        .product-title {
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 15px 0 5px 0;
-            color: #3E4A32;
-        }
-
-        .product-description {
-            font-size: 0.95rem;
-            color: #544338;
-            max-width: 600px;
-            margin: 0 auto 15px auto;
-        }
-
-        .tech-tag {
-            display: inline-block;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border: 1px solid #3E4A32;
-            color: #3E4A32;
-            padding: 5px 15px;
-            margin-top: 10px;
-        }
-
-        /* Tlačidlo Späť na hlavný web */
         .back-container {
             text-align: center;
             margin-top: 60px;
@@ -177,9 +133,8 @@
             color: #8A766A;
         }
 
-        /* Responzivita: Na mobile pôjdu pod seba */
-        @media (max-width: 768px) {
-            .techpack-grid {
+        @media (max-width: 900px) {
+            .collection-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -188,7 +143,7 @@
 <body>
 
     <header>
-        <h1>M I M I M A G E R Y</h1>
+        <h1>M I M I M A G E RY</h1>
         <p>The Kiss The Ground Capsule — Specially Crafted for Ian Somerhalder</p>
         <div class="divider"></div>
     </header>
@@ -200,37 +155,29 @@
             </p>
         </section>
 
-        <!-- GRID PRE DVA TECH PACKY VEDĽA SEBA -->
-        <div class="techpack-grid">
+        <!-- TROJSTĹPCOVÝ GRID PRE IANA ZJEDNOTENÝ S PAULOM -->
+        <div class="collection-grid">
             
-            <!-- 1. PÁNSKA KOLEKCIA -->
-            <div class="techpack-image-container">
-                <div class="techpack-title">[ Men's Collection Blueprint ]</div>
-                <img src="./kiss_the_ground.jpg" alt="Men's Technical Blueprint" class="techpack-display">
+            <!-- 1. PÁNSKY TECH PACK -->
+            <div class="collection-item">
+                <div class="collection-title">[ Men's Tech Pack ]</div>
+                <img src="./kiss_the_ground.jpg" alt="Men's Technical Blueprint" class="collection-image">
             </div>
 
-            <!-- 2. DÁMSKA KOLEKCIA (NOVÁ) -->
-            <div class="techpack-image-container">
-                <div class="techpack-title">[ Women's Collection Blueprint ]</div>
-                <img src="./Women's_Kiss _the_Ground_collection.jpg" alt="Women's Technical Blueprint" class="techpack-display">
+            <!-- 2. DÁMSKY TECH PACK -->
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tech Pack ]</div>
+                <img src="./Women's_Kiss _the_Ground_collection.jpg" alt="Women's Technical Blueprint" class="collection-image">
+            </div>
+
+            <!-- 3. MIESTO PRE ĎALŠIU FOTKU -->
+            <div class="collection-item">
+                <div class="collection-title">[ Campaign Editorial ]</div>
+                <div class="image-placeholder">[ Regenerative Tee Photo - Pending ]</div>
             </div>
 
         </div>
 
-        <div class="divider"></div>
-
-        <div class="gallery-container">
-            <div class="product-card">
-                <div class="image-placeholder">[ Sustainable Merchandise Photo - Pending ]</div>
-                <div class="product-title">I. The Regenerative Tee</div>
-                <div class="product-description">
-                    Premium relaxed-fit merchandise piece crafted from 70% organic cotton and 30% sustainable hemp. Fully optimized with custom internal satin labeling and optimized for European production expansion.
-                </div>
-                <div class="tech-tag">Production Ready Blueprint</div>
-            </div>
-        </div>
-
-        <!-- Tlačidlo Späť -->
         <div class="back-container">
             <a href="../" class="back-button">[ Back to Atelier Home ]</a>
         </div>
