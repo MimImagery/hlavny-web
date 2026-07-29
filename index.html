@@ -41,7 +41,7 @@
             margin-bottom: 40px;
         }
 
-        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA NA ŠÍRKU FOTIEK (900px) */
+        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -262,8 +262,7 @@
 
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
-            <!-- OPRAVENÝ FORMULÁR SMERUJÚCI NA SPRÁVNE TRASE PRE OBOCH CHLAPCOV -->
-            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = 'https://github.io'; } else if(v === 'ian77') { window.location.href = 'https://github.io'; } else if(v) { alert('Access Denied. Invalid Key.'); } return false;">
+            <form class="nav-links-form" onsubmit="checkClientPortal(); return false;">
                 <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
@@ -303,5 +302,20 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
-</body>
-</html>
+    <!-- INTELIGENTNÝ VYHĽADÁVACÍ SKRIPT NA PREPOJENIE KLIENSTKÝCH CIEST -->
+    <script>
+        function checkClientPortal() {
+            var v = document.getElementById('clientKey').value.trim().toLowerCase();
+            if (!v) return;
+
+            if (v === 'paul77') {
+                // Skúša všetky tri cesty pre Paula, ktoré dnes na serveri vznikli
+                var paths = [
+                    "https://github.io",
+                    "https://github.io",
+                    "https://github.io"
+                ];
+                tryPaths(paths);
+            } else if (v === 'ian77') {
+                var pathsIan = [
+
