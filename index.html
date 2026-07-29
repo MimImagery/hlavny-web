@@ -41,7 +41,7 @@
             margin-bottom: 40px;
         }
 
-        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA NA ŠÍRKU FOTIEK (900px) */
+        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -63,7 +63,6 @@
             font-weight: bold;
         }
 
-        /* Čistá forma inline formulára bez externých JS chýb */
         .nav-links-form {
             display: flex;
             justify-content: center;
@@ -257,14 +256,14 @@
     <header>
         <h1>
             <span class="brand-name">M I M</span> 
-            <span class="brand-name">I M A G E R Y</span>
+            <span class="brand-name">I M A G E RY</span>
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
-            <!-- POISTNÝ KLIENTSKÝ KÓD PREMIEŇAJÚCI TEXT NA ADRESU SÚBORU -->
-            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77.html'; } else if(v === 'ian77') { window.location.href = './ian77.html'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
+            <!-- PRESNÉ PREPOJENIE PRIAMO DO VNÚTRA KLIENSTKÝCH PRIEČINKOV -->
+            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/index.html'; } else if(v === 'ian77') { window.location.href = './ian77/index.html'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
                 <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
@@ -296,11 +295,9 @@
 
         <!-- Traditional Craft -->
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="exclusive-nav" style="background-color: transparent; border: none; box-shadow: none;">
-            <div class="nav-links" style="gap: 30px;">
-                <div class="lace-item" style="flex: 1;"><img src="./lace-bobbins.jpg" class="lace-image"></div>
-                <div class="lace-item" style="flex: 1;"><img src="./lace-detail.jpg" class="lace-image"></div>
-            </div>
+        <div class="lace-container">
+            <div class="lace-item"><img src="./lace-bobbins.jpg" class="lace-image"></div>
+            <div class="lace-item"><img src="./lace-detail.jpg" class="lace-image"></div>
         </div>
     </main>
 
@@ -308,4 +305,3 @@
 
 </body>
 </html>
-
