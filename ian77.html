@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiss The Ground Capsule | MIM IMAGERY</title>
     <style>
-        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', 'Bodoni MT', serif; margin: 0; padding: 0; line-height: 1.8; }
         header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
         header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #3E4A32; }
         header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
         .divider { width: 60px; height: 1px; background-color: #3E4A32; margin: 30px auto; }
         main { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .story-section { text-align: justify; max-width: 650px; margin: 0 auto 60px auto; font-size: 1.05rem; }
+        
+        /* KLÚČOVÝ DIZAJNOVÝ BLOK PRE TVOJ PRÍBEH */
+        .story-section { 
+            text-align: justify; 
+            max-width: 650px; 
+            margin: 40px auto 60px auto; 
+            font-size: 1.05rem; 
+            border-top: 1px solid #3E4A32;
+            border-bottom: 1px solid #3E4A32;
+            padding: 30px 0;
+        }
         .story-section p { margin-bottom: 20px; }
+        
         .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
         .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #3E4A32; font-weight: bold; }
@@ -32,6 +43,7 @@
         <div class="divider"></div>
     </header>
     <main>
+        <!-- TVOJ EMOCIONÁLNY MANIFEST PRE IANA O OPERÁCII A URDRŽATEĽNOSTI -->
         <section class="story-section">
             <p><i>[ Private Client Zone ]</i></p>
             <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality.</p>
@@ -41,11 +53,11 @@
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="./ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+                <img src="../ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
                 <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="./women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+                <img src="../women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
         </div>
         <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
@@ -58,4 +70,4 @@
     </script>
 </body>
 </html>
-   
+
