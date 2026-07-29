@@ -5,188 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiss The Ground Capsule | MimImagery</title>
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
+        header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #3E4A32; }
+        header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
+        .divider { width: 60px; height: 1px; background-color: #3E4A32; margin: 30px auto; }
+        main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .story-section { text-align: justify; max-width: 800px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .collection-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; margin: 40px 0 60px 0; }
+        .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 15px; text-align: center; }
+        .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #3E4A32; font-weight: bold; }
+        
+        /* Klikateľný obrázok s lupou */
+        .collection-image { width: 100%; height: 450px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #3E4A32; cursor: zoom-in; transition: opacity 0.3s; }
+        .collection-image:hover { opacity: 0.9; }
+        .image-placeholder { width: 100%; height: 450px; background-color: #EFEBE4; display: flex; align-items: center; justify-content: center; color: #8A766A; font-style: italic; font-size: 0.9rem; letter-spacing: 1px; border: 1px dashed #C6B9A8; }
+        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
+        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #3E4A32; color: #3E4A32; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; transition: all 0.3s ease; }
+        .back-button:hover { background-color: #3E4A32; color: #FDFBF7; }
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
 
-        header {
-            text-align: center;
-            padding: 60px 20px 20px 20px;
-            letter-spacing: 4px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            font-weight: 300;
-            margin: 0;
-            text-transform: uppercase;
-            color: #3E4A32;
-        }
-
-        header p {
-            font-size: 0.9rem;
-            font-style: italic;
-            color: #6E5A4F;
-            margin-top: 10px;
-        }
-
-        .divider {
-            width: 60px;
-            height: 1px;
-            background-color: #3E4A32;
-            margin: 30px auto;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .story-section {
-            text-align: justify;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            font-size: 1.05rem;
-        }
-
-        /* Profesionálny trojstĺpcový grid zjednotený s Paulom */
-        .collection-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            margin: 40px 0 60px 0;
-        }
-
-        .collection-item {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .collection-title {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            color: #3E4A32;
-            font-weight: bold;
-        }
-
-        .collection-image {
-            width: 100%;
-            height: 450px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid #3E4A32;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 450px;
-            background-color: #EFEBE4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8A766A;
-            font-style: italic;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            border: 1px dashed #C6B9A8;
-        }
-
-        .back-container {
-            text-align: center;
-            margin-top: 60px;
-            margin-bottom: 20px;
-        }
-
-        .back-button {
-            display: inline-block;
-            padding: 10px 25px;
-            border: 1px solid #3E4A32;
-            color: #3E4A32;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #3E4A32;
-            color: #FDFBF7;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-        }
+        /* LUXUSNÉ VYSKOVAKOVACIE OKNO (LIGHTBOX) */
+        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.95); align-items: center; justify-content: center; cursor: zoom-out; }
+        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #3E4A32; }
 
         @media (max-width: 900px) {
-            .collection-grid {
-                grid-template-columns: 1fr;
-            }
+            .collection-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .collection-image, .image-placeholder { height: 280px; }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>M I M I M A G E RY</h1>
+        <h1>M I M I M A G E R Y</h1>
         <p>The Kiss The Ground Capsule — Specially Crafted for Ian Somerhalder</p>
         <div class="divider"></div>
     </header>
-
     <main>
         <section class="story-section">
-            <p>
-                Rooted in regenerative values, this exclusive European merchandise concept is built entirely on sustainability and eco-conscious innovation. Inspired by Ian's environmental legacy, the collection utilizes organic raw textiles and non-toxic, water-based printing methods to deliver an apparel line that honors the soil and the future of fashion.
-            </p>
+            <p>Rooted in regenerative values, this exclusive European merchandise concept is built entirely on sustainability and eco-conscious innovation. Inspired by Ian's environmental legacy, the collection utilizes organic raw textiles and non-toxic, water-based printing methods to deliver an apparel line that honors the soil and the future of fashion.</p>
         </section>
-
-        <!-- TROJSTĹPCOVÝ GRID PRE IANA ZJEDNOTENÝ S PAULOM -->
         <div class="collection-grid">
-            
-            <!-- 1. PÁNSKY TECH PACK -->
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="./kiss_the_ground.jpg" alt="Men's Technical Blueprint" class="collection-image">
+                <img src="./kiss_the_ground.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
-
-            <!-- 2. DÁMSKY TECH PACK -->
             <div class="collection-item">
                 <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="./Women's_Kiss _the_Ground_collection.jpg" alt="Women's Technical Blueprint" class="collection-image">
+                <img src="./Women's_Kiss _the_Ground_collection.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
-
-            <!-- 3. MIESTO PRE ĎALŠIU FOTKU -->
             <div class="collection-item">
                 <div class="collection-title">[ Campaign Editorial ]</div>
                 <div class="image-placeholder">[ Regenerative Tee Photo - Pending ]</div>
             </div>
-
         </div>
-
-        <div class="back-container">
-            <a href="../" class="back-button">[ Back to Atelier Home ]</a>
-        </div>
+        <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
     </main>
+    <footer>© 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
-    <footer>
-        © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED. <br>
-        REGENERATIVE DESIGN — CRAFTED IN EUROPE.
-    </footer>
+    <!-- Element pre zväčšenie -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
 
+    <script>
+        function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
+        function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+    </script>
 </body>
 </html>
