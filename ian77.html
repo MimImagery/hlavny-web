@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiss The Ground Capsule | MIM IMAGERY</title>
     <style>
-        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', 'Bodoni MT', serif; margin: 0; padding: 0; line-height: 1.8; }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
         header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
         header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #3E4A32; }
         header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
         .divider { width: 60px; height: 1px; background-color: #3E4A32; margin: 30px auto; }
         main { max-width: 1000px; margin: 0 auto; padding: 20px; }
         
-        /* KLÚČOVÝ DIZAJNOVÝ BLOK PRE TVOJ PRÍBEH */
-        .story-section { 
-            text-align: justify; 
-            max-width: 650px; 
-            margin: 40px auto 60px auto; 
-            font-size: 1.05rem; 
-            border-top: 1px solid #3E4A32;
-            border-bottom: 1px solid #3E4A32;
-            padding: 30px 0;
-        }
+        /* SKRYTÝ BLOK PRE PRÍBEH */
+        .toggle-btn-container { text-align: center; margin: 30px auto; }
+        .toggle-story-btn { background: none; border: 1px solid #3E4A32; color: #3E4A32; padding: 12px 30px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.85rem; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; }
+        .toggle-story-btn:hover { background-color: #3E4A32; color: #FDFBF7; }
+        
+        .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #3E4A32; border-bottom: 1px solid #3E4A32; padding: 30px 0; }
         .story-section p { margin-bottom: 20px; }
         
         .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
@@ -43,31 +39,47 @@
         <div class="divider"></div>
     </header>
     <main>
-        <!-- TVOJ EMOCIONÁLNY MANIFEST PRE IANA O OPERÁCII A URDRŽATEĽNOSTI -->
-        <section class="story-section">
+        
+        <!-- GRID S DIELAMI JE HNEĎ NAVRCHU -->
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">[ Men's Tech Pack ]</div>
+                <img src="./ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tech Pack ]</div>
+                <img src="./women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <!-- ELEGANTNÉ TLAČIDLO PRE PRÍBEH -->
+        <div class="toggle-btn-container">
+            <button class="toggle-story-btn" onclick="toggleStory()">[ Read Creative Director's Letter ]</button>
+        </div>
+
+        <!-- SKRYTÝ MANIFEST - ROZBALÍ SA AŽ PO KLIKNUTÍ -->
+        <section id="privateStory" class="story-section">
             <p><i>[ Private Client Zone ]</i></p>
             <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality.</p>
             <p>Following major spinal surgery, I spent six long weeks completely immobile. No movement. No normal life. Just me, the ceiling, and a deep, forced connection to the concept of time and stillness. It was during this recovery that your environmental legacy, your dedication to the earth, and the raw message of <i>Kiss the Ground</i> deeply resonated with me. It made me realize that art must have a purpose, a soul, and a grounding connection to our roots.</p>
             <p>Stepping recently into the historic atmosphere of Banská Štiavnica reawakened that dormant universe. Observing the costume artistry brought me straight back to my tailoring roots, while the cinematic energy of the set provided the final catalyst. This capsule is the manifestation of that journey—weaving design, acting, and sustainable luxury innovation into the organic soul of the <i>Kiss the Ground</i> collection, custom-crafted exclusively for your evaluation.</p>
         </section>
-        <div class="collection-grid">
-            <div class="collection-item">
-                <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="../ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-                <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="../women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-        </div>
+
         <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
     </main>
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+    
     <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
+    
     <script>
         function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
         function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+        function toggleStory() {
+            var x = document.getElementById("privateStory");
+            if (x.style.display === "block") { x.style.display = "none"; } else { x.style.display = "block"; }
+        }
     </script>
 </body>
 </html>
+           
 
