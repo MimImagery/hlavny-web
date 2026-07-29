@@ -314,12 +314,12 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
+    <!-- ULTRA-PRIAMY SKRIPT S ABSOLÚTNYMI ADRESAMI -->
     <script>
         function checkAccess() {
-            // STOPPERCENTNE OPRAVENÝ PRÍKAZ BEZ CHÝB
-            let inputField = document.getElementById('clientKey');
-            if (inputField) {
-                let input = inputField.value;
-                if (input !== null && input !== "") {
-                    let cleanKey = input.trim().toLowerCase();
-                    if (cleanKey === 'paul77') {
+            var k = document.getElementById('clientKey').value.trim().toLowerCase();
+            if (k === 'paul77') {
+                window.location = "https://github.io";
+            } else if (k === 'ian77') {
+                window.location = "https://github.io";
+
