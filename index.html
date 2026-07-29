@@ -41,7 +41,6 @@
             margin-bottom: 40px;
         }
 
-        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -87,9 +86,7 @@
             transition: border-color 0.3s;
         }
 
-        .access-input:focus {
-            border-color: #C6A77A;
-        }
+        .access-input:focus { border-color: #C6A77A; }
 
         .access-btn {
             font-family: 'Didot', serif;
@@ -104,43 +101,12 @@
             transition: all 0.3s ease;
         }
 
-        .access-btn:hover {
-            background-color: transparent;
-            color: #2B1E17;
-        }
+        .access-btn:hover { background-color: transparent; color: #2B1E17; }
+        .nav-icon { width: 130px; height: auto; opacity: 0.85; display: inline-block; margin: 0 20px; }
+        .divider { width: 80px; height: 1px; background-color: #C6A77A; margin: 50px auto; }
+        main { max-width: 940px; margin: 0 auto; padding: 20px; }
+        .section-title { text-align: center; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 5px; margin: 60px 0 35px 0; color: #C6A77A; font-weight: 400; }
 
-        .nav-icon {
-            width: 130px;
-            height: auto;
-            opacity: 0.85;
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 1px;
-            background-color: #C6A77A;
-            margin: 50px auto;
-        }
-
-        main {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 60px 0 35px 0;
-            color: #C6A77A;
-            font-weight: 400;
-        }
-
-        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -157,21 +123,11 @@
             transition: all 0.3s ease;
         }
 
-        .photo-card-link:hover {
-            transform: translateY(-3px);
-            border-color: #C6A77A;
-        }
-
-        .photo-display {
-            width: 100%;
-            border: 1px solid #C6B9A8;
-            display: block;
-        }
-
+        .photo-card-link:hover { transform: translateY(-3px); border-color: #C6A77A; }
+        .photo-display { width: 100%; border: 1px solid #C6B9A8; display: block; }
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
 
-        /* INTERIÉROVÝ GRID */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -187,38 +143,12 @@
             text-decoration: none;
             color: #2B1E17;
             display: block;
-            transition: all 0.3s ease;
         }
 
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            border-color: #C6A77A;
-        }
+        .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
+        .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
+        .portfolio-card p { font-size: 0.85rem; font-style: italic; color: #8A766A; margin: 0 0 10px 0; }
 
-        .portfolio-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 18px;
-        }
-
-        .portfolio-card h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 10px 0 5px 0;
-            font-weight: 400;
-        }
-
-        .portfolio-card p {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #8A766A;
-            margin: 0 0 10px 0;
-        }
-
-        /* TRADIČNÉ PALIČKOVANIE */
         .lace-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -227,34 +157,13 @@
             margin: 0 auto 80px auto;
         }
 
-        .lace-item {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .lace-image {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 18px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 80px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-            border-top: 1px solid #EAE1D4;
-        }
+        .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
+        .lace-image { width: 100%; height: 420px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
+        footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
 
         @media (max-width: 850px) {
             .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; }
-            .img-portrait { height: 500px; }
-            .img-landscape { height: 280px; }
+            .img-portrait { height: 500px; } .img-landscape { height: 280px; }
             .portfolio-image, .lace-image { height: 320px; }
             .nav-links-form { flex-direction: column; gap: 15px; }
             .exclusive-nav { max-width: 100%; }
@@ -274,7 +183,6 @@
 
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
-            <!-- POISTNÝ ZÁMOK SÚKROMNÝCH ZÓN CHLANOV ZOSTÁVA 100% BEZPEČNÝ -->
             <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/index.html'; } else if(v === 'ian77') { window.location.href = './ian77/index.html'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
                 <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
@@ -284,19 +192,18 @@
     </header>
 
     <main>
-        <!-- PILIER 1: FINE-ART PHOTOGRAPHY (KLIKACIA STRUKTÚRA DO OPRAVENEJ GALÉRIE) -->
+        <!-- 4 SAMOSTATNÉ ADRESY PRE KAŽDÝ PRÍBEH ZVLÁŠŤ -->
         <div class="section-title">Fine-Art Photography</div>
         <div class="photography-grid">
-            <a href="./galeria.html" class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></a>
-            <a href="./galeria.html" class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></a>
-            <a href="./galeria.html" class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></a>
-            <a href="./galeria.html" class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></a>
+            <a href="./story1.html" class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></a>
+            <a href="./story2.html" class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></a>
+            <a href="./story3.html" class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></a>
+            <a href="./story4.html" class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></a>
         </div>
-        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to view full gallery story ]</p>
+        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
 
         <div class="divider"></div>
 
-        <!-- PILIER 2: INTERIÉROVÝ DIZAJN -->
         <div class="section-title">Interior Architecture</div>
         <div class="portfolio-grid">
             <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3><p>[ View Full Interior Story ]</p></a>
@@ -306,5 +213,15 @@
 
         <div class="divider"></div>
 
-        <!-- PILIER 3: TRADIČNÉ PALIČKOVANIE -->
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <div class="lace-container">
+            <div class="lace-item"><img src="./lace-bobbins.jpg" class="lace-image"></div>
+            <div class="lace-item"><img src="./lace-detail.jpg" class="lace-image"></div>
+        </div>
+    </main>
+
+    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+</body>
+</html>
+ 
