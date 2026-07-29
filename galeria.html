@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
         }
 
         main {
-            max-width: 940px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -63,24 +64,18 @@
             line-height: 1.6;
         }
 
-        /* VISUAL POETRY FLOW */
+        /* VISUAL POETRY FLOW - KAŽDÁ FOTKA SAMOSTATNE POD SEBOU */
         .gallery-story-flow {
             display: flex;
             flex-direction: column;
-            gap: 90px;
+            gap: 80px;
             margin-bottom: 60px;
-        }
-
-        .photo-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
         }
 
         .gallery-item {
             background-color: #FAF6F0;
             border: 1px solid #EAE1D4;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             transition: all 0.3s ease;
         }
@@ -92,29 +87,30 @@
 
         .gallery-image {
             width: 100%;
+            height: auto;
+            max-height: 850px;
+            object-fit: contain;
             border: 1px solid #C6B9A8;
             cursor: zoom-in;
             display: block;
+            margin: 0 auto;
         }
-
-        .img-portrait { height: 650px; object-fit: cover; }
-        .img-landscape { height: 380px; object-fit: cover; }
 
         .gallery-caption {
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #8A766A;
-            margin-top: 15px;
+            margin-top: 20px;
             font-weight: bold;
         }
 
-        /* LUXURY EDITORIAL QUOTE SEPARATORS */
+        /* CURATED SEPARATOR QUOTES */
         .text-separator-box {
             text-align: center;
-            max-width: 650px;
-            margin: 20px auto;
-            padding: 30px 20px;
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 40px 20px;
             background-color: #FAF6F0;
             border-top: 1px solid #EAE1D4;
             border-bottom: 1px solid #EAE1D4;
@@ -124,7 +120,7 @@
             font-size: 1.3rem;
             font-style: italic;
             color: #2B1E17;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .separator-author {
@@ -189,9 +185,7 @@
         }
 
         @media (max-width: 750px) {
-            .photo-row { grid-template-columns: 1fr; gap: 20px; }
-            .img-portrait { height: 480px; }
-            .img-landscape { height: 260px; }
+            .gallery-image { max-height: 550px; }
             header h1 { font-size: 2.2rem; }
             .philosophy-quote, .separator-quote { font-size: 1.15rem; }
         }
@@ -213,19 +207,18 @@
             </div>
         </section>
 
-        <!-- VISUAL NARRATIVE WITH INTEGRATED QUOTES -->
         <div class="gallery-story-flow">
             
-            <!-- BLOCK 1: PORTRAIT & LAVENDER -->
-            <div class="photo-row">
-                <div class="gallery-item">
-                    <img src="./photo-portrait.jpg" class="gallery-image img-portrait" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">I. The Editorial Portrait</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./photo-lavender.jpg" class="gallery-image img-portrait" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">II. Lavender Light Play</div>
-                </div>
+            <!-- FOTKA 1: BÁBÄTKO SO SRDIEČKOM -->
+            <div class="gallery-item">
+                <img src="./fine1.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">I. Precious Slumber</div>
+            </div>
+
+            <!-- FOTKA 2: BÁBÄTKO V ŠEDEJ ČIAPOČKE -->
+            <div class="gallery-item">
+                <img src="./fine2.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">II. Serene Innocence</div>
             </div>
 
             <!-- CURATED SEPARATOR QUOTE 1 (Karl Lagerfeld) -->
@@ -234,16 +227,16 @@
                 <div class="separator-author">— Karl Lagerfeld</div>
             </div>
 
-            <!-- BLOCK 2: RINGS & BABY CONNECTION -->
-            <div class="photo-row">
-                <div class="gallery-item">
-                    <img src="./photo-rings.jpg" class="gallery-image img-landscape" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">III. Tangible Detail</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./photo-baby.jpg" class="gallery-image img-landscape" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">IV. Pure Connection</div>
-                </div>
+            <!-- FOTKA 3: TEHOTNÁ ŽENA S MODRÝM PLÁŠŤOM PRI VODE -->
+            <div class="gallery-item">
+                <img src="./fine3.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">III. Whispers of the River</div>
+            </div>
+
+            <!-- FOTKA 4: MATKA S DCÉROU / TEHOTENSKÁ SÉRIA V PRÍRODE -->
+            <div class="gallery-item">
+                <img src="./fine4.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">IV. Sacred Matrescence</div>
             </div>
 
             <!-- CURATED SEPARATOR QUOTE 2 (Anonymous) -->
@@ -252,8 +245,20 @@
                 <div class="separator-author">— Anonymous</div>
             </div>
 
+            <!-- FOTKA 5: BRAČEK BOZKÁVA BÁBÄTKO -->
+            <div class="gallery-item">
+                <img src="./fine5.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">V. The First Bond</div>
+            </div>
+
+            <!-- FOTKA 6: ŽENA HĽADIACA DO KORÚN STROMOV -->
+            <div class="gallery-item">
+                <img src="./fine6.jpg" class="gallery-image" onclick="openLightbox(this.src)">
+                <div class="gallery-caption">VI. Earthly Harmony</div>
+            </div>
+
             <!-- CURATED SEPARATOR QUOTE 3 (James Thurber) -->
-            <div class="text-separator-box" style="margin-top: -50px; border-top: none;">
+            <div class="text-separator-box">
                 <div class="separator-quote">“Photography is a pause button for life’s laughter.”</div>
                 <div class="separator-author">— James Thurber</div>
             </div>
@@ -282,4 +287,3 @@
     </script>
 </body>
 </html>
- 
