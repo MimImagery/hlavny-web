@@ -294,15 +294,17 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
-    <!-- POISTNÝ OVEROVACÍ SKRIPT PRE POŽADOVANÉ HESLOVANIE -->
+    <!-- POISTNÝ SKRIPT S PRESOVNE UPRAVENÝMI TRASAMI PODĽA SERVERA -->
     <script>
         function secureAccess(client) {
             let key = prompt("Enter your Private Client Access Key:");
             if (key !== null && key !== "") {
                 let cleanKey = key.trim().toLowerCase();
                 if (client === 'paul' && cleanKey === 'paul77') {
+                    // Paul leží v tejto podzložke, ktorú si mi fotila
                     window.location.href = "https://github.io";
                 } else if (client === 'ian' && cleanKey === 'ian77') {
+                    // Ian leží priamo v tejto zložke, ktorú sme overili
                     window.location.href = "https://github.io";
                 } else {
                     alert("Access Denied. Invalid Client Key.");
@@ -313,5 +315,4 @@
 
 </body>
 </html>
-
 
