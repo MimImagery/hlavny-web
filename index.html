@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIMIMAGERY | Boutique Creative Studio</title>
+    <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
         body {
             background-color: #FDFBF7;
@@ -26,6 +26,13 @@
             margin: 0;
             text-transform: uppercase;
             color: #2B1E17;
+            white-space: normal;
+            word-break: keep-all;
+        }
+
+        .brand-name {
+            display: inline-block;
+            white-space: nowrap;
         }
 
         header p {
@@ -37,7 +44,6 @@
             margin-bottom: 40px;
         }
 
-        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -100,7 +106,7 @@
         }
 
         main {
-            max-width: 940px; /* Zarovnanie na stred s lištou */
+            max-width: 940px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -115,7 +121,7 @@
             font-weight: 400;
         }
 
-        /* DOKONALÁ FOTOGRAFICKÁ MRIEŽKA BEZ OREZANIA OBRÁZKOV */
+        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -137,12 +143,23 @@
             border-color: #C6A77A;
         }
 
+        /* Špeciálne prispôsobenie výšok pre dokonalú symetriu riadkov */
         .photo-display {
             width: 100%;
-            height: auto; /* Zrušená pevná výška - zabráni deformácii */
-            object-fit: contain; /* Fotka sa zobrazí celá bez orezania */
             border: 1px solid #C6B9A8;
             display: block;
+        }
+
+        /* Riadok 1 (Fotky na výšku) */
+        .img-portrait {
+            height: 650px;
+            object-fit: cover;
+        }
+
+        /* Riadok 2 (Fotky na šírku) */
+        .img-landscape {
+            height: 380px;
+            object-fit: cover;
         }
 
         /* INTERIÉROVÝ GRID */
@@ -237,16 +254,22 @@
             .photography-grid, .portfolio-grid, .lace-container {
                 grid-template-columns: 1fr;
             }
+            .img-portrait { height: 500px; }
+            .img-landscape { height: 280px; }
             .portfolio-image, .lace-image { height: 320px; }
             .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
+            header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>M I M I M A G E R Y</h1>
+        <h1>
+            <span class="brand-name">M I M</span> 
+            <span class="brand-name">I M A G E R Y</span>
+        </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
         <div class="exclusive-nav">
@@ -261,21 +284,26 @@
 
     <main>
         
-        <!-- PILIER 1: FINE-ART PHOTOGRAPHY -->
+        <!-- PILIER 1: FINE-ART PHOTOGRAPHY (DOKONALÁ STRUKTÚRA PÁROV) -->
         <div class="section-title">Fine-Art Photography</div>
         <div class="photography-grid">
+            
+            <!-- RIADOK 1: FOTKY NA VÝŠKU (TEHOTENSKÉ) -->
             <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-portrait.jpg" alt="Fine Art Editorial Portrait" class="photo-display">
+                <img src="./photo-portrait.jpg" alt="Fine Art Editorial Portrait" class="photo-display img-portrait">
             </a>
             <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-rings.jpg" alt="Editorial Detail" class="photo-display">
+                <img src="./photo-lavender.jpg" alt="Nature Light Play" class="photo-display img-portrait">
+            </a>
+
+            <!-- RIADOK 2: FOTKY NA ŠÍRKU (DETAIL + BÁBÄTKO) -->
+            <a href="./fine-art-photography/" class="photo-card-link">
+                <img src="./photo-rings.jpg" alt="Editorial Detail" class="photo-display img-landscape">
             </a>
             <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-lavender.jpg" alt="Nature Light Play" class="photo-display">
+                <img src="./photo-baby.jpg" alt="Emotional Connection" class="photo-display img-landscape">
             </a>
-            <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-baby.jpg" alt="Emotional Connection" class="photo-display">
-            </a>
+
         </div>
         <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-bottom: 40px;">[ Click any photograph to view full gallery story ]</p>
 
@@ -303,20 +331,4 @@
 
         <div class="divider"></div>
 
-        <!-- PILIER 3: TRADIČNÉ PALIČKOVANIE -->
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="lace-container">
-            <div class="lace-item">
-                <img src="./lace-bobbins.jpg" alt="Traditional Slovak Bobbin Lace Process" class="lace-image">
-                <div class="lace-caption">The Heritage Process</div>
-            </div>
-            <div class="lace-item">
-                <img src="./lace-detail.jpg" alt="Bespoke Woven Ornament Detail" class="lace-image">
-                <div class="lace-caption">The Avant-Garde Ornament</div>
-            </div>
-        </div>
 
-    </main>
-
-    <footer>
-        © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED. <br>
