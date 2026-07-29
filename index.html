@@ -3,215 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIMIMAGERY | Boutique Creative Studio</title>
+    <title>The Marble Atelier Residence | MimImagery</title>
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px 40px 20px;
-            letter-spacing: 6px;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 300;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 0.95rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #6E5A4F;
-            margin-top: 15px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 1px;
-            background-color: #2B1E17;
-            margin: 40px auto;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 60px 0 30px 0;
-            color: #2B1E17;
-        }
-
-        /* Pinterest Style Grid pre tvoje 3 unikátne projekty */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-
-        .portfolio-card {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            color: #2B1E17;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            border-color: #C6B9A8;
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-card h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 10px 0 5px 0;
-            font-weight: 400;
-        }
-
-        .portfolio-card p {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #6E5A4F;
-            margin: 0 0 10px 0;
-        }
-
-        /* Sekcia pre Exkluzívne spolupráce (Chlapci) */
-        .collab-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 800px;
-            margin: 0 auto 80px auto;
-        }
-
-        .collab-button {
-            display: block;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #2B1E17;
-            color: #2B1E17;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            background-color: #2B1E17;
-            color: #FDFBF7;
-        }
-
-        .collab-button.ian {
-            background-color: #3E4A32;
-            border-color: #3E4A32;
-        }
-
-        .collab-button:hover {
-            background-color: transparent;
-            color: #2B1E17;
-        }
-
-        .collab-button.ian:hover {
-            color: #3E4A32;
-        }
-
-        footer {
-            text-align: center;
-            padding: 80px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-            border-top: 1px solid #EAE1D4;
-        }
-
-        @media (max-width: 850px) {
-            .portfolio-grid, .collab-container {
-                grid-template-columns: 1fr;
-            }
-            .portfolio-image {
-                height: 300px;
-            }
-        }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.7; }
+        header { text-align: center; padding: 80px 20px 40px 20px; letter-spacing: 5px; }
+        header h1 { font-size: 2.4rem; font-weight: 300; margin: 0; text-transform: uppercase; }
+        header p { font-size: 0.95rem; letter-spacing: 2px; font-style: italic; color: #6E5A4F; margin-top: 10px; }
+        .divider { width: 80px; height: 1px; background-color: #2B1E17; margin: 30px auto; }
+        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .story-section { text-align: justify; max-width: 800px; margin: 0 auto 50px auto; font-size: 1.05rem; }
+        .story-gallery { display: flex; flex-direction: column; gap: 40px; margin-bottom: 60px; }
+        .gallery-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
+        .gallery-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; border: 1px solid #C6B9A8; margin-bottom: 15px; }
+        .gallery-caption { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #6E5A4F; font-weight: bold; }
+        .back-container { text-align: center; margin-top: 60px; margin-bottom: 40px; }
+        .back-button { display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: all 0.3s ease; }
+        .back-button:hover { background-color: #2B1E17; color: #FDFBF7; }
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>M I M I M A G E R Y</h1>
-        <p>Boutique Creative Studio | Central Europe</p>
+        <h1>The Marble Atelier Residence</h1>
+        <p>A Harmonious Blend of Noble Stone and Soft Geometry</p>
         <div class="divider"></div>
     </header>
-
     <main>
-        <!-- SEKCE 1: INTERIÉROVÝ DIZAJN (MRAMOR JE TERAZ PRVÝ) -->
-        <div class="section-title">Interior Architecture</div>
-        <div class="portfolio-grid">
+        <section class="story-section">
+            <p>This premium urban residence seamlessly integrates rich organic wood paneling with the grand, dramatic veins of curated arabescato marble. The open-concept living zone flows effortlessly from a clean, minimalist kitchen lounge into a warm dining area and a sophisticated media atelier, defining a sophisticated standard of high-end European lifestyle and textured interior balance.</p>
+        </section>
+        <div class="story-gallery">
             
-            <!-- PROJEKT 1: KUCHYŇA, OBÝVAČKA A CHODBA S MRAMOROM (VLAVO NA PRVOM MIESTE) -->
-            <a href="./projekt-atelier/" class="portfolio-card">
-                <img src="./project-marble-atelier.jpg" alt="The Marble Atelier Residence" class="portfolio-image">
-                <h3>I. The Marble Atelier Residence</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
+            <!-- 1. POHĽAD: KUCHYŇA A OBÝVAČKA -->
+            <div class="gallery-item">
+                <img src="../project-marble-atelier.jpg" class="gallery-image">
+                <div class="gallery-caption">I. Open Concept Marble Lounge & Media Atelier</div>
+            </div>
 
-            <!-- PROJEKT 2: LUXUSNÝ HORSKÝ CHALET -->
-            <a href="./projekt-chalet/" class="portfolio-card">
-                <img src="./project-chalet-main.jpg" alt="The Alpine Timber Chalet" class="portfolio-image">
-                <h3>II. The Alpine Timber Chalet</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
+            <!-- 2. POHĽAD: NOVÝ DRUHÝ POHĽAD -->
+            <div class="gallery-item">
+                <img src="../project-marble-02.jpg" class="gallery-image">
+                <div class="gallery-caption">II. Spatial Harmony & Refined Perspectives</div>
+            </div>
 
-            <!-- PROJEKT 3: KROV SO ŽLTOU SEDAČKOU -->
-            <a href="./projekt-pavilion/" class="portfolio-card">
-                <img src="./project-yellow-sofa.jpg" alt="The Amber Accent Pavilion" class="portfolio-image">
-                <h3>III. The Amber Accent Pavilion</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
+            <!-- 3. POHĽAD: NOVÝ TRETÍ POHĽAD -->
+            <div class="gallery-item">
+                <img src="../project-marble-03.jpg" class="gallery-image">
+                <div class="gallery-caption">III. Curated Material Textures & Fine Geometry</div>
+            </div>
 
         </div>
-
-        <div class="divider"></div>
-
-        <!-- SEKCE 2: EXKLUZÍVNE MEDZINÁRODNÉ COOPERÁCIE -->
-        <div class="section-title">Exclusive Collaborations</div>
-        <div class="collab-container">
-            <a href="./Paul/" class="collab-button">Paul Wesley — The Trotuár Promenade</a>
-            <a href="./Ian/" class="collab-button ian">Ian Somerhalder — Kiss The Ground</a>
+        <div class="back-container">
+            <a href="../" class="back-button">[ Back to Atelier Portfolio ]</a>
         </div>
     </main>
-
-    <footer>
-        © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED. <br>
-        ARCHITECTURE — PHOTOGRAPHY — SUSTAINABLE DESIGN.
-    </footer>
-
+    <footer>© 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
