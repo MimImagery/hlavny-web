@@ -44,7 +44,7 @@
             margin-bottom: 40px;
         }
 
-        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA */
+        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -66,51 +66,28 @@
             font-weight: bold;
         }
 
-        /* Čistá forma formulára s priamou absolútnou adresou */
-        .nav-links-form {
+        .nav-links {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            border: none;
+            gap: 40px;
         }
 
-        .access-input {
-            font-family: 'Didot', serif;
-            padding: 8px 15px;
-            border: 1px solid #EAE1D4;
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-align: center;
-            width: 220px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .access-input:focus {
-            border-color: #C6A77A;
-        }
-
-        .access-btn {
-            font-family: 'Didot', serif;
-            padding: 8px 20px;
-            border: 1px solid #2B1E17;
-            background-color: #2B1E17;
-            color: #FDFBF7;
-            font-size: 0.85rem;
+        /* Čisté priame klientske preklikové linky */
+        .nav-button-client {
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            letter-spacing: 3px;
+            color: #2B1E17;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Didot', serif;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
         }
 
-        .access-btn:hover {
-            background-color: transparent;
-            color: #2B1E17;
+        .nav-button-client:hover {
+            color: #C6A77A;
         }
 
         .nav-icon {
@@ -118,7 +95,6 @@
             height: auto;
             opacity: 0.85;
             display: inline-block;
-            margin: 0 20px;
         }
 
         .divider {
@@ -260,10 +236,9 @@
             .img-portrait { height: 500px; }
             .img-landscape { height: 280px; }
             .portfolio-image, .lace-image { height: 320px; }
-            .nav-links-form { flex-direction: column; gap: 15px; }
+            .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
             header h1 { font-size: 2.2rem; }
-            .access-input { width: 100%; }
         }
     </style>
 </head>
@@ -276,14 +251,14 @@
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
+        <!-- PRIAME, NA MILIMETER PRESNÉ PREPOJENIE NA EXISTUJÚCE PRIEČINKY -->
         <div class="exclusive-nav">
-            <div class="nav-title">[ Secure Private Client Portal ]</div>
-            <!-- ABSOLÚTNA TRASA KTORÁ ZABRÁNI AKÉMUKOĽVEK ZLIATIU ADRESY -->
-            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v) { window.location.href = 'https://github.io' + v + '.html'; } return false;">
-                <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
+            <div class="nav-title">[ Secure Private Client Portals ]</div>
+            <div class="nav-links">
+                <a href="./Paul/paul77/index.html" class="nav-button-client">Paul Wesley</a>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
-                <button type="submit" class="access-btn">Open Portal</button>
-            </form>
+                <a href="./ian77/index.html" class="nav-button-client">Ian Somerhalder</a>
+            </div>
         </div>
     </header>
 
