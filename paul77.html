@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trotuár Promenade | MIM IMAGERY</title>
+    <style>
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
+        header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; }
+        header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
+        .divider { width: 60px; height: 1px; background-color: #C6A77A; margin: 30px auto; }
+        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .story-section { text-align: justify; max-width: 800px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
+        .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
+        .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #8A766A; font-weight: bold; }
+        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #C6B9A8; cursor: zoom-in; }
+        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
+        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
+        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
+        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
+        @media (max-width: 750px) { .collection-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>M I M &nbsp; I M A G E R Y</h1>
+        <p>The Trotuár Promenade Collection — Specially Crafted for Paul Wesley</p>
+        <div class="divider"></div>
+    </header>
+    <main>
+        <section class="story-section">
+            <p>[ Private Client Zone ] – This limited capsule represents the structural harmony of high-end tailoring and traditional Slovak lace detail, built exclusively for personal evaluation.</p>
+        </section>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">[ Men's Tech Pack ]</div>
+                <img src="./Paul/paul77/paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tech Pack ]</div>
+                <img src="./Paul/paul77/women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+        <div class="back-container"><a href="./" class="back-button">[ Back to Atelier Home ]</a></div>
+    </main>
+    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
+    <script>
+        function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
+        function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+    </script>
+</body>
+</html>
