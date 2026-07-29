@@ -44,6 +44,7 @@
             margin-bottom: 40px;
         }
 
+        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -139,6 +140,7 @@
             font-weight: 400;
         }
 
+        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -169,6 +171,7 @@
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
 
+        /* INTERIÉROVÝ GRID */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -215,6 +218,7 @@
             margin: 0 0 10px 0;
         }
 
+        /* PALIČKOVANIE */
         .lace-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -312,12 +316,10 @@
 
     <script>
         function checkAccess() {
-            let input = document.getElementById('clientKey').value;
-            if (input !== null && input !== "") {
-                let cleanKey = input.trim().toLowerCase();
-                if (cleanKey === 'paul77') {
-                    window.location.href = "https://github.io";
-                } else if (cleanKey === 'ian77') {
-                    window.location.href = "https://github.io";
-                } else {
-
+            // STOPPERCENTNE OPRAVENÝ PRÍKAZ BEZ CHÝB
+            let inputField = document.getElementById('clientKey');
+            if (inputField) {
+                let input = inputField.value;
+                if (input !== null && input !== "") {
+                    let cleanKey = input.trim().toLowerCase();
+                    if (cleanKey === 'paul77') {
