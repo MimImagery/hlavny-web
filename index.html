@@ -44,7 +44,6 @@
             margin-bottom: 40px;
         }
 
-        /* PERFEKTNE SÚOSÁ CLIENT LIŠTA */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -140,7 +139,6 @@
             font-weight: 400;
         }
 
-        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -171,7 +169,6 @@
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
 
-        /* INTERIÉROVÝ GRID */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -218,7 +215,6 @@
             margin: 0 0 10px 0;
         }
 
-        /* PALIČKOVANIE */
         .lace-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -258,6 +254,7 @@
             .portfolio-image, .lace-image { height: 320px; }
             .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
+            header h1 { font-size: 2.2rem; }
             .access-input { width: 100%; }
         }
     </style>
@@ -271,7 +268,6 @@
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- PRIVÁTNY FORMULÁR -->
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
             <div class="nav-links">
@@ -314,14 +310,14 @@
 
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 
-    <!-- SAMOOPRAVNÝ KLIENTSKÝ SKRIPT - SKÚŠA VŠETKY MOŽNÉ ADRESY ZA SEBOU -->
     <script>
         function checkAccess() {
             let input = document.getElementById('clientKey').value;
             if (input !== null && input !== "") {
                 let cleanKey = input.trim().toLowerCase();
-                
                 if (cleanKey === 'paul77') {
-                    // Test č. 1: Skúsi priamy odkaz s malými písmenami
-
+                    window.location.href = "https://github.io";
+                } else if (cleanKey === 'ian77') {
+                    window.location.href = "https://github.io";
+                } else {
 
