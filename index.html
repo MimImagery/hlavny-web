@@ -44,7 +44,7 @@
             margin-bottom: 40px;
         }
 
-        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
+        /* UZAMKNUTÁ CLIENT LIŠTA */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -140,7 +140,7 @@
             font-weight: 400;
         }
 
-        /* SYMETRICKÁ STRUKTÚRA FOTOGALÉRIE */
+        /* FOTOGALÉRIA */
         .photography-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -203,21 +203,6 @@
             margin-bottom: 18px;
         }
 
-        .portfolio-card h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 10px 0 5px 0;
-            font-weight: 400;
-        }
-
-        .portfolio-card p {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #8A766A;
-            margin: 0 0 10px 0;
-        }
-
         /* PALIČKOVANIE */
         .lace-container {
             display: grid;
@@ -242,14 +227,6 @@
             margin-bottom: 18px;
         }
 
-        .lace-caption {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #8A766A;
-            font-weight: bold;
-        }
-
         footer {
             text-align: center;
             padding: 80px 20px;
@@ -260,15 +237,12 @@
         }
 
         @media (max-width: 850px) {
-            .photography-grid, .portfolio-grid, .lace-container {
-                grid-template-columns: 1fr;
-            }
+            .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; }
             .img-portrait { height: 500px; }
             .img-landscape { height: 280px; }
             .portfolio-image, .lace-image { height: 320px; }
             .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
-            header h1 { font-size: 2.2rem; }
             .access-input { width: 100%; }
         }
     </style>
@@ -278,11 +252,11 @@
     <header>
         <h1>
             <span class="brand-name">M I M</span> 
-            <span class="brand-name">I M A G E R Y</span>
+            <span class="brand-name">I M A G E RY</span>
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- PRIVÁTNY FORMULÁR -->
+        <!-- BEZPEČNÝ FORMULÁR BEZ VEREJNÝCH ODKAZOV -->
         <div class="exclusive-nav">
             <div class="nav-title">[ Secure Private Client Portal ]</div>
             <div class="nav-links">
@@ -294,41 +268,54 @@
     </header>
 
     <main>
-        
-        <!-- PILIER 1: FINE-ART PHOTOGRAPHY -->
+        <!-- Fine-Art Photography -->
         <div class="section-title">Fine-Art Photography</div>
         <div class="photography-grid">
-            <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-portrait.jpg" alt="Fine Art Editorial Portrait" class="photo-display img-portrait">
-            </a>
-            <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-lavender.jpg" alt="Nature Light Play" class="photo-display img-portrait">
-            </a>
-            <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-rings.jpg" alt="Editorial Detail" class="photo-display img-landscape">
-            </a>
-            <a href="./fine-art-photography/" class="photo-card-link">
-                <img src="./photo-baby.jpg" alt="Emotional Connection" class="photo-display img-landscape">
-            </a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-portrait.jpg" class="photo-display img-portrait"></a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-lavender.jpg" class="photo-display img-portrait"></a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-rings.jpg" class="photo-display img-landscape"></a>
+            <a href="./fine-art-photography/" class="photo-card-link"><img src="./photo-baby.jpg" class="photo-display img-landscape"></a>
         </div>
-        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-bottom: 40px;">[ Click any photograph to view full gallery story ]</p>
 
         <div class="divider"></div>
 
-        <!-- PILIER 2: INTERIÉROVÝ DIZAJN -->
+        <!-- Interior Architecture -->
         <div class="section-title">Interior Architecture</div>
         <div class="portfolio-grid">
-            <a href="./projekt-atelier/" class="portfolio-card">
-                <img src="./project-marble-atelier.jpg" alt="The Marble Atelier Residence" class="portfolio-image">
-                <h3>I. The Marble Atelier Residence</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
-            <a href="./projekt-chalet/" class="portfolio-card">
-                <img src="./project-chalet-main.jpg" alt="The Alpine Timber Chalet" class="portfolio-image">
-                <h3>II. The Alpine Timber Chalet</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
-            <a href="./projekt-pavilion/" class="portfolio-card">
+            <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3></a>
+            <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3></a>
+            <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3></a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Traditional Craft -->
+        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <div class="lace-container">
+            <div class="lace-item"><img src="./lace-bobbins.jpg" class="lace-image"></div>
+            <div class="lace-item"><img src="./lace-detail.jpg" class="lace-image"></div>
+        </div>
+    </main>
+
+    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+    <script>
+        function checkAccess() {
+            let input = document.getElementById('clientKey').value;
+            if (input !== null && input !== "") {
+                let cleanKey = input.trim().toLowerCase();
+                if (cleanKey === 'paul77') {
+                    window.location.href = "https://github.io";
+                } else if (cleanKey === 'ian77') {
+                    window.location.href = "https://github.io";
+                } else {
+                    alert("Access Denied. Invalid Client Key.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
 
 
 
