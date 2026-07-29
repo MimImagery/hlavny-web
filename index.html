@@ -3,60 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Marble Atelier Residence | MimImagery</title>
+    <title>MIMIMAGERY | Boutique Creative Studio</title>
     <style>
-        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.7; }
-        header { text-align: center; padding: 80px 20px 40px 20px; letter-spacing: 5px; }
-        header h1 { font-size: 2.4rem; font-weight: 300; margin: 0; text-transform: uppercase; }
-        header p { font-size: 0.95rem; letter-spacing: 2px; font-style: italic; color: #6E5A4F; margin-top: 10px; }
-        .divider { width: 80px; height: 1px; background-color: #2B1E17; margin: 30px auto; }
-        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .story-section { text-align: justify; max-width: 800px; margin: 0 auto 50px auto; font-size: 1.05rem; }
-        .story-gallery { display: flex; flex-direction: column; gap: 40px; margin-bottom: 60px; }
-        .gallery-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
-        .gallery-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; border: 1px solid #C6B9A8; margin-bottom: 15px; }
-        .gallery-caption { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #6E5A4F; font-weight: bold; }
-        .back-container { text-align: center; margin-top: 60px; margin-bottom: 40px; }
-        .back-button { display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: all 0.3s ease; }
-        .back-button:hover { background-color: #2B1E17; color: #FDFBF7; }
-        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
+        body {
+            background-color: #FDFBF7;
+            color: #2B1E17;
+            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px 20px;
+            letter-spacing: 6px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #6E5A4F;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Luxusné horné menu pre chlapcov */
+        .exclusive-nav {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            border-top: 1px solid #EAE1D4;
+            border-bottom: 1px solid #EAE1D4;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .nav-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #8A766A;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2B1E17;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-link.ian { color: #3E4A32; } /* Jemný olivový akcent pre Iana */
+
+        .nav-link:hover { color: #6E5A4F; }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background-color: #2B1E17;
+            margin: 40px auto;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 60px 0 30px 0;
+            color: #2B1E17;
+        }
+
+        /* 1. PILIER: FINE-ART PHOTOGRAPHY (Mriežka v štýle Pinterestu) */
+        .photography-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .photo-item {
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
+            padding: 15px;
+        }
+
+        .photo-display {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border: 1px solid #C6B9A8;
+        }
+
+        /* 2. PILIER: INTERIÉROVÝ DIZAJN */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-card {
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #2B1E17;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: #C6B9A8;
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid #C6B9A8;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 10px 0 5px 0;
+            font-weight: 400;
+        }
+
+        .portfolio-card p {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #6E5A4F;
+            margin: 0 0 10px 0;
+        }
+
+        /* 3. PILIER: PALIČKOVANÁ ČIPKA */
+        .lace-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+        }
+
+        .lace-item {
+            background-color: #FAF6F0;
+            border: 1px solid #EAE1D4;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .lace-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid #C6B9A8;
+            margin-bottom: 15px;
+        }
+
+        .lace-caption {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6E5A4F;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #8A766A;
+            border-top: 1px solid #EAE1D4;
+        }
+
+        @media (max-width: 850px) {
+            .photography-grid, .portfolio-grid, .lace-container {
+                grid-template-columns: 1fr;
+            }
+            .photo-display { height: 350px; }
+            .portfolio-image { height: 300px; }
+            .lace-image { height: 300px; }
+            .nav-links { gap: 20px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>The Marble Atelier Residence</h1>
-        <p>A Harmonious Blend of Noble Stone and Soft Geometry</p>
-        <div class="divider"></div>
+        <h1>M I M I M A G E R Y</h1>
+        <p>Boutique Creative Studio | Central Europe</p>
+
+        <!-- PRIVÁTNA LIŠTA PRE CHLAPCOV UPROSTRED HLAVIČKY -->
+        <div class="exclusive-nav">
+            <div class="nav-title">[ Exclusive Client Portals ]</div>
+            <div class="nav-links">
+                <a href="./Paul/" class="nav-link">Paul Wesley Portal</a>
+                <a href="./Ian/" class="nav-link ian">Ian Somerhalder Portal</a>
+            </div>
+        </div>
     </header>
+
     <main>
-        <section class="story-section">
-            <p>This premium urban residence seamlessly integrates rich organic wood paneling with the grand, dramatic veins of curated arabescato marble. The open-concept living zone flows effortlessly from a clean, minimalist kitchen lounge into a warm dining area and a sophisticated media atelier, defining a sophisticated standard of high-end European lifestyle and textured interior balance.</p>
-        </section>
-        <div class="story-gallery">
-            
-            <!-- 1. POHĽAD: KUCHYŇA A OBÝVAČKA -->
-            <div class="gallery-item">
-                <img src="../project-marble-atelier.jpg" class="gallery-image">
-                <div class="gallery-caption">I. Open Concept Marble Lounge & Media Atelier</div>
+        
+        <!-- PILIER 1: FINE-ART PHOTOGRAPHY -->
+        <div class="section-title">Fine-Art Photography</div>
+        <div class="photography-grid">
+            <div class="photo-item">
+                <img src="./photo-portrait.jpg" alt="Fine Art Editorial Portrait" class="photo-display">
             </div>
-
-            <!-- 2. POHĽAD: NOVÝ DRUHÝ POHĽAD -->
-            <div class="gallery-item">
-                <img src="../project-marble-02.jpg" class="gallery-image">
-                <div class="gallery-caption">II. Spatial Harmony & Refined Perspectives</div>
+            <div class="photo-item">
+                <img src="./photo-rings.jpg" alt="Editorial Detail" class="photo-display">
             </div>
-
-            <!-- 3. POHĽAD: NOVÝ TRETÍ POHĽAD -->
-            <div class="gallery-item">
-                <img src="../project-marble-03.jpg" class="gallery-image">
-                <div class="gallery-caption">III. Curated Material Textures & Fine Geometry</div>
+            <div class="photo-item">
+                <img src="./photo-lavender.jpg" alt="Nature Light Play" class="photo-display">
             </div>
-
+            <div class="photo-item">
+                <img src="./photo-baby.jpg" alt="Emotional Connection" class="photo-display">
+            </div>
         </div>
-        <div class="back-container">
-            <a href="../" class="back-button">[ Back to Atelier Portfolio ]</a>
+
+        <div class="divider"></div>
+
+        <!-- PILIER 2: INTERIÉROVÝ DIZAJN -->
+        <div class="section-title">Interior Architecture</div>
+        <div class="portfolio-grid">
+            <a href="./projekt-atelier/" class="portfolio-card">
+                <img src="./project-marble-atelier.jpg" alt="The Marble Atelier Residence" class="portfolio-image">
+                <h3>I. The Marble Atelier Residence</h3>
+                <p>[ View Full Interior Story ]</p>
+            </a>
+            <a href="./projekt-chalet/" class="portfolio-card">
+                <img src="./project-chalet-main.jpg" alt="The Alpine Timber Chalet" class="portfolio-image">
+                <h3>II. The Alpine Timber Chalet</h3>
+                <p>[ View Full Interior Story ]</p>
+            </a>
+            <a href="./projekt-pavilion/" class="portfolio-card">
+                <img src="./project-yellow-sofa.jpg" alt="The Amber Accent Pavilion" class="portfolio-image">
+                <h3>III. The Amber Accent Pavilion</h3>
+                <p>[ View Full Interior Story ]</p>
+            </a>
         </div>
+
+        <div class="divider"></div>
+
+        <!-- PILIER 3: TRADIČNÉ PALIČKOVANIE -->
+        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <div class="lace-container">
+            <div class="lace-item">
+                <img src="./lace-bobbins.jpg" alt="Traditional Slovak Bobbin Lace Process" class="lace-image">
+                <div class="lace-caption">The Heritage Process</div>
+            </div>
+            <div class="lace-item">
+                <img src="./lace-detail.jpg" alt="Bespoke Woven Ornament Detail" class="lace-image">
+                <div class="lace-caption">The Avant-Garde Ornament</div>
+            </div>
+        </div>
+
     </main>
-    <footer>© 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+    <footer>
+        © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED. <br>
+        PHOTOGRAPHY — ARCHITECTURE — TRADITIONAL CRAFT.
+    </footer>
+
 </body>
 </html>
