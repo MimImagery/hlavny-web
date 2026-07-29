@@ -44,7 +44,7 @@
             margin-bottom: 40px;
         }
 
-        /* LIŠTA S DĹŽKOU DOKONALE ZAROVNANOU S FOTKAMI (900px) */
+        /* UZAMKNUTÁ CLIENT LIŠTA */
         .exclusive-nav {
             max-width: 900px;
             margin: 0 auto;
@@ -70,24 +70,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 20px;
         }
 
-        /* Čisté, priame prepojenie na ich tajné portály */
-        .nav-button-client {
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #2B1E17;
-            font-weight: bold;
-            text-decoration: none;
+        /* Elegantné vstupné textové pole priamo v lište */
+        .access-input {
             font-family: 'Didot', serif;
-            padding: 5px 10px;
-            transition: color 0.3s ease;
+            padding: 8px 15px;
+            border: 1px solid #EAE1D4;
+            background-color: #FDFBF7;
+            color: #2B1E17;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-align: center;
+            width: 220px;
+            outline: none;
+            transition: border-color 0.3s;
         }
 
-        .nav-button-client:hover {
-            color: #C6A77A;
+        .access-input:focus {
+            border-color: #C6A77A;
+        }
+
+        .access-btn {
+            font-family: 'Didot', serif;
+            padding: 8px 20px;
+            border: 1px solid #2B1E17;
+            background-color: #2B1E17;
+            color: #FDFBF7;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .access-btn:hover {
+            background-color: transparent;
+            color: #2B1E17;
         }
 
         .nav-icon {
@@ -95,6 +115,7 @@
             height: auto;
             opacity: 0.85;
             display: inline-block;
+            margin: 0 20px;
         }
 
         .divider {
@@ -249,6 +270,7 @@
             .nav-links { gap: 15px; flex-direction: column; align-items: center; }
             .exclusive-nav { max-width: 100%; }
             header h1 { font-size: 2.2rem; }
+            .access-input { width: 100%; }
         }
     </style>
 </head>
@@ -261,13 +283,13 @@
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
-        <!-- BEZPEČNÁ LIŠTA S PRIAMYMI KLIKACÍMI LINKAMI -->
+        <!-- NOVÝ INTERNETOVÝ FORMULÁR – ŽIADNE SKRYTÉ ODKAZY V KÓDE -->
         <div class="exclusive-nav">
-            <div class="nav-title">[ Secure Private Client Portals ]</div>
+            <div class="nav-title">[ Secure Private Client Portal ]</div>
             <div class="nav-links">
-                <a href="./paul77/" class="nav-button-client">Paul Wesley</a>
+                <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY...">
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
-                <a href="./ian77/" class="nav-button-client">Ian Somerhalder</a>
+                <button class="access-btn" onclick="checkAccess()">Open Portal</button>
             </div>
         </div>
     </header>
@@ -307,18 +329,5 @@
                 <h3>II. The Alpine Timber Chalet</h3>
                 <p>[ View Full Interior Story ]</p>
             </a>
-            <a href="./projekt-pavilion/" class="portfolio-card">
-                <img src="./project-yellow-sofa.jpg" alt="The Amber Accent Pavilion" class="portfolio-image">
-                <h3>III. The Amber Accent Pavilion</h3>
-                <p>[ View Full Interior Story ]</p>
-            </a>
-        </div>
 
-        <div class="divider"></div>
-
-        <!-- PILIER 3: TRADIČNÉ PALIČKOVANIE -->
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="lace-container">
-            <div class="lace-item">
-                <img src="./lace-bobbins.jpg" alt="Traditional Slovak Bobbin Lace Process" class="lace-image">
 
