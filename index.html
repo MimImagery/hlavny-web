@@ -73,14 +73,20 @@
             gap: 40px;
         }
 
-        /* Čistý, elegantný klientsky text bez otravného zasekávacieho klikania */
-        .nav-client-name {
+        /* Aktívne priame klikacie odkazy do tajných zložiek */
+        .nav-link-client {
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             color: #2B1E17;
             font-weight: bold;
+            text-decoration: none;
             padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link-client:hover {
+            color: #C6A77A;
         }
 
         .nav-icon {
@@ -254,12 +260,13 @@
         </h1>
         <p>Boutique Creative Studio | Central Europe</p>
 
+        <!-- PRIAME PREKLIKY DO TAJNÝCH SEKCIÍ NA JEDNO KLIKNUTIE -->
         <div class="exclusive-nav">
-            <div class="nav-title">[ Premium Private Client List ]</div>
+            <div class="nav-title">[ Secure Private Client Portals ]</div>
             <div class="nav-links">
-                <div class="nav-client-name">Paul Wesley</div>
+                <a href="./paul77/" class="nav-link-client">Paul Wesley</a>
                 <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
-                <div class="nav-client-name">Ian Somerhalder</div>
+                <a href="./ian77/" class="nav-link-client">Ian Somerhalder</a>
             </div>
         </div>
     </header>
@@ -313,8 +320,5 @@
         <div class="lace-container">
             <div class="lace-item">
                 <img src="./lace-bobbins.jpg" alt="Traditional Slovak Bobbin Lace Process" class="lace-image">
-                <div class="lace-caption">The Heritage Process</div>
-            </div>
-            <div class="lace-item">
-                <img src="./lace-detail.jpg" alt="Bespoke Woven Ornament Detail" class="lace-image">
+
 
