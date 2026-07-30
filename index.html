@@ -36,8 +36,8 @@
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
         
-        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
-        .inspiration-grid { display: grid; grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 60px auto; }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .inspiration-grid { display: grid; grid-template-columns: 1fr; max-width: 450px; margin: 0 auto 60px auto; }
         
         .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; cursor: pointer; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: #C6A77A; }
@@ -56,10 +56,17 @@
         .main-contact-details a { color: #2B1E17; text-decoration: none; border-bottom: 1px solid #C6A77A; padding-bottom: 2px; }
         footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
         
-        .main-lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
-        .main-lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
+        /* MULTI-GALLERY LIGHTBOX S NAVIGÁCIOU */
+        .main-lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.97); align-items: center; justify-content: center; }
+        .main-lightbox img { max-width: 90%; max-height: 85%; object-fit: contain; border: 1px solid #C6A77A; }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: #FDFBF7; font-size: 2rem; cursor: pointer; font-family: monospace; }
+        .lightbox-btn { position: absolute; top: 50%; transform: translateY(-50%); color: #FDFBF7; font-size: 3rem; background: none; border: none; cursor: pointer; user-select: none; font-family: serif; padding: 0 20px; transition: color 0.3s; }
+        .lightbox-btn:hover { color: #C6A77A; }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        .lightbox-counter { position: absolute; bottom: 30px; color: #8A766A; font-family: 'Didot', serif; letter-spacing: 2px; font-size: 0.9rem; }
         
-        @media (max-width: 850px) { .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; } .img-portrait { height: 500px; } .img-landscape { height: 280px; } .portfolio-image, .lace-image { height: 320px; } .nav-links-form { flex-direction: column; gap: 15px; } .exclusive-nav { max-width: 100%; } header h1 { font-size: 2.2rem; } .access-input { width: 100%; } }
+        @media (max-width: 850px) { .portfolio-grid { grid-template-columns: 1fr; } .photography-grid, .lace-container { grid-template-columns: 1fr; } .img-portrait { height: 500px; } .img-landscape { height: 280px; } .portfolio-image, .lace-image { height: 320px; } .nav-links-form { flex-direction: column; gap: 15px; } .exclusive-nav { max-width: 100%; } header h1 { font-size: 2.2rem; } .access-input { width: 100%; } .lightbox-btn { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -87,31 +94,16 @@
         <div class="divider"></div>
         
         <div class="section-title">Interior Architecture</div>
+        
+        <!-- BLOK 1: PÔVODNÉ TRI PROJEKTY -->
         <div class="portfolio-grid">
             <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
-        
-        <div class="section-title">Studio Moodboards & Inspiration</div>
-        <div class="inspiration-grid">
-            <div class="portfolio-card" onclick="openMainLightbox('project-eucalyptus.jpg')">
-                <img src="project-eucalyptus.jpg" class="portfolio-image">
-                <h3>The Interior Inspiration Concept</h3>
-                <p>[ View Material Story ]</p>
-            </div>
-        </div>
-        
-        <div class="divider"></div>
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="lace-container">
-            <div class="lace-item"><img src="lace1.jpg" class="lace-image"></div>
-            <div class="lace-item"><img src="lace2.jpg" class="lace-image"></div>
-        </div>
-        
-        <div class="main-contact-zone">
-            <div class="main-contact-title">[ Commissions & General Inquiries ]</div>
-            <div class="main-contact-p">Available for exclusive international photography assignments, bespoke interior styling, and heritage design collaborations across Europe.</div>
-            <div class="main-contact-details">
-                <a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276
 
+        <!-- BLOK 2: KAPITOLY V, VI, VII S INTEGROVANÝMI SKRYTÝMI GALÉRIAMI -->
+        <div class="portfolio-grid">
+            <div class="portfolio-card" onclick="openGallery(['project-blue-onyx.jpg', 'project-blue-onyx-1.jpg', 'project-blue-onyx-2.jpg'])">
+                <img src="project-blue-onyx.jpg" class="portfolio-image">
+                <h3>V. The Deep Onyx Wellness</h3>
