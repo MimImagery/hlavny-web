@@ -36,7 +36,7 @@
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
         .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 60px; }
-        .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; }
+        .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; cursor: pointer; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: #C6A77A; }
         .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
         .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
@@ -44,15 +44,17 @@
         .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 60px auto; }
         .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .lace-image { width: 100%; height: 450px; object-fit: cover; border: 1px solid #C6B9A8; }
-        
-        /* ATELIÉROVÝ VEREJNÝ KONTAKT */
         .main-contact-zone { text-align: center; font-family: 'Didot', serif; margin: 80px auto 40px auto; max-width: 650px; }
         .main-contact-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px; color: #C6A77A; margin-bottom: 15px; font-weight: bold; }
         .main-contact-p { font-size: 1rem; font-style: italic; color: #8A766A; line-height: 1.8; margin-bottom: 25px; }
         .main-contact-details { font-size: 1.05rem; letter-spacing: 1px; color: #2B1E17; }
         .main-contact-details a { color: #2B1E17; text-decoration: none; border-bottom: 1px solid #C6A77A; padding-bottom: 2px; }
-        
         footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
+        
+        /* LIGHTBOX PRE HLAVNÝ WEB */
+        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
+        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
+        
         @media (max-width: 850px) { .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; } .img-portrait { height: 500px; } .img-landscape { height: 280px; } .portfolio-image, .lace-image { height: 320px; } .nav-links-form { flex-direction: column; gap: 15px; } .exclusive-nav { max-width: 100%; } header h1 { font-size: 2.2rem; } .access-input { width: 100%; } }
     </style>
 </head>
@@ -83,7 +85,13 @@
         <div class="portfolio-grid">
             <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3><p>[ View Full Interior Story ]</p></a>
+            
+            <!-- KLIKACIE TLAČIDLO PRE TVOJU NOVÚ PINTEREST INŠPIRÁCIU -->
+            <div class="portfolio-card" onclick="openLightbox('./project-eucalyptus.jpg')">
+                <img src="./project-eucalyptus.jpg" class="portfolio-image">
+                <h3>III. The Interior Inspiration Concept</h3>
+                <p>[ View Material Story ]</p>
+            </div>
         </div>
         <div class="divider"></div>
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
@@ -91,8 +99,6 @@
             <div class="lace-item"><img src="lace1.jpg" class="lace-image"></div>
             <div class="lace-item"><img src="lace2.jpg" class="lace-image"></div>
         </div>
-
-        <!-- NOVÁ VEREJNÁ KONTAKTNÁ ZÓNA PRE KLIENTOV -->
         <div class="main-contact-zone">
             <div class="main-contact-title">[ Commissions & General Inquiries ]</div>
             <div class="main-contact-p">Available for exclusive international photography assignments, bespoke interior styling, and heritage design collaborations across Europe.</div>
@@ -102,7 +108,9 @@
         </div>
     </main>
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
-</body>
-</html>
-
+    
+    <!-- LIGHTBOX STRUKTÚRA PRE ROZBALENIE -->
+    <div id="mainLightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
+    
+    <script>
 
