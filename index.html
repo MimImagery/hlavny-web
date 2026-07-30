@@ -48,6 +48,7 @@
         .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 60px auto; }
         .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .lace-image { width: 100%; height: 450px; object-fit: cover; border: 1px solid #C6B9A8; }
+        
         .main-contact-zone { text-align: center; font-family: 'Didot', serif; margin: 80px auto 40px auto; max-width: 650px; }
         .main-contact-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px; color: #C6A77A; margin-bottom: 15px; font-weight: bold; }
         .main-contact-p { font-size: 1rem; font-style: italic; color: #8A766A; line-height: 1.8; margin-bottom: 25px; }
@@ -55,6 +56,7 @@
         .main-contact-details a { color: #2B1E17; text-decoration: none; border-bottom: 1px solid #C6A77A; padding-bottom: 2px; }
         footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
         
+        /* LIGHTBOX PRE HLAVNÝ WEB */
         .main-lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
         .main-lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
         
@@ -94,11 +96,10 @@
         
         <div class="section-title">Studio Moodboards & Inspiration</div>
         <div class="inspiration-grid">
-            <!-- PRÍSNE ČISTÝ ZÁPIS BEZ NÁHRADNÝCH FOTIEK -->
-            <div class="portfolio-card" onclick="openMainLightbox('https://github.io')">
-                <img src="https://github.io" class="portfolio-image">
+            <div class="portfolio-card" onclick="openMainLightbox('project-eucalyptus.jpg')">
+                <img src="project-eucalyptus.jpg" class="portfolio-image">
                 <h3>The Interior Inspiration Concept</h3>
-                <p>[ Material Story Design ]</p>
+                <p>[ View Material Story ]</p>
             </div>
         </div>
         
@@ -108,7 +109,10 @@
             <div class="lace-item"><img src="lace1.jpg" class="lace-image"></div>
             <div class="lace-item"><img src="lace2.jpg" class="lace-image"></div>
         </div>
+        
         <div class="main-contact-zone">
             <div class="main-contact-title">[ Commissions & General Inquiries ]</div>
             <div class="main-contact-p">Available for exclusive international photography assignments, bespoke interior styling, and heritage design collaborations across Europe.</div>
+            <div class="main-contact-details">
+
 
