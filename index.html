@@ -19,7 +19,8 @@
         .section-title { font-size: 1.4rem; text-transform: uppercase; letter-spacing: 4px; margin: 50px 0 30px 0; color: #C6A77A; font-weight: 400; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; }
-        .card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 15px; text-decoration: none; color: #2B1E17; display: block; }
+        .card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 15px; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border-color: #C6A77A; }
         .card img { width: 100%; height: 380px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 15px; }
         .card h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin: 5px 0; font-weight: 400; }
         .card p { font-size: 0.8rem; font-style: italic; color: #8A766A; margin: 0; }
@@ -53,22 +54,26 @@
         <div class="divider"></div>
         
         <div class="section-title">Interior Architecture</div>
+        <!-- PÔVODNÉ TRI PROJEKTY: I, II, III -->
         <div class="grid-3">
             <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>I. The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>II. The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>III. The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
+        <!-- NOVÉ PROJEKTY: IV, V, VI -->
         <div class="grid-3">
             <a href="story5.html" class="card"><img src="project-blue-onyx.jpg"><h3>IV. The Deep Onyx Wellness</h3><p>[ View Full Interior Story ]</p></a>
             <a href="story6.html" class="card"><img src="project-warm-cedar.jpg"><h3>V. The Warm Cedar Retreat</h3><p>[ View Full Interior Story ]</p></a>
             <a href="story7.html" class="card"><img src="project-emerald-forest.jpg"><h3>VI. The Emerald Oasis</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
+        <!-- REALIZÁCIA KUCHYNE: VII -->
         <div class="portfolio-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 40px auto;">
             <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>VII. The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
+        <!-- STUDIO MOODBOARD / EUKALYPTUS: VIII -->
         <div class="section-title">Studio Moodboards & Inspiration</div>
         <div style="max-width: 400px; margin: 0 auto 60px auto;">
             <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>VIII. The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
