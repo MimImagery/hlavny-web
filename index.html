@@ -35,12 +35,18 @@
         .photo-display { width: 100%; border: 1px solid #C6B9A8; display: block; }
         .img-portrait { height: 650px; object-fit: cover; }
         .img-landscape { height: 380px; object-fit: cover; }
-        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        
+        /* ŠPECIFICKÁ MRIEŽKA PRE INŠPIRÁCIE */
+        .inspiration-grid { display: grid; grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 60px auto; }
+        
         .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; cursor: pointer; }
         .portfolio-card:hover { transform: translateY(-5px); border-color: #C6A77A; }
         .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
         .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
         .portfolio-card p { font-size: 0.85rem; font-style: italic; color: #8A766A; margin: 0 0 10px 0; }
+        
         .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 60px auto; }
         .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .lace-image { width: 100%; height: 450px; object-fit: cover; border: 1px solid #C6B9A8; }
@@ -51,7 +57,6 @@
         .main-contact-details a { color: #2B1E17; text-decoration: none; border-bottom: 1px solid #C6A77A; padding-bottom: 2px; }
         footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
         
-        /* LIGHTBOX PRE HLAVNÝ WEB */
         .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
         .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
         
@@ -81,18 +86,24 @@
         </div>
         <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
         <div class="divider"></div>
+        
         <div class="section-title">Interior Architecture</div>
         <div class="portfolio-grid">
             <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3><p>[ View Full Interior Story ]</p></a>
-            
-            <!-- KLIKACIE TLAČIDLO PRE TVOJU NOVÚ PINTEREST INŠPIRÁCIU -->
-            <div class="portfolio-card" onclick="openLightbox('./project-eucalyptus.jpg')">
-                <img src="./project-eucalyptus.jpg" class="portfolio-image">
-                <h3>III. The Interior Inspiration Concept</h3>
-                <p>[ View Material Story ]</p>
+            <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3><p>[ View Full Interior Story ]</p></a>
+        </div>
+        
+        <!-- NOVÁ, ÚPLNE SAMOSTATNÁ SEKCE PRO TVOJE MATERIÁLOVÉ INŠPIRÁCIE -->
+        <div class="section-title">Studio Moodboards & Inspiration</div>
+        <div class="inspiration-grid">
+            <div class="portfolio-card" onclick="openLightbox('https://github.io')">
+                <img src="https://github.io" class="portfolio-image" onerror="this.src='photo-portrait.jpg';">
+                <h3>The Interior Inspiration Concept</h3>
+                <p>[ Material Story Design ]</p>
             </div>
         </div>
+        
         <div class="divider"></div>
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
         <div class="lace-container">
@@ -101,16 +112,4 @@
         </div>
         <div class="main-contact-zone">
             <div class="main-contact-title">[ Commissions & General Inquiries ]</div>
-            <div class="main-contact-p">Available for exclusive international photography assignments, bespoke interior styling, and heritage design collaborations across Europe.</div>
-            <div class="main-contact-details">
-                <a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276
-            </div>
-        </div>
-    </main>
-    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
-    
-    <!-- LIGHTBOX STRUKTÚRA PRE ROZBALENIE -->
-    <div id="mainLightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
-    
-    <script>
 
