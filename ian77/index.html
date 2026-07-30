@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://googletagmanager.com"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P3ZJM8KSYD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiss The Ground Capsule | MIM IMAGERY</title>
@@ -11,20 +19,20 @@
         header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
         .divider { width: 60px; height: 1px; background-color: #3E4A32; margin: 30px auto; }
         main { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        
         .toggle-btn-container { text-align: center; margin: 40px auto; }
         .toggle-story-btn { background: none; border: 1px solid #3E4A32; color: #3E4A32; padding: 12px 30px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.85rem; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; }
         .toggle-story-btn:hover { background-color: #3E4A32; color: #FDFBF7; }
-        
         .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #3E4A32; border-bottom: 1px solid #3E4A32; padding: 30px 0; }
         .story-section p { margin-bottom: 20px; }
-        
         .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
         .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
         .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #3E4A32; font-weight: bold; }
         .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #3E4A32; cursor: zoom-in; }
         .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
         .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #3E4A32; color: #3E4A32; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        .atelier-contact { text-align: center; font-family: 'Didot', serif; margin: 50px auto 20px auto; color: #2B1E17; font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8; }
+        .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: #3E4A32; margin-bottom: 10px; font-style: italic; }
+        .contact-details a { color: #2B1E17; text-decoration: none; border-bottom: 1px solid #3E4A32; padding-bottom: 2px; }
         footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
         .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
         .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #3E4A32; }
@@ -38,35 +46,38 @@
         <div class="divider"></div>
     </header>
     <main>
-        
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+                <img src="./ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
                 <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+                <img src="./women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
         </div>
-
         <div class="toggle-btn-container">
             <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
         </div>
-
         <section id="privateStory" class="story-section">
             <p><i>[ Private Client Zone ]</i></p>
-            <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality.</p>
-            <p>Following major spinal surgery, I spent six long weeks completely immobile. No movement. Just me, the ceiling, and a deep, forced connection to the concept of time and absolute stillness. It was during this profound recovery that your environmental legacy, your dedication to the earth, and the raw message of your documentary film <i>Kiss the Ground</i> deeply resonated with my soul. Being a dedicated vegan for over 7 years and prioritizing sustainability for even longer, it made me realize that art must have a purpose, an organic heartbeat, and a grounding connection to our roots.</p>
-            <p>Stepping recently into the historic atmosphere of Banská Štiavnica for the live film set where Paul was shooting reawakened that dormant universe. Observing the costume artistry brought me straight back to my tailoring roots, while the cinematic energy of the set provided the final catalyst. This capsule is the manifestation of that journey—weaving design, acting, and my lifestyle of sustainable luxury innovation into the organic soul of the <i>Kiss the Ground</i> collection, custom-crafted exclusively for your evaluation.</p>
+            <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My journey began in my youth when I graduated in Fashion Design, mastering the delicate craft of traditional lace-making, followed by a University Degree in Acting. For years, these twin passions defined my reality.</p>
+            <p>Following major spinal surgery, I spent six long weeks completely immobile. No movement. Just me, the ceiling, and a deep, forced connection to the concept of time and absolute stillness. It was during this recovery that your environmental legacy, your dedication to the earth, and the raw message of your documentary film <i>Kiss the Ground</i> deeply resonated with my soul. Being a dedicated vegan for over 7 years and prioritizing sustainability for even longer, it made me realize that art must have a purpose, an organic heartbeat, and a grounding connection to our roots.</p>
+            <p>Stepping recently into the historic atmosphere of Banská Štiavnica for the live film set reawakened that dormant universe. After 35 years of creative silence, I returned to the bobbins and traditional craft. Observing the costume artistry brought me straight back to my roots in tailoring, while the cinematic energy of the set provided the final catalyst to weave design, acting, and my lifestyle of sustainable luxury innovation into the organic soul of the <i>Kiss the Ground</i> collection, custom-crafted exclusively for you and Nikki.</p>
         </section>
+        
+        <div class="atelier-contact">
+            <div class="contact-title">[ For further creative evaluation, direct commissions, or personal inquiries ]</div>
+            <div class="contact-details">
+                <a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276
+            </div>
+            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #3E4A32; margin-top: 10px;">Creative Director Zone | Central Europe</div>
+        </div>
 
         <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
     </main>
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
-    
     <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
-    
     <script>
         function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
         function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
