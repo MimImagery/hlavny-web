@@ -3,69 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trotuár Promenade | MIM IMAGERY</title>
+    <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
-        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.8; }
-        header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
-        header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; }
-        header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
-        .divider { width: 60px; height: 1px; background-color: #C6A77A; margin: 30px auto; }
-        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .toggle-btn-container { text-align: center; margin: 40px auto; }
-        .toggle-story-btn { background: none; border: 1px solid #C6A77A; color: #C6A77A; padding: 12px 30px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.85rem; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; }
-        .toggle-story-btn:hover { background-color: #C6A77A; color: #FDFBF7; }
-        .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #EAE1D4; border-bottom: 1px solid #EAE1D4; padding: 30px 0; }
-        .story-section p { margin-bottom: 20px; }
-        .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
-        .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
-        .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #8A766A; font-weight: bold; }
-        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #C6B9A8; cursor: zoom-in; }
-        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
-        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
-        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
-        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; cursor: zoom-out; }
-        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #C6A77A; }
-        @media (max-width: 750px) { .collection-grid { grid-template-columns: 1fr; } }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif; margin: 0; padding: 0; line-height: 1.7; }
+        header { text-align: center; padding: 80px 20px 40px 20px; letter-spacing: 6px; }
+        header h1 { font-size: 3rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #2B1E17; white-space: normal; word-break: keep-all; }
+        .brand-name { display: inline-block; white-space: nowrap; }
+        header p { font-size: 0.95rem; letter-spacing: 3px; text-transform: uppercase; color: #8A766A; margin-top: 15px; margin-bottom: 40px; }
+        .exclusive-nav { max-width: 900px; margin: 0 auto; background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 25px; text-align: center; box-shadow: 0 4px 20px rgba(43, 30, 23, 0.02); border-radius: 2px; box-sizing: border-box; }
+        .nav-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 5px; color: #C6A77A; margin-bottom: 20px; font-weight: bold; }
+        .nav-links-form { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 0; padding: 0; border: none; }
+        .access-input { font-family: 'Didot', serif; padding: 8px 15px; border: 1px solid #EAE1D4; background-color: #FDFBF7; color: #2B1E17; font-size: 0.9rem; letter-spacing: 2px; text-align: center; width: 220px; outline: none; transition: border-color 0.3s; }
+        .access-input:focus { border-color: #C6A77A; }
+        .access-btn { font-family: 'Didot', serif; padding: 8px 20px; border: 1px solid #2B1E17; background-color: #2B1E17; color: #FDFBF7; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
+        .access-btn:hover { background-color: transparent; color: #2B1E17; }
+        .nav-icon { width: 130px; height: auto; opacity: 0.85; display: inline-block; margin: 0 20px; }
+        .divider { width: 80px; height: 1px; background-color: #C6A77A; margin: 50px auto; }
+        main { max-width: 940px; margin: 0 auto; padding: 20px; }
+        .section-title { text-align: center; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 5px; margin: 60px 0 35px 0; color: #C6A77A; font-weight: 400; }
+        .photography-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; }
+        .photo-card-link { text-decoration: none; display: block; background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; transition: all 0.3s ease; }
+        .photo-card-link:hover { transform: translateY(-3px); border-color: #C6A77A; }
+        .photo-display { width: 100%; border: 1px solid #C6B9A8; display: block; }
+        .img-portrait { height: 650px; object-fit: cover; }
+        .img-landscape { height: 380px; object-fit: cover; }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 60px; }
+        .portfolio-card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 18px; text-align: center; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; }
+        .portfolio-card:hover { transform: translateY(-5px); border-color: #C6A77A; }
+        .portfolio-image { width: 100%; height: 400px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 18px; }
+        .portfolio-card h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 5px 0; font-weight: 400; }
+        .portfolio-card p { font-size: 0.85rem; font-style: italic; color: #8A766A; margin: 0 0 10px 0; }
+        .lace-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto 80px auto; }
+        .lace-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
+        .lace-image { width: 100%; height: 450px; object-fit: cover; border: 1px solid #C6B9A8; }
+        footer { text-align: center; padding: 80px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; border-top: 1px solid #EAE1D4; }
+        @media (max-width: 850px) { .photography-grid, .portfolio-grid, .lace-container { grid-template-columns: 1fr; } .img-portrait { height: 500px; } .img-landscape { height: 280px; } .portfolio-image, .lace-image { height: 320px; } .nav-links-form { flex-direction: column; gap: 15px; } .exclusive-nav { max-width: 100%; } header h1 { font-size: 2.2rem; } .access-input { width: 100%; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>M I M &nbsp; I M A G E R Y</h1>
-        <p>The Trotuár Promenade Collection — Specially Crafted for Paul Wesley</p>
-        <div class="divider"></div>
+        <h1><span class="brand-name">M I M</span> <span class="brand-name">I M A G E R Y</span></h1>
+        <p>Boutique Creative Studio | Central Europe</p>
+        <div class="exclusive-nav">
+            <div class="nav-title">[ Secure Private Client Portal ]</div>
+            <form class="nav-links-form" onsubmit="var v = document.getElementById('clientKey').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/index.html'; } else if(v === 'ian77') { window.location.href = './ian77/index.html'; } else if(v === 'nathalie77') { window.location.href = 'nathalie.html'; } else if(v) { alert('Access Denied. Invalid Client Key.'); } return false;">
+                <input type="text" id="clientKey" class="access-input" placeholder="ENTER CLIENT KEY..." required>
+                <img src="./podpis_horizon.png" alt="Atelier Icon" class="nav-icon">
+                <button type="submit" class="access-btn">Open Portal</button>
+            </form>
+        </div>
     </header>
     <main>
-        <div class="collection-grid">
-            <div class="collection-item">
-                <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-                <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
+        <div class="section-title">Fine-Art Photography</div>
+        <div class="photography-grid">
+            <a href="story1.html" class="photo-card-link"><img src="photo-portrait.jpg" class="photo-display img-portrait"></a>
+            <a href="story2.html" class="photo-card-link"><img src="photo-lavender.jpg" class="photo-display img-portrait"></a>
+            <a href="story3.html" class="photo-card-link"><img src="photo-rings.jpg" class="photo-display img-landscape"></a>
+            <a href="story4.html" class="photo-card-link"><img src="photo-baby.jpg" class="photo-display img-landscape"></a>
         </div>
-        <div class="toggle-btn-container">
-            <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
+        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
+        <div class="divider"></div>
+        <div class="section-title">Interior Architecture</div>
+        <div class="portfolio-grid">
+            <a href="./projekt-atelier/" class="portfolio-card"><img src="./project-marble-atelier.jpg" class="portfolio-image"><h3>I. The Marble Atelier Residence</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-chalet/" class="portfolio-card"><img src="./project-chalet-main.jpg" class="portfolio-image"><h3>II. The Alpine Timber Chalet</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-pavilion/" class="portfolio-card"><img src="./project-yellow-sofa.jpg" class="portfolio-image"><h3>III. The Amber Accent Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
-        <section id="privateStory" class="story-section">
-            <p><i>[ Private Client Zone ]</i></p>
-            <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My journey began in my youth when I graduated in Fashion Design, mastering the intricate craft of traditional lace-making, followed by a University Degree in Acting. For years, these twin passions defined my reality, shaping how I perceive raw emotion and form.</p>
-            <p>Following major spinal surgery, I spent six long weeks completely immobile. Just me and the ceiling. During that dark time, visual storytelling became my ultimate escape. The absolute belief that even after the deepest darkness there will always be light kept me alive. While Ian’s legacy grounded my focus on sustainable luxury and my 7-year vegan lifestyle, it was your intense creative energy and charisma that provided the necessary spark, structure, and courage for my sketches. This collection celebrates that raw human resilience and light.</p>
-            <p>Stepping recently into the historic atmosphere of Banská Štiavnica for the live film set of your project triggered a powerful artistic reawakening. After 35 years of creative silence, I returned to the bobbins and traditional craft. Observing the costume artistry under the cinematic lights brought me straight back to my roots in tailoring, creating the final catalyst to transform pain, design, and acting into the bold lines of <i>The Trotuár Promenade</i>, custom-crafted exclusively for your evaluation.</p>
-        </section>
-        <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
+        <div class="divider"></div>
+        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <div class="lace-container">
+            <div class="lace-item"><img src="lace1.jpg" class="lace-image"></div>
+            <div class="lace-item"><img src="lace2.jpg" class="lace-image"></div>
+        </div>
     </main>
     <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src=""></div>
-    <script>
-        function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
-        function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
-        function toggleStory() {
-            var x = document.getElementById("privateStory");
-            if (x.style.display === "block") { x.style.display = "none"; } else { x.style.display = "block"; }
-        }
-    </script>
 </body>
 </html>
 
