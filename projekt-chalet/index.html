@@ -1,176 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Alpine Timber Chalet | MimImagery</title>
+    <meta charset="UTF-8"><title>II. The Alpine Chalet | MIM IMAGERY</title>
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px 40px 20px;
-            letter-spacing: 5px;
-        }
-
-        header h1 {
-            font-size: 2.4rem;
-            font-weight: 300;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 0.95rem;
-            font-style: italic;
-            color: #6E5A4F;
-            margin-top: 10px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 1px;
-            background-color: #2B1E17;
-            margin: 30px auto;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .story-section {
-            text-align: justify;
-            max-width: 800px;
-            margin: 0 auto 50px auto;
-            font-size: 1.05rem;
-            color: #3D2F26;
-        }
-
-        /* Pinterest vertikálna galéria celého interiéru */
-        .story-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .gallery-item {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: auto;
-            max-height: 700px;
-            object-fit: contain;
-            border: 1px solid #C6B9A8;
-            margin-bottom: 15px;
-        }
-
-        .gallery-caption {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #6E5A4F;
-            font-weight: bold;
-        }
-
-        .back-container {
-            text-align: center;
-            margin-top: 60px;
-            margin-bottom: 40px;
-        }
-
-        .back-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid #2B1E17;
-            color: #2B1E17;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #2B1E17;
-            color: #FDFBF7;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-            border-top: 1px solid #EAE1D4;
-        }
+        body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; text-align: center; padding: 60px 20px; margin: 0; }
+        h1 { font-weight: 300; text-transform: uppercase; letter-spacing: 3px; font-size: 2rem; margin-bottom: 40px; }
+        img { max-width: 900px; width: 100%; height: auto; border: 1px solid #C6B9A8; margin-bottom: 40px; display: block; margin: 0 auto 40px auto; }
+        .back-link { display: inline-block; margin-top: 20px; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>The Alpine Timber Chalet</h1>
-        <p>Exclusive High-End Mountain Residence Story</p>
-        <div class="divider"></div>
-    </header>
-
-    <main>
-        <section class="story-section">
-            <p>
-                A comprehensive high-end mountain residence concept that seamlessly connects the raw architecture of a massive exposed timber truss with the warm, deep geometry of private and social living zones. Every single detail, from the muted sage-green custom kitchen and the backlit midnight sanctuary of the bathroom to the luxury walnut bedroom with delicate glass frameworks, was meticulously crafted with an emphasis on organic textures and sophisticated interior stillness.
-            </p>
-        </section>
-
-        <div class="story-gallery">
-            
-            <!-- 1. POHĽAD: VEĽKOLEPÝ KROV -->
-            <div class="gallery-item">
-                <img src="../project-chalet-main.jpg" alt="Massive Timber Ceiling Architecture" class="gallery-image">
-                <div class="gallery-caption">I. Main Timber Truss Living Space</div>
-            </div>
-
-            <!-- 2. POHĽAD: LUXUSNÁ SPÁLŇA -->
-            <div class="gallery-item">
-                <img src="../interior-bedroom.jpg" alt="Luxury Walnut Bedroom Master Piece" class="gallery-image">
-                <div class="gallery-caption">II. Walnut Velvet Master Bedroom</div>
-            </div>
-
-            <!-- 3. POHĽAD: ŠALVIOVÁ KUCHYŇA -->
-            <div class="gallery-item">
-                <img src="../interior-kitchen.jpg" alt="Sage Geometric Kitchen Design" class="gallery-image">
-                <div class="gallery-caption">III. Sage Geometric Kitchen Atelier</div>
-            </div>
-
-            <!-- 4. POHĽAD: LUXUSNÁ KÚPEĽŇA -->
-            <div class="gallery-item">
-                <img src="../interior-bath.jpg" alt="Midnight Blue Bathroom Sanctuary" class="gallery-image">
-                <div class="gallery-caption">IV. Midnight Blue Sanctuary</div>
-            </div>
-
-        </div>
-
-        <div class="back-container">
-            <a href="#" class="back-link" onclick="history.back(); return false;">[ Back to Atelier Portfolio ]</a>
-        </div>
-    </main>
-
-    <footer>
-        © 2026 MIMIMAGERY STUDIO. ALL RIGHTS RESERVED.
-    </footer>
-
+    <h1>II. The Alpine Chalet</h1>
+    <img src="../project-chalet-main.jpg">
+    <a href="#" class="back-link" onclick="history.back(); return false;">[ Back to Atelier Portfolio ]</a>
 </body>
 </html>
+
