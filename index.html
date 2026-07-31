@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <script async src="https://googletagmanager.com"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJM8KSYD');</script>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,13 +36,14 @@
         <h1>M I M &nbsp; I M A G E R Y</h1>
         <p>Boutique Creative Studio</p>
         <div class="exclusive-nav">
-            <form onsubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/index.html'; } else if(v === 'ian77') { window.location.href = './ian77/index.html'; } else if(v === 'nathalie77') { window.location.href = './nathalie.html'; } else if(v) { alert('Denied.'); } return false;">
+            <form onSubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'pau177') { window.location.href = './pau177/index.html'; } else { alert('Invalid Access Key'); } return false;">
                 <input type="text" id="key" class="access-input" placeholder="CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
             </form>
         </div>
     </header>
+
     <main>
         <div class="section-title">Fine-Art Photography</div>
         <div class="grid-2">
@@ -50,9 +52,10 @@
             <a href="story3.html" class="card"><img src="photo-rings.jpg"></a>
             <a href="story4.html" class="card"><img src="photo-baby.jpg"></a>
         </div>
-        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
-        <div class="divider"></div>
+        <p style="text-align: center; font-family: style; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
         
+        <div class="divider"></div>
+
         <div class="section-title">Interior Architecture</div>
         <!-- PÔVODNÉ TRI PROJEKTY: I, II, III -->
         <div class="grid-3">
@@ -69,29 +72,42 @@
         </div>
 
         <!-- REALIZÁCIA KUCHYNE: VII -->
-        <div class="portfolio-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 40px auto;">
+        <div class="grid-portfolio-grid" style="grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 40px auto;">
             <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>VII. The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- STUDIO MOODBOARD / EUKALYPTUS: VIII -->
+        <!-- STUDIO MOODBOARDS / EUKALYPTUS: VIII -->
         <div class="section-title">Studio Moodboards & Inspiration</div>
-        <div style="max-width: 400px; margin: 0 auto 60px auto;">
+        <div style="max-width: 480px; margin: 0 auto 60px auto;">
             <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>VIII. The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
         </div>
-        
+
         <div class="divider"></div>
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+
+        <!-- NOVÁ SEKCIA IX: EDITORIAL SELECTION -->
+        <div class="section-title">IX. The Editorial Selection</div>
         <div class="grid-2">
-            <div class="card"><img src="lace1.jpg" style="height:450px;"></div>
-            <div class="card"><img src="lace2.jpg" style="height:450px;"></div>
+            <div class="card">
+                <img src="mattheo.jpg" style="height:550px; object-fit: cover;">
+                <h3>Mattheo</h3>
+                <p>Published in International Kid Model Magazine (USA)</p>
+            </div>
+            <div class="card">
+                <img src="auri.jpg" style="height:550px; object-fit: cover;">
+                <h3>Auri</h3>
+                <p>Published in International Kid Model Magazine (USA)</p>
+            </div>
         </div>
-        
+
+        <div class="divider"></div>
+
         <div class="contact">
             <p style="font-size:0.8rem; letter-spacing:3px; color:#C6A77A;">[ COMMISSIONS & INQUIRIES ]</p>
             <p style="font-size:0.95rem; font-style:italic; color:#8A766A;">Available for exclusive international assignments across Europe.</p>
-            <p style="font-size:1.05rem;"><a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276</p>
+            <p style="font-size:1.05rem;"><a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;&nbsp; +421 944 442 276</p>
         </div>
     </main>
-    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+    <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
