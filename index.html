@@ -49,8 +49,11 @@
             e.preventDefault();
             var inputKey = document.getElementById('key').value.trim().toLowerCase();
             
-            // DYNAMICKÉ PREPOJENIE: Presmeruje priamo do priečinka podľa zadaného textu
-            if (inputKey) {
+            // POISTKA PRE NATHALIE: Kód je nathalie77, ale priečinok je len nathalie
+            if (inputKey === 'nathalie77') {
+                window.location.href = './nathalie/index.html';
+            } else if (inputKey) {
+                // Dynamické prepojenie pre paul77 a ian77 (hľadá rovnomenné priečinky)
                 window.location.href = './' + inputKey + '/index.html';
             }
         });
@@ -131,4 +134,5 @@
     <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
+
 
