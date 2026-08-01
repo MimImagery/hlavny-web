@@ -1,298 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fine-Art Photography | MIM IMAGERY</title>
-    <style>
-        body {
-            background-color: #FDFBF7;
-            color: #2B1E17;
-            font-family: 'Didot', 'Bodoni MT', serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
-
-        header {
-            text-align: center;
-            padding: 90px 20px 40px 20px;
-            letter-spacing: 4px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #8A766A;
-            margin-top: 10px;
-        }
-
-        .divider {
-            width: 60px;
-            height: 1px;
-            background-color: #C6A77A;
-            margin: 30px auto;
-        }
-
-        main {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* FILOZOFICKÝ BLOK NAVRCHU */
-        .philosophy-section {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 100px auto;
-            padding: 0 20px;
-        }
-
-        .philosophy-quote {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: #2B1E17;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .philosophy-sub {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #8A766A;
-        }
-
-        /* VERTIKÁLNY ROZPRÁVKOVÝ GRID S CITÁTMI */
-        .gallery-story-flow {
-            display: flex;
-            flex-direction: column;
-            gap: 90px;
-            margin-bottom: 60px;
-        }
-
-        /* Symetrické dvojice fotografií */
-        .photo-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .gallery-item {
-            background-color: #FAF6F0;
-            border: 1px solid #EAE1D4;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-3px);
-            border-color: #C6A77A;
-        }
-
-        .gallery-image {
-            width: 100%;
-            border: 1px solid #C6B9A8;
-            cursor: zoom-in;
-            display: block;
-        }
-
-        .img-portrait { height: 650px; object-fit: cover; }
-        .img-landscape { height: 380px; object-fit: cover; }
-
-        .gallery-caption {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #8A766A;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        /* ELEGANTNÉ MEDZICITÁTY MEDZI FOTKAMI */
-        .text-separator-box {
-            text-align: center;
-            max-width: 650px;
-            margin: 20px auto;
-            padding: 30px 20px;
-            background-color: #FAF6F0;
-            border-top: 1px solid #EAE1D4;
-            border-bottom: 1px solid #EAE1D4;
-        }
-
-        .separator-quote {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: #2B1E17;
-            margin-bottom: 10px;
-        }
-
-        .separator-author {
-            font-size: 0.75rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #C6A77A;
-            font-weight: bold;
-        }
-
-        .back-container {
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 40px;
-        }
-
-        .back-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid #2B1E17;
-            color: #2B1E17;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #2B1E17;
-            color: #FDFBF7;
-        }
-
-        /* LIGHTBOX PRE LUXUSNÉ ZVÄČŠOVANIE FOTIEK */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(43, 30, 23, 0.97);
-            align-items: center;
-            justify-content: center;
-            cursor: zoom-out;
-        }
-
-        .lightbox img {
-            max-width: 95%;
-            max-height: 95%;
-            object-fit: contain;
-            border: 1px solid #C6A77A;
-        }
-
-        footer {
-            text-align: center;
-            padding: 80px 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #8A766A;
-            border-top: 1px solid #EAE1D4;
-        }
-
-        @media (max-width: 750px) {
-            .photo-row { grid-template-columns: 1fr; gap: 20px; }
-            .img-portrait { height: 480px; }
-            .img-landscape { height: 260px; }
-            header h1 { font-size: 2rem; }
-            .philosophy-quote, .separator-quote { font-size: 1.15rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Fine-Art Photography</h1>
-        <p>MIM IMAGERY Ateliér</p>
-        <div class="divider"></div>
-    </header>
-
     <main>
-        <!-- HLAVNÉ MOTTO (TVOJE SLOVÁ) -->
-        <section class="philosophy-section">
-            <div class="philosophy-quote">
-                "I am not just a photographer. I am a woman who loves to capture memories."
-            </div>
-            <div class="philosophy-sub">
-                Nie som len fotograf. Som žena, ktorá rada zachytáva spomienky.
-            </div>
-        </section>
-
-        <!-- PLYNULÝ PRÍBEH: FOTKY PREPLETENÉ S TVOJIMI CITÁTMI -->
-        <div class="gallery-story-flow">
-            
-            <!-- BLOK 1: PORTRÉT A LEVANDUĽA (Na výšku) -->
-            <div class="photo-row">
-                <div class="gallery-item">
-                    <img src="./photo-portrait.jpg" class="gallery-image img-portrait" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">I. The Editorial Portrait</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./photo-lavender.jpg" class="gallery-image img-portrait" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">II. Lavender Light Play</div>
-                </div>
-            </div>
-
-            <!-- CITÁT ČÍSLO 1 (Karl Lagerfeld) -->
-            <div class="text-separator-box">
-                <div class="separator-quote">„Fotografia je spôsob, ako zaznamenať život, ktorý žijeme.“</div>
-                <div class="separator-author">— Karl Lagerfeld</div>
-            </div>
-
-            <!-- BLOK 2: DETAILY PRSTENE A BÁBÄTKO (Na šírku) -->
-            <div class="photo-row">
-                <div class="gallery-item">
-                    <img src="./photo-rings.jpg" class="gallery-image img-landscape" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">III. Tangible Detail</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./photo-baby.jpg" class="gallery-image img-landscape" onclick="openLightbox(this.src)">
-                    <div class="gallery-caption">IV. Pure Connection</div>
-                </div>
-            </div>
-
-            <!-- CITÁT ČÍSLO 2 (Neznámy autor) -->
-            <div class="text-separator-box">
-                <div class="separator-quote">„Je len jeden spôsob, ako zastaviť čas: fotografia.“</div>
-                <div class="separator-author">— Neznámy autor</div>
-            </div>
-
-            <!-- CITÁT ČÍSLO 3 (James Thurger) -->
-            <div class="text-separator-box" style="margin-top: -50px; border-top: none;">
-                <div class="separator-quote">„Fotografovanie je pauza na smiech pre život.“</div>
-                <div class="separator-author">— James Thurger</div>
-            </div>
-
+        <div class="section-title">Fine-Art Photography</div>
+        
+        <!-- Prvé 4 galérie v dvoch čistých riadkoch -->
+        <div class="grid-2">
+            <a href="story1.html" class="card"><img src="photo-portrait.jpg" style="height:550px;"><h3>Black & White Artistry</h3></a>
+            <a href="story2.html" class="card"><img src="photo-lavender.jpg" style="height:550px;"><h3>Maternity Narrative</h3></a>
+            <a href="story3.html" class="card"><img src="photo-rings.jpg"><h3>Wedding Editorial</h3></a>
+            <a href="story4.html" class="card"><img src="photo-baby.jpg"><h3>Newborn Purity</h3></a>
         </div>
 
-        <div class="back-container">
-            <a href="./" class="back-button">[ Return to Atelier Home ]</a>
+        <!-- NOVÁ 5. GALÉRIA: Vycentrovaná pod nimi ako dominantný kúsok -->
+        <div style="max-width: 455px; margin: 30px auto 0 auto;">
+            <a href="story-portraits.html" class="card">
+                <img src="katka-portret.jpg" style="height:550px; object-fit: cover;">
+                <h3>Fine-Art Portraiture</h3>
+            </a>
         </div>
-    </main>
 
-    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+        <p style="text-align: center; font-family: 'Didot', serif; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 30px;">
+            [ Select a gallery to explore our dedicated aesthetic portfolio ]
+        </p>
+        
+        <div class="divider"></div>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="">
-    </div>
+        <!-- INTERIÉRY BEZ RÍMSKYCH ČÍSIEL -->
+        <div class="section-title">Interior Architecture</div>
+        <div class="grid-3">
+            <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
+        </div>
 
-    <script>
-        function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-    </script>
-</body>
-</html> 
+        <div class="grid-3">
+            <a href="story5.html" class="card"><img src="project-blue-onyx.jpg"><h3>The Deep Onyx Wellness</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="story6.html" class="card"><img src="project-warm-cedar.jpg"><h3>The Warm Cedar Retreat</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="story7.html" class="card"><img src="project-emerald-forest.jpg"><h3>The Emerald Oasis</h3><p>[ View Full Interior Story ]</p></a>
+        </div>
 
+        <div class="grid-portfolio-grid" style="grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 40px auto;">
+            <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
+        </div>
+
+        <div class="section-title">Studio Moodboards & Inspiration</div>
+        <div style="max-width: 480px; margin: 0 auto 60px auto;">
+            <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ČIPKY BEZ ČÍSIEL -->
+        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <div class="grid-2">
+            <div class="card"><img src="lace1.jpg" style="height:450px;"><h3>Heritage Lace Detail</h3></div>
+            <div class="card"><img src="lace2.jpg" style="height:450px;"><h3>The Art of Patience</h3></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- USA EDITORIAL BEZ ČÍSLA IX -->
+        <div class="section-title">The Editorial Selection</div>
+        <div style="max-width: 480px; margin: 0 auto 60px auto; text-align: center;">
+            <p style="font-size:0.95rem; font-style:italic; color:#8A766A; margin-bottom: 25px;">Featured in international press.</p>
+            <a href="editorial.html" class="card" style="display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
+                [ View Editorial Press Story ]
+            </a>
+        </div>
