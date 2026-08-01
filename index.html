@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <script async src="https://googletagmanager.com"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJM8KSYD');</script>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,74 +36,91 @@
         <h1>M I M &nbsp; I M A G E R Y</h1>
         <p>Boutique Creative Studio</p>
         <div class="exclusive-nav">
-            <form onsubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'paul77') { window.location.href = './paul77/index.html'; } else if(v === 'ian77') { window.location.href = './ian77/index.html'; } else if(v === 'nathalie77') { window.location.href = './nathalie.html'; } else if(v) { alert('Denied.'); } return false;">
+            <form onSubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'pau177') { window.location.href = './pau177/index.html'; } else { alert('Invalid Access Key'); } return false;">
                 <input type="text" id="key" class="access-input" placeholder="CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
             </form>
         </div>
     </header>
+
     <main>
         <div class="section-title">Fine-Art Photography</div>
-        <div class="grid-2">
-            <a href="story1.html" class="card"><img src="photo-portrait.jpg" style="height:550px;"></a>
-            <a href="story2.html" class="card"><img src="photo-lavender.jpg" style="height:550px;"></a>
-            <a href="story3.html" class="card"><img src="photo-rings.jpg"></a>
-            <a href="story4.html" class="card"><img src="photo-baby.jpg"></a>
-        </div>
-        <p style="text-align: center; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 15px;">[ Click any photograph to explore its individual narrative chapter ]</p>
-        <div class="divider"></div>
         
+        <!-- Prvé 4 pôvodné galérie bez rímskych číslic -->
+        <div class="grid-2">
+            <a href="story1.html" class="card"><img src="photo-portrait.jpg" style="height:550px;"><h3>Black & White Artistry</h3></a>
+            <a href="story2.html" class="card"><img src="photo-lavender.jpg" style="height:550px;"><h3>Maternity Narrative</h3></a>
+            <a href="story3.html" class="card"><img src="photo-rings.jpg"><h3>Wedding Editorial</h3></a>
+            <a href="story4.html" class="card"><img src="photo-baby.jpg"><h3>Newborn Purity</h3></a>
+        </div>
+
+        <!-- NOVÁ 5. GALÉRIA: Dokonale vycentrovaná pod nimi pre tie portréty -->
+        <div style="max-width: 455px; margin: 30px auto 0 auto;">
+            <a href="story-portraits.html" class="card">
+                <img src="portret-main.jpg" style="height:550px; object-fit: cover;">
+                <h3>Fine-Art Portraiture</h3>
+            </a>
+        </div>
+
+        <p style="text-align: center; font-family: 'Didot', serif; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 30px;">
+            [ Select a gallery to explore our dedicated aesthetic portfolio ]
+        </p>
+        
+        <div class="divider"></div>
+
         <div class="section-title">Interior Architecture</div>
-        <!-- PÔVODNÉ TRI PROJEKTY: I, II, III -->
+        <!-- Interiérové projekty bez rímskych čísiel -->
         <div class="grid-3">
-            <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>I. The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>II. The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>III. The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- NOVÉ PROJEKTY: IV, V, VI -->
         <div class="grid-3">
-            <a href="story5.html" class="card"><img src="project-blue-onyx.jpg"><h3>IV. The Deep Onyx Wellness</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="story6.html" class="card"><img src="project-warm-cedar.jpg"><h3>V. The Warm Cedar Retreat</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="story7.html" class="card"><img src="project-emerald-forest.jpg"><h3>VI. The Emerald Oasis</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="story5.html" class="card"><img src="project-blue-onyx.jpg"><h3>The Deep Onyx Wellness</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="story6.html" class="card"><img src="project-warm-cedar.jpg"><h3>The Warm Cedar Retreat</h3><p>[ View Full Interior Story ]</p></a>
+            <a href="story7.html" class="card"><img src="project-emerald-forest.jpg"><h3>The Emerald Oasis</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- REALIZÁCIA KUCHYNE: VII -->
-        <div class="portfolio-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 40px auto;">
-            <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>VII. The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
+        <div class="grid-portfolio-grid" style="grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 40px auto;">
+            <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- STUDIO MOODBOARD / EUKALYPTUS: VIII -->
         <div class="section-title">Studio Moodboards & Inspiration</div>
-        <div style="max-width: 400px; margin: 0 auto 60px auto;">
-            <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>VIII. The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
+        <div style="max-width: 480px; margin: 0 auto 60px auto;">
+            <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
         </div>
-        
-        <div class="divider"></div>
-        <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <div class="grid-2">
-            <div class="card"><img src="lace1.jpg" style="height:450px;"></div>
-            <div class="card"><img src="lace2.jpg" style="height:450px;"></div>
-        </div>
-                <div class="divider"></div>
 
-        <!-- NOVÁ SEKCIA IX: ODKAZ NA PODSTRÁNKU -->
-        <div class="section-title">IX. The Editorial Selection</div>
+        <div class="divider"></div>
+
+        <div class="section-title">Traditional Craft & Bobbin Lace</div>
+        <!-- Čipky s čistými luxusnými názvami -->
+        <div class="grid-2">
+            <div class="card"><img src="lace1.jpg" style="height:450px;"><h3>Heritage Lace Detail</h3></div>
+            <div class="card"><img src="lace2.jpg" style="height:450px;"><h3>The Art of Patience</h3></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-title">The Editorial Selection</div>
+        <!-- USA časopis bez čísla IX -->
         <div style="max-width: 480px; margin: 0 auto 60px auto; text-align: center;">
-            <p style="font-size:0.95rem; font-style:italic; color:#8A766A; margin-bottom: 25px;">Moja tvorba publikovaná v americkom online časopise.</p>
+            <p style="font-size:0.95rem; font-style:italic; color:#8A766A; margin-bottom: 25px;">Featured in international press.</p>
             <a href="editorial.html" class="card" style="display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
                 [ View Editorial Press Story ]
             </a>
         </div>
 
+        <div class="divider"></div>
+
         <div class="contact">
             <p style="font-size:0.8rem; letter-spacing:3px; color:#C6A77A;">[ COMMISSIONS & INQUIRIES ]</p>
             <p style="font-size:0.95rem; font-style:italic; color:#8A766A;">Available for exclusive international assignments across Europe.</p>
-            <p style="font-size:1.05rem;"><a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276</p>
+            <p style="font-size:1.05rem;"><a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;&nbsp; +421 944 442 276</p>
         </div>
     </main>
-    <footer>© 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
+    <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
-
