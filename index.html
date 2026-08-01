@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script async src="https://googletagmanager.com"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJM8KSYD');</script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
         body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.7; text-align: center; }
@@ -36,13 +36,31 @@
         <h1>M I M &nbsp; I M A G E R Y</h1>
         <p>Boutique Creative Studio</p>
         <div class="exclusive-nav">
-            <form onSubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'pau177') { window.location.href = './pau177/index.html'; } else { alert('Invalid Access Key'); } return false;">
+            <form id="portal-form">
                 <input type="text" id="key" class="access-input" placeholder="CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
             </form>
         </div>
     </header>
+
+    <script>
+        document.getElementById('portal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var inputKey = document.getElementById('key').value.trim().toLowerCase();
+            
+            // PODPORA PRE VŠETKY TRI TAJNÉ KĽÚČE (paul77, ian77, nathalie77)
+            if (inputKey === 'paul77') {
+                window.location.href = './paul77/index.html';
+            } else if (inputKey === 'ian77') {
+                window.location.href = './ian77/index.html';
+            } else if (inputKey === 'nathalie77') {
+                window.location.href = './nathalie77/index.html';
+            } else {
+                alert('Invalid Access Key');
+            }
+        });
+    </script>
 
     <main>
         <div class="section-title">Fine-Art Photography</div>
@@ -119,5 +137,4 @@
     <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
-
 
