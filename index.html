@@ -49,15 +49,9 @@
             e.preventDefault();
             var inputKey = document.getElementById('key').value.trim().toLowerCase();
             
-            // PODPORA PRE VŠETKY TRI TAJNÉ KĽÚČE (paul77, ian77, nathalie77)
-            if (inputKey === 'paul77') {
-                window.location.href = './paul77/index.html';
-            } else if (inputKey === 'ian77') {
-                window.location.href = './ian77/index.html';
-            } else if (inputKey === 'nathalie77') {
-                window.location.href = './nathalie77/index.html';
-            } else {
-                alert('Invalid Access Key');
+            // DYNAMICKÉ PREPOJENIE: Presmeruje priamo do priečinka podľa zadaného textu
+            if (inputKey) {
+                window.location.href = './' + inputKey + '/index.html';
             }
         });
     </script>
