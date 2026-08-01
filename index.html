@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script async src="https://googletagmanager.com"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJM8KSYD');</script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
         body { background-color: #FDFBF7; color: #2B1E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.7; text-align: center; }
@@ -36,7 +36,7 @@
         <h1>M I M &nbsp; I M A G E R Y</h1>
         <p>Boutique Creative Studio</p>
         <div class="exclusive-nav">
-            <form onSubmit="var v = document.getElementById('key').value.trim().toLowerCase(); if(v === 'pau177') { window.location.href = './pau177/index.html'; } else { alert('Invalid Access Key'); } return false;">
+            <form id="portal-form">
                 <input type="text" id="key" class="access-input" placeholder="CLIENT KEY..." required>
                 <img src="./podpis_horizon.png" class="nav-icon">
                 <button type="submit" class="access-btn">Open Portal</button>
@@ -44,10 +44,21 @@
         </div>
     </header>
 
+    <script>
+        document.getElementById('portal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var inputKey = document.getElementById('key').value.trim().toLowerCase();
+            if (inputKey === 'pau177') {
+                window.location.href = './pau177/index.html';
+            } else {
+                alert('Invalid Access Key');
+            }
+        });
+    </script>
+
     <main>
         <div class="section-title">Fine-Art Photography</div>
         
-        <!-- Prvé 4 galérie bez rímskych čísiel -->
         <div class="grid-2">
             <a href="story1.html" class="card"><img src="photo-portrait.jpg" style="height:550px;"><h3>Black & White Artistry</h3></a>
             <a href="story2.html" class="card"><img src="photo-lavender.jpg" style="height:550px;"><h3>Maternity Narrative</h3></a>
@@ -55,7 +66,6 @@
             <a href="story4.html" class="card"><img src="photo-baby.jpg"><h3>Newborn Purity</h3></a>
         </div>
 
-        <!-- 5. GALÉRIA: Vycentrovaná pod nimi pre portréty -->
         <div style="max-width: 455px; margin: 30px auto 0 auto;">
             <a href="story-portraits.html" class="card">
                 <img src="portret-main.jpg" style="height:550px; object-fit: cover;">
@@ -70,26 +80,22 @@
         <div class="divider"></div>
 
         <div class="section-title">Interior Architecture</div>
-        <!-- Prvé tri interiérové projekty bez čísiel -->
         <div class="grid-3">
             <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- Ďalšie interiérové projekty bez čísiel -->
         <div class="grid-3">
             <a href="story5.html" class="card"><img src="project-blue-onyx.jpg"><h3>The Deep Onyx Wellness</h3><p>[ View Full Interior Story ]</p></a>
             <a href="story6.html" class="card"><img src="project-warm-cedar.jpg"><h3>The Warm Cedar Retreat</h3><p>[ View Full Interior Story ]</p></a>
             <a href="story7.html" class="card"><img src="project-emerald-forest.jpg"><h3>The Emerald Oasis</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- Realizácia kuchyne bez čísla -->
         <div class="grid-portfolio-grid" style="grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 40px auto;">
             <a href="story8.html" class="card"><img src="project-kitchen-reality.jpg"><h3>The Living Space Reality</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
-        <!-- Studio moodboardy bez čísla -->
         <div class="section-title">Studio Moodboards & Inspiration</div>
         <div style="max-width: 480px; margin: 0 auto 60px auto;">
             <a href="story9.html" class="card"><img src="project-eucalyptus.jpg"><h3>The Inspiration Concept</h3><p>[ View Full Interior Story ]</p></a>
@@ -98,7 +104,6 @@
         <div class="divider"></div>
 
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
-        <!-- Čipky s čistými luxusnými názvami -->
         <div class="grid-2">
             <div class="card"><img src="lace1.jpg" style="height:450px;"><h3>Heritage Lace Detail</h3></div>
             <div class="card"><img src="lace2.jpg" style="height:450px;"><h3>The Art of Patience</h3></div>
@@ -107,7 +112,6 @@
         <div class="divider"></div>
 
         <div class="section-title">The Editorial Selection</div>
-        <!-- USA časopis bez čísla -->
         <div style="max-width: 480px; margin: 0 auto 60px auto; text-align: center;">
             <p style="font-size:0.95rem; font-style:italic; color:#8A766A; margin-bottom: 25px;">Featured in international press.</p>
             <a href="editorial.html" class="card" style="display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
