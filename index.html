@@ -49,11 +49,11 @@
             e.preventDefault();
             var inputKey = document.getElementById('key').value.trim().toLowerCase();
             
-            // POISTKA PRE NATHALIE: Kód je nathalie77, ale priečinok je len nathalie
+            // PRE NATHALIE: Ak zadá kód nathalie77, pošle ju priamo na samostatný súbor nathalie.html
             if (inputKey === 'nathalie77') {
-                window.location.href = './nathalie/index.html';
+                window.location.href = './nathalie.html';
             } else if (inputKey) {
-                // Dynamické prepojenie pre paul77 a ian77 (hľadá rovnomenné priečinky)
+                // Pre paul77 a ian77 hľadá priečinky paul77/index.html a ian77/index.html
                 window.location.href = './' + inputKey + '/index.html';
             }
         });
@@ -134,6 +134,3 @@
     <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
-
-
-
