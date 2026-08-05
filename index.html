@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script async src="https://googletagmanager.com"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJM8KSYD');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P3ZJMBKSYD');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY | Boutique Creative Studio</title>
     <style>
@@ -22,7 +22,7 @@
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; }
         .card { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 15px; text-decoration: none; color: #2B1E17; display: block; transition: all 0.3s ease; }
         .card:hover { transform: translateY(-5px); border-color: #C6A77A; }
-        .card img { width: 100%; height: 380px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 15px; }
+        .card img { width: 100%; height: 550px; object-fit: cover; border: 1px solid #C6B9A8; margin-bottom: 15px; }
         .card h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin: 5px 0; font-weight: 400; }
         .card p { font-size: 0.8rem; font-style: italic; color: #8A766A; margin: 0; }
         .contact { margin: 60px auto 20px auto; max-width: 600px; }
@@ -32,8 +32,9 @@
     </style>
 </head>
 <body>
+
     <header>
-        <h1>M I M &nbsp; I M A G E R Y</h1>
+        <h1>MIM &nbsp; IMAGERY</h1>
         <p>Boutique Creative Studio</p>
         <div class="exclusive-nav">
             <form id="portal-form">
@@ -49,29 +50,27 @@
             e.preventDefault();
             var inputKey = document.getElementById('key').value.trim().toLowerCase();
             
-            // PRE NATHALIE: Ak zadá kód nathalie77, pošle ju priamo na samostatný súbor nathalie.html
             if (inputKey === 'nathalie77') {
                 window.location.href = './nathalie.html';
             } else if (inputKey) {
-                // Pre paul77 a ian77 hľadá priečinky paul77/index.html a ian77/index.html
-                window.location.href = './' + inputKey + '/index.html';
+                window.location.location.href = './' + inputKey + '/index.html';
             }
         });
     </script>
 
     <main>
+        <!-- SEKCE: FINE-ART PHOTOGRAPHY -->
         <div class="section-title">Fine-Art Photography</div>
-        
         <div class="grid-2">
-            <a href="story1.html" class="card"><img src="photo-portrait.jpg" style="height:550px;"><h3>Black & White Artistry</h3></a>
-            <a href="story2.html" class="card"><img src="photo-lavender.jpg" style="height:550px;"><h3>Maternity Narrative</h3></a>
+            <a href="story1.html" class="card"><img src="photo-portrait.jpg"><h3>Black & White Artistry</h3></a>
+            <a href="story2.html" class="card"><img src="photo-lavender.jpg"><h3>Maternity Narrative</h3></a>
             <a href="story3.html" class="card"><img src="photo-rings.jpg"><h3>Wedding Editorial</h3></a>
             <a href="story4.html" class="card"><img src="photo-baby.jpg"><h3>Newborn Purity</h3></a>
         </div>
 
-        <div style="max-width: 455px; margin: 30px auto 0 auto;">
+        <div style="max-width: 455px; margin: 30px auto auto auto;">
             <a href="story-portraits.html" class="card">
-                <img src="portret-main.jpg" style="height:550px; object-fit: cover;">
+                <img src="portret-main.jpg">
                 <h3>Fine-Art Portraiture</h3>
             </a>
         </div>
@@ -79,14 +78,15 @@
         <p style="text-align: center; font-family: 'Didot', serif; font-style: italic; font-size: 0.9rem; color: #8A766A; margin-top: 30px;">
             [ Select a gallery to explore our dedicated aesthetic portfolio ]
         </p>
-        
+
         <div class="divider"></div>
 
+        <!-- SEKCE: INTERIOR ARCHITECTURE (UPRATANÁ S AMBER PAVILION NA PRVOM MIESTE) -->
         <div class="section-title">Interior Architecture</div>
         <div class="grid-3">
+            <a href="./projekt-pavilion/" class="card"><img src="./new-york-burl-wood.jpg"><h3>The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-atelier/" class="card"><img src="./project-marble-atelier.jpg"><h3>The Marble Atelier</h3><p>[ View Full Interior Story ]</p></a>
             <a href="./projekt-chalet/" class="card"><img src="./project-chalet-main.jpg"><h3>The Alpine Chalet</h3><p>[ View Full Interior Story ]</p></a>
-            <a href="./projekt-pavilion/" class="card"><img src="./project-yellow-sofa.jpg"><h3>The Amber Pavilion</h3><p>[ View Full Interior Story ]</p></a>
         </div>
 
         <div class="grid-3">
@@ -109,7 +109,7 @@
         <div class="section-title">Traditional Craft & Bobbin Lace</div>
         <div class="grid-2">
             <div class="card"><img src="lace1.jpg" style="height:450px;"><h3>Heritage Lace Detail</h3></div>
-            <div class="card"><img src="lace2.jpg" style="height:450px;"><h3>The Art of Patience</h3></div>
+            <div class="card"><img src="lace2.jpg" style="height:450px;"><h3>The Art Of Patience</h3></div>
         </div>
 
         <div class="divider"></div>
@@ -117,7 +117,7 @@
         <div class="section-title">The Editorial Selection</div>
         <div style="max-width: 480px; margin: 0 auto 60px auto; text-align: center;">
             <p style="font-size:0.95rem; font-style:italic; color:#8A766A; margin-bottom: 25px;">Featured in international press.</p>
-            <a href="editorial.html" class="card" style="display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">
+            <a href="editorial.html" class="card" style="display: inline-block; padding: 12px 30px; border: 1px solid #2B1E17; color: #2B1E17; text-decoration: none;">
                 [ View Editorial Press Story ]
             </a>
         </div>
@@ -132,5 +132,6 @@
     </main>
 
     <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+
 </body>
 </html>
