@@ -48,28 +48,28 @@
     <main>
         <div class="collection-grid">
             <div class="collection-item">
-                <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-               <!-- Prísne štýly pre oddelenú mriežku na PC a Mobil -->
-    <style>
-            <!-- 1. PÔVODNÝ WOMEN'S TECH PACK (Vrátený na svoje miesto) -->
+            <main>
+    <!-- PRVÁ MRŽKA: PÔVODNÉ DVA ŠIROKÉ TECH PACKY VEDĽA SEBA -->
+    <div class="collection-grid">
+        <div class="collection-item">
+            <div class="collection-title">[ Men's Tech Pack ]</div>
+            <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
         <div class="collection-item">
             <div class="collection-title">[ Women's Tech Pack ]</div>
             <img src="./women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
         </div>
-    </div> <!-- UABZATVORENIE PRVEJ DRIEDKAVEJ MRÍŽKY .collection-grid -->
+    </div>
 
-    <!-- Prísne štýly pre novú oddelenú mriežku na PC a Mobil -->
+    <!-- ŠTÝLY PRE DRUHÚ, RESPONSÍVNU MRŽKU (VEĽKÉ NA PC, POD SEBOU NA MOBILE) -->
     <style>
         .tina-custom-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Tri veľké stĺpce vedľa seba na PC */
             gap: 32px;
             width: 100%;
-            margin-top: 60px;
-            margin-bottom: 60px;
+            margin-top: 40px;
+            margin-bottom: 40px;
             box-sizing: border-box;
         }
         .tina-custom-row .collection-item {
@@ -87,7 +87,7 @@
             display: block;
         }
 
-        /* Prísna podmienka pre smartfóny (obrazovky do 768px) */
+        /* Podmienka pre smartfóny (obrazovky do 768px) */
         @media (max-width: 768px) {
             .tina-custom-row {
                 grid-template-columns: 1fr !important; /* Na mobile natvrdo pod seba */
@@ -97,7 +97,7 @@
         }
     </style>
 
-    <!-- 2. TRI NOVÉ VERTIKÁLNE TECH PACKY (Natvrdo veľké a vedľa seba na PC) -->
+    <!-- DRUHÁ MRŽKA: TRI NOVÉ VERTIKÁLNE TECH PACKY -->
     <div class="tina-custom-row">
         <div class="collection-item">
             <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Sweatshirt ]</div>
@@ -115,34 +115,12 @@
         </div>
     </div>
 
-
-    <!-- Samotná čistá štruktúra galérie -->
-    <div class="tina-custom-row">
-        <div class="collection-item">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Sweatshirt ]</div>
-            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
-        </div>
-
-        <div class="collection-item">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Cap ]</div>
-            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
-        </div>
-
-        <div class="collection-item">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack T-Shirt ]</div>
-            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
-        </div>
+    <!-- TLAČIDLO PRE PRÍBEH -->
+    <div class="toggle-btn-container">
+        <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
     </div>
 
-        </div>
-    </div>
-
-            </div>
-        </div>
-    </div>
-
-        </div>
-    </div>
+    <section id="privateStory" class="story-section">
 
         </div>
         <div class="toggle-btn-container">
