@@ -52,25 +52,60 @@
                 <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
-                <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="./women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-    <div class="collection-grid" style="margin-top: 40px;">
+               <!-- Prísne štýly pre oddelenú mriežku na PC a Mobil -->
+    <style>
+        .tina-custom-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Natvrdo tri stĺpce vedľa seba na PC */
+            gap: 32px;
+            width: 100%;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            box-sizing: border-box;
+        }
+        .tina-custom-row .collection-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #f7f5f0;
+            padding: 20px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .tina-custom-row .collection-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Prísna podmienka pre smartfóny (obrazovky do 768px) */
+        @media (max-width: 768px) {
+            .tina-custom-row {
+                grid-template-columns: 1fr !important; /* Na mobile natvrdo pod seba */
+                gap: 40px;
+                padding: 0 10px;
+            }
+        }
+    </style>
+
+    <!-- Samotná čistá štruktúra galérie -->
+    <div class="tina-custom-row">
         <div class="collection-item">
-         <div class="product-grid-vertical" style="display: flex; flex-wrap: wrap; gap: 32px; width: 100%; margin-top: 50px; margin-bottom: 50px; justify-content: center;">
-        <div class="collection-item" style="flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; background-color: #f7f5f0; padding: 16px; border-radius: 4px; box-sizing: border-box;">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; width: 100%;">[ Trotuár Tech Pack Sweatshirt ]</div>
-            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)" style="width: 100%; height: auto; display: block;">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Sweatshirt ]</div>
+            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
         </div>
 
-        <div class="collection-item" style="flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; background-color: #f7f5f0; padding: 16px; border-radius: 4px; box-sizing: border-box;">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; width: 100%;">[ Trotuár Tech Pack Cap ]</div>
-            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)" style="width: 100%; height: auto; display: block;">
+        <div class="collection-item">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Cap ]</div>
+            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
         </div>
 
-        <div class="collection-item" style="flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; background-color: #f7f5f0; padding: 16px; border-radius: 4px; box-sizing: border-box;">
-            <div class="collection-title" style="margin-bottom: 16px; text-align: center; width: 100%;">[ Trotuár Tech Pack T-Shirt ]</div>
-            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)" style="width: 100%; height: auto; display: block;">
+        <div class="collection-item">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack T-Shirt ]</div>
+            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+
         </div>
     </div>
 
