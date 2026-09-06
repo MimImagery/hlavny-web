@@ -54,9 +54,18 @@
             <div class="collection-item">
                <!-- Prísne štýly pre oddelenú mriežku na PC a Mobil -->
     <style>
+            <!-- 1. PÔVODNÝ WOMEN'S TECH PACK (Vrátený na svoje miesto) -->
+        <div class="collection-item">
+            <div class="collection-title">[ Women's Tech Pack ]</div>
+            <img src="./women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
+    </div> <!-- UABZATVORENIE PRVEJ DRIEDKAVEJ MRÍŽKY .collection-grid -->
+
+    <!-- Prísne štýly pre novú oddelenú mriežku na PC a Mobil -->
+    <style>
         .tina-custom-row {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Natvrdo tri stĺpce vedľa seba na PC */
+            grid-template-columns: repeat(3, 1fr); /* Tri veľké stĺpce vedľa seba na PC */
             gap: 32px;
             width: 100%;
             margin-top: 60px;
@@ -87,6 +96,25 @@
             }
         }
     </style>
+
+    <!-- 2. TRI NOVÉ VERTIKÁLNE TECH PACKY (Natvrdo veľké a vedľa seba na PC) -->
+    <div class="tina-custom-row">
+        <div class="collection-item">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Sweatshirt ]</div>
+            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
+
+        <div class="collection-item">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack Cap ]</div>
+            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
+
+        <div class="collection-item">
+            <div class="collection-title" style="margin-bottom: 16px; text-align: center; font-size: 1.1rem;">[ Trotuár Tech Pack T-Shirt ]</div>
+            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+
 
     <!-- Samotná čistá štruktúra galérie -->
     <div class="tina-custom-row">
