@@ -1,145 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://googletagmanager.com"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-P3ZJM8KSYD');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ The Trotuár Promenade Collection ] | MIM IMAGERY</title>
+    <title>MIM IMAGERY — The Trotuár Promenade Collection</title>
     <style>
-        body { background-color: #FDFBF7; color: #281E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
-        header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
-        header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #281E17; }
-        header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
-        .divider { width: 60px; height: 1px; background-color: #281E17; margin: 30px auto; }
-        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .toggle-btn-container { text-align: center; margin: 40px auto; }
-        .toggle-story-btn { background: none; border: 1px solid #281E17; color: #281E17; padding: 12px 30px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.8rem; cursor: pointer; transition: 0.3s; }
-        .toggle-story-btn:hover { background-color: #281E17; color: #FDFBF7; }
-        .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #281E17; border-bottom: 1px solid #281E17; padding: 30px 0; }
-        .story-section p { margin-bottom: 20px; }
-        
-        /* Pôvodná dvojstĺpcová mriežka pre široké Tech Packy */
-        .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
-        
-        /* NOVÁ trojstĺpcová mriežka pre vertikálne produkty na PC */
-        .collection-grid-three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
-        
-        .collection-item { background-color: #FAF6F0; border: 1px solid #EAE1D4; padding: 20px; text-align: center; }
-        .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #281E17; font-weight: bold; }
-        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #281E17; cursor: zoom-in; }
-        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
-        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
-        .back-button:hover { background-color: #281E17; color: #FDFBF7; }
-        .atelier-contact { text-align: center; font-family: 'Didot', serif; margin: 50px auto 20px auto; color: #281E17; font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8; }
-        .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: #281E17; margin-bottom: 10px; font-style: italic; }
-        .contact-details a { color: #281E17; text-decoration: none; border-bottom: 1px solid #281E17; padding-bottom: 2px; }
-        
-        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
-        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; }
-        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #FAF6F0; }
-        
-        /* Prísny responsívny prechod pre mobilné displeje */
-        @media (max-width: 750px) { 
-            .collection-grid { grid-template-columns: 1fr; } 
-            .collection-grid-three { grid-template-columns: 1fr; } 
+        /* BASE STYLE: Quiet Luxury Dark Aesthetic */
+        body {
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .collection-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* GRID SYSTEM: Prísna symetria na dva stĺpce */
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .collection-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .collection-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .collection-title {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8c8c8c;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .collection-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            filter: grayscale(20%);
+            transition: all 0.4s ease;
+        }
+
+        .collection-image:hover {
+            filter: grayscale(0%);
+            transform: scale(1.01);
+        }
+
+        /* DOWNLOAD BUTTON: Tlmená elegantná sivá */
+        .download-container {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a3a3a3;
+            text-decoration: none;
+            border: 1px solid #333333;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            background-color: #111111;
+        }
+
+        /* INTERACTIVE STORY SECTION */
+        .story-section {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 40px;
+        }
+
+        .toggle-story-btn {
+            background: none;
+            border: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-story-btn:hover {
+            color: #8c8c8c;
+        }
+
+        .letter-content {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #cccccc;
+            white-space: pre-line;
+            font-family: "Courier New", Courier, monospace; /* Evokuje tvoj Triumph stroj */
+            background-color: #0f0f0f;
+            padding: 30px;
+            border: 1px solid #141414;
+        }
+
+        /* LIGHTBOX SYSTEM */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(5, 5, 5, 0.95);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>M I M &nbsp; I M A G E R Y</h1>
-        <p>The Trotuár Promenade Collection – Specially Crafted for Paul Wesley</p>
-        <div class="divider"></div>
-    </header>
-
-    <main>
-        <!-- PRVÝ RAD: DVA PÔVODNÉ ŠIROKÉ TECH PACKY (VEDĽA SEBA NA PC) -->
-        <div class="collection-grid">
-            <div class="collection-item">
-                <div class="collection-title">[ Men's Tech Pack ]</div>
-                <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-                <div class="collection-title">[ Women's Tech Pack ]</div>
-                <img src="./women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
+<div class="collection-container">
+    
+    <!-- MAIN GRID -->
+    <div class="collection-grid">
+        
+        <!-- 1. MUŽSKÝ TECH PACK -->
+        <div class="collection-item">
+            <div class="collection-title">[ Men's Collection Tech Pack ]</div>
+            <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Men's Tech Pack">
         </div>
 
-        <!-- DRUHÝ RAD: TRI NOVÉ VERTIKÁLNE TECH PACKY (NATVRDO VEDĽA SEBA NA PC, POD SEBOU NA MOBILE) -->
-        <div class="collection-grid-three">
-            <div class="collection-item">
-                <div class="collection-title">[ Trotuár Tech Pack Sweatshirt ]</div>
-                <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-                <div class="collection-title">[ Trotuár Tech Pack Cap ]</div>
-                <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-            <div class="collection-item">
-                <div class="collection-title">[ Trotuár Tech Pack T-Shirt ]</div>
-                <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
+        <!-- 2. ŽENSKÝ TECH PACK - TRIČKO -->
+        <div class="collection-item">
+            <div class="collection-title">[ Women's Tee Tech Pack ]</div>
+            <img src="./paul-women-tee-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Tee Tech Pack">
         </div>
 
-        <!-- TLAČIDLO PRE PRÍBEH (HNEDÝ DIZAJN, FUNKČNÝ SKRIPT) -->
-        <div class="toggle-btn-container">
-            <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
+        <!-- 3. ŽENSKÝ TECH PACK - MIKINA -->
+        <div class="collection-item">
+            <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
+            <img src="./paul-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Hoodie Tech Pack">
         </div>
 
-        <!-- SEKCE OSOBNÉHO LISTU PRE PAULA (THE EUROPEAN CHAPTER) -->
-        <section id="privateStory" class="story-section">
-            <p><i>[ Private Client Zone ]</i></p>
-            <p>This capsule represents a deep, full-circle return to the architectural pillars that have shaped my entire life. My journey began with a foundation in Fashion Design, fueled by the raw expression of materials. Soon after, architectural engineering captured my focus, transforming how I perceive spatial boundaries, structural grids, and the movement of light.</p>
-            <p>Stepping into the historic atmosphere of Banská Štiavnica for the live film set reawakened that dormant universe. After decades of creative silence, I realized that true high-end design must unite the movement of clothing with the permanence of space. This is where history meets the silver screen.</p>
-            <p>This European chapter is crafted directly for you—a material narrative calculated by millimeter, designed to transition fluidly between daylight and shadow. Every line is a structural layout; every piece is a calculated frame.</p>
-        </section>
-
-        <div class="atelier-contact">
-            <div class="contact-title">[ For further creative evaluation, direct commissions, or personal inquiries ]</div>
-            <div class="contact-details">
-                <a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276
-            </div>
-            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #281E17; margin-top: 10px;">Creative Director Zone | Central Europe</div>
+        <!-- 4. ATMOSFÉRICKÁ ŠTÚDIA 1 -->
+        <div class="collection-item">
+            <div class="collection-title">[ Atmospheric Study I ]</div>
+            <img src="./ny-bedroom.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Atmospheric Study I">
         </div>
 
-        <div class="back-container">
-            <a href="../" class="back-button">[ Back to Atelier Home ]</a>
+        <!-- 5. ATMOSFÉRICKÁ ŠTÚDIA 2 -->
+        <div class="collection-item">
+            <div class="collection-title">[ Atmospheric Study II ]</div>
+            <img src="./ny-bathroom1.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Atmospheric Study II">
         </div>
-    </main>
 
-    <footer>&copy; 2026 MIM IMAGERY STUDIO. ALL RIGHTS RESERVED.</footer>
+        <!-- 6. ATMOSFÉRICKÁ ŠTÚDIA 3 -->
+        <div class="collection-item">
+            <div class="collection-title">[ Atmospheric Study III ]</div>
+            <img src="./ny-bathroom2.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Atmospheric Study III">
+        </div>
 
-    <!-- LIGHTBOX -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="">
     </div>
 
-    <script>
-        function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
+    <!-- MAIN DOWNLOAD BUTTON (Zlúčené PDF z Canvy) -->
+    <div class="download-container">
+        <a href="./paul-collection-complete.pdf" download class="download-link">[ Download Complete Collection Tech Pack - PDF ]</a>
+    </div>
+
+    <!-- INTERACTIVE LETTER FROM TINA -->
+    <div class="story-section">
+        <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
+        <div id="paul-letter" class="letter-content">
+            Dear Paul,
+
+            There is an unspoken architecture in how history meets the silver screen. This collection, rooted in the timeless texture of Central Europe and the raw alignment of mechanical alignment, was built for uncompromised permanence.
+
+            Every line calculated. Every piece independent.
+            
+            Welcome to the European Chapter.
+            
+            — Tina | MiM Imagery
+        </div>
+    </div>
+
+</div>
+
+<!-- LIGHTBOX ELEMENT -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Visual">
+</div>
+
+<script>
+    /* INTERACTIVE FUNCTIONS */
+    function toggleStory() {
+        const letter = document.getElementById('paul-letter');
+        const btn = document.querySelector('.toggle-story-btn');
+        
+        if (letter.style.display === 'none' || letter.style.display === '') {
+            letter.style.display = 'block';
+            btn.innerText = '[ Close the Letter ]';
+        } else {
+            letter.style.display = 'none';
+            btn.innerText = '[ Open the Letter from Tina ]';
         }
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-        function toggleStory() {
-            var x = document.getElementById("privateStory");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
+    }
+
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = src;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
 </body>
 </html>
-
 
