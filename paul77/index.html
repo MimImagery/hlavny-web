@@ -20,23 +20,28 @@
         .divider { width: 60px; height: 1px; background-color: #281E17; margin: 30px auto; }
         main { max-width: 1000px; margin: 0 auto; padding: 20px; }
         .toggle-btn-container { text-align: center; margin: 40px auto; }
-        .toggle-story-btn { background: none; border: 1px solid #281E17; color: #281E17; padding: 12px 30px; margin: 5px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.8rem; cursor: pointer; transition: transition 0.3s; display: inline-block; text-decoration: none; }
+        
+        .toggle-story-btn { background: none; border: 1px solid #281E17; color: #281E17; padding: 12px 30px; margin: 5px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.8rem; cursor: pointer; transition: all 0.3s; display: inline-block; text-decoration: none; }
         .toggle-story-btn:hover { background-color: #281E17; color: #FDFBF7; }
+        
         .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #281E17; border-bottom: 1px solid #281E17; padding: 30px 0; }
         .story-section p { margin-bottom: 20px; }
 
-        /* Pôvodná dvojstĺpcová mriežka pre široké Tech Packy */
         .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
-
-        /* NOVÁ trojstĺpcová mriežka pre vertikálne produkty na PC */
         .collection-grid-three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
 
+        /* JEDNOTNÝ KRÉMOVÝ PODKLAD BOXU */
         .collection-item { background-color: #FAF6F0; border: 1px solid #E4E1D4; padding: 20px; text-align: center; }
         .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #281E17; font-weight: bold; }
-        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #281E17; cursor: zoom-in; }
+        
+        /* MULTIPLY BLEND MÓD ZJEDNOTÍ POZADIA VŠETKÝCH OBRÁZKOV NA KRÉMOVÚ */
+        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #281E17; cursor: zoom-in; mix-blend-mode: multiply; }
+        
         .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
-        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: transition 0.3s; }
+        
+        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; }
         .back-button:hover { background-color: #281E17; color: #FDFBF7; }
+        
         .atelier-contact { text-align: center; font-family: 'Didot', serif; margin: 50px auto 20px auto; color: #281E17; font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8; }
         .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-style: italic; }
         .contact-details a { color: #281E17; text-decoration: none; border-bottom: 1px solid #281E17; padding-bottom: 2px; }
@@ -44,7 +49,6 @@
         .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; }
         .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #FAF6F0; }
 
-        /* Prísny responsívny prechod pre mobilné displeje */
         @media (max-width: 750px) {
             .collection-grid { grid-template-columns: 1fr; }
             .collection-grid-three { grid-template-columns: 1fr; }
@@ -60,7 +64,7 @@
     </header>
 
     <main>
-        <!-- PRVÝ RAD: DVA PÔVODNÉ ŠIROKÉ TECH PACKY (VEDĽA SEBA NA PC) -->
+        <!-- 1. RAD: 2 veľké široké Tech Packy -->
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
@@ -72,7 +76,7 @@
             </div>
         </div>
 
-        <!-- DRUHÝ RAD: TRI NOVÉ VERTIKÁLNE TECH PACKY (NATVRDO VEDĽA SEBA NA PC, POD SEBOU NA MOBILE) -->
+        <!-- 2. RAD: 3 úzke produktové detaily -->
         <div class="collection-grid-three">
             <div class="collection-item">
                 <div class="collection-title">[ Trotuár Tech Pac Sweatshirt ]</div>
@@ -88,7 +92,7 @@
             </div>
         </div>
 
-        <!-- TRETÍ RAD: DVA NOVÉ SAMOSTATNÉ ŽENSKÉ TECH PACKY (ZORADENÉ VEDĽA SEBA NA PC V EMULÁCII TVOJHO GRIDU) -->
+        <!-- 3. RAD: 2 nové samostatné ženské Tech Packy -->
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
@@ -100,21 +104,20 @@
             </div>
         </div>
 
-        <!-- TLAČIDLÁ PRE PRÍBEH A PDF (DOKONALE ZLÚČENÉ V TVOJOM KONTAJNERI) -->
+        <!-- TLAČIDLÁ PRE PRÍBEH A PDF -->
         <div class="toggle-btn-container">
             <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
             <a href="./paul-collection-complete.pdf" download class="toggle-story-btn">[ Download Complete Tech Pack - PDF ]</a>
         </div>
 
-        <!-- SEKCE OSOBNÉHO LISTU PRE PAULA (THE EUROPEAN CHAPTER) -->
+        <!-- SEKCE OSOBNÉHO LISTU PRE PAULA (TVOJ ORIGINÁLNY A ÚPLNÝ TEXT Z OBRÁZKA) -->
         <section id="privateStory" class="story-section">
             <p><i>[ Private Client Zone ]</i></p>
-This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality, shaping how I perceive raw emotion and form.
-
-Following major spinal surgery, I spent six long weeks completely immobile. No movement. Just me and the ceiling. During that dark time, visual storytelling became my ultimate canvas. The absolute belief that even after the deepest darkness there will always be light kept me alive. While Ian’s environmental legacy inspired me to ground my craft in raw nature and my 7-year vegan lifestyle, it was your striking charisma and creative intensity that breathed the necessary fire, courage, and structure into my sketches. This collection is an artistic celebration of that raw human strength and light.
-
-Stepping recently into the historic, cinematic atmosphere of Banská Štiavnica reawakened that dormant universe. Observing the costume artistry brought me straight back to my tailoring roots, while the energy of the set provided the final catalyst. It was the spark needed to transform pain, design, and acting into the bold lines of The Trotuár Promenade, custom-crafted exclusively for your evaluation.
-</section>
+            <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality, shaping how I perceive raw emotion and form.</p>
+            <p>Following major spinal surgery, I spent six long weeks completely immobile. No movement. Just me and the ceiling. During that dark time, visual storytelling became my ultimate canvas. The absolute belief that even after the deepest darkness there will always be light kept me alive.</p>
+            <p>While Ian's environmental legacy inspired me to ground my craft in raw nature and my 7-year vegan lifestyle, it was your striking charisma and creative intensity that breathed the necessary fire, courage, and structure into my sketches. This collection is an artistic celebration of that raw human strength and light.</p>
+            <p>Stepping recently into the historic, cinematic atmosphere of Banská Štiavnica reawakened that dormant universe. Observing the costume artistry brought me straight back to my tailoring roots, while the energy of the set provided the final catalyst. It was the spark needed to transform pain, design, and acting into the bold lines of The Trotuár Promenade, custom-crafted exclusively for your evaluation.</p>
+        </section>
 
         <div class="atelier-contact">
             <div class="contact-title">[ For further creative evaluation, direct commissions, or personal inquiries ]</div>
@@ -125,7 +128,7 @@ Stepping recently into the historic, cinematic atmosphere of Banská Štiavnica 
         </div>
 
         <div class="back-container">
-            <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
+            <a href="index.html" class="back-button">[ Back to Atelier Home ]</a>
         </div>
     </main>
 
