@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY — The Trotuár Promenade Collection</title>
     <style>
-        /* ORIGINÁLNY VIZUÁLNY KÓD: Luxusné krémové plátno */
+        /* LUXUSNÉ SMOTANOVÉ PLÁTNO */
         body {
             background-color: #faf6f0;
             color: #3d352e;
@@ -22,7 +22,7 @@
             width: 100%;
         }
 
-        /* 1. RAD: Dva veľké široké boxy vedľa seba */
+        /* 1. RAD & 3. RAD: 2 boxy vedľa seba */
         .grid-row-2col {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -30,7 +30,7 @@
             margin-bottom: 30px;
         }
 
-        /* 2. RAD: Tri úzke vertikálne boxy vedľa seba */
+        /* 2. RAD: 3 boxy vedľa seba */
         .grid-row-3col {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -38,7 +38,6 @@
             margin-bottom: 30px;
         }
 
-        /* Responzivita pre mobilné zariadenia */
         @media (max-width: 768px) {
             .grid-row-2col, .grid-row-3col {
                 grid-template-columns: 1fr;
@@ -46,7 +45,7 @@
             }
         }
 
-        /* ARCHITEKTÚRA BOXOV */
+        /* UKLADANIE SÚBOROV */
         .collection-item {
             background-color: #ffffff;
             border: 1px solid #e6ded4;
@@ -78,7 +77,7 @@
             opacity: 0.9;
         }
 
-        /* CENTROVANÁ AKČNÁ ZÓNA POD MRIEŽKOU */
+        /* STREDOVÝ PANEL PRE TLAČIDLÁ */
         .action-container {
             display: flex;
             flex-direction: column;
@@ -88,7 +87,6 @@
             width: 100%;
         }
 
-        /* ŠTÍHLE ELEGANTNÉ TLAČIDLÁ V ZÁVORKÁCH */
         .luxury-btn {
             background: none;
             border: 1px solid #d1c7bd;
@@ -113,12 +111,12 @@
             background-color: #fdfcfb;
         }
 
-        /* DIZAJN PRE KURIÉRSKY LIST */
+        /* POLOŽKA LISTU */
         .letter-content {
             display: none;
             width: 100%;
             max-width: 650px;
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: left;
             font-size: 14px;
             line-height: 1.9;
@@ -131,7 +129,7 @@
             box-sizing: border-box;
         }
 
-        /* LIGHTBOX SYSTEM */
+        /* LIGHTBOX */
         .lightbox {
             display: none;
             position: fixed;
@@ -157,7 +155,7 @@
 
 <div class="collection-container">
     
-    <!-- 1. RAD: 2 fotky vedľa seba -->
+    <!-- 1. RAD: 2 hlavné Tech Packy -->
     <div class="grid-row-2col">
         <div class="collection-item">
             <div class="collection-title">[ Men's Tech Pack ]</div>
@@ -169,41 +167,41 @@
         </div>
     </div>
 
-    <!-- 2. RAD: 3 fotky vedľa seba -->
+    <!-- 2. RAD: 3 produktové fotografie z priečinka -->
     <div class="grid-row-3col">
         <div class="collection-item">
             <div class="collection-title">[ Trotuár<br>Tech Pack<br>Sweatshirt ]</div>
-            <img src="./paul-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Hoodie Tech Pack">
+            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Sweatshirt Image">
         </div>
         <div class="collection-item">
             <div class="collection-title">[ Trotuár<br>Tech Pack<br>Cap ]</div>
-            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Trotuár Cap Tech Pack">
+            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Cap Image">
         </div>
         <div class="collection-item">
             <div class="collection-title">[ Trotuár<br>Tech Pack<br>T-Shirt ]</div>
+            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="T-Shirt Image">
+        </div>
+    </div>
+
+    <!-- 3. RAD: 2 nové samostatné ženské Tech Packy -->
+    <div class="grid-row-2col">
+        <div class="collection-item">
+            <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
+            <img src="./paul-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Hoodie Tech Pack">
+        </div>
+        <div class="collection-item">
+            <div class="collection-title">[ Women's Tee Tech Pack ]</div>
             <img src="./paul-women-tee-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Tee Tech Pack">
         </div>
     </div>
 
-    <!-- 3. RAD: 2 fotky vedľa seba -->
-    <div class="grid-row-2col">
-        <div class="collection-item">
-            <div class="collection-title">[ Atmospheric Study I ]</div>
-            <img src="./Trotuar Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Atmospheric Study I">
-        </div>
-        <div class="collection-item">
-            <div class="collection-title">[ Atmospheric Study II ]</div>
-            <img src="./trutoar_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Atmospheric Study II">
-        </div>
-    </div>
-
-    <!-- CENTRÁLNY STÔL PRE TLAČIDLÁ -->
+    <!-- CENTRÁLNA ZÓNA S TLAČIDLAMI -->
     <div class="action-container">
         
         <!-- TLAČIDLO PRE LIST -->
         <button class="luxury-btn" id="story-trigger" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
         
-        <!-- TEXT LISTU PRE PAULA -->
+        <!-- TEXT LISTU (Otvorí sa čisto na mieste) -->
         <div id="paul-letter" class="letter-content">
             Dear Paul,
 
@@ -219,14 +217,14 @@
         <!-- TLAČIDLO NA STIAHNUTIE PDF -->
         <a href="./paul-collection-complete.pdf" download class="luxury-btn">[ Download Complete Tech Pack - PDF ]</a>
         
-        <!-- TLAČIDLO SPÄŤ NA HLAVNÚ STRÁNKU (VRACIA NA HOME) -->
+        <!-- TLAČIDLO NÁVRATU NA HLAVNÚ STRÁNKU -->
         <a href="index.html" class="luxury-btn">[ Back to Atelier Home ]</a>
         
     </div>
 
 </div>
 
-<!-- LIGHTBOX ELEMENT -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Visual">
 </div>
@@ -239,7 +237,6 @@
         if (letter.style.display === 'none' || letter.style.display === '') {
             letter.style.display = 'block';
             btn.innerText = '[ Close the Letter ]';
-            letter.scrollIntoView({ behavior: 'smooth' });
         } else {
             letter.style.display = 'none';
             btn.innerText = '[ Open the Letter from Tina ]';
