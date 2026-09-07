@@ -5,129 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIM IMAGERY — The Trotuár Promenade Collection</title>
     <style>
-        /* BASE STYLE: Quiet Luxury Dark Aesthetic */
+        /* ORIGINÁLNY VIZUÁLNY KÓD: Luxusné krémové plátno */
         body {
-            background-color: #0a0a0a;
-            color: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #faf6f0; /* Tvoja smotanová */
+            color: #3d352e;
+            font-family: "Times New Roman", Times, Georgia, serif;
             margin: 0;
-            padding: 40px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .collection-container {
-            max-width: 900px; /* Užšie rozloženie pre čistú vertikálnu líniu */
+            max-width: 1100px;
             width: 100%;
         }
 
-        /* BACK BUTTONS: Minimalistické navigácie */
+        /* TLAČIDLO SPÄŤ: Navigácia */
         .nav-back-link {
             display: inline-block;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: #8c8c8c;
+            color: #8c7b6e;
             text-decoration: none;
             margin-bottom: 40px;
-            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
         }
 
         .nav-back-link:hover {
-            color: #ffffff;
+            color: #3d352e;
+            border-bottom: 1px solid #8c7b6e;
         }
 
-        /* VERTICAL LIST SYSTEM: Každý produkt samostatne a veľký */
-        .collection-vertical-list {
-            display: flex;
-            flex-direction: column;
-            gap: 60px; /* Prísny rozostup medzi prvkami */
-            width: 100%;
+        /* 1. HORNÝ GRID: Dva veľké široké boxy vedľa seba */
+        .grid-top {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
+        /* 2. SPODNÝ GRID: Tri úzke vertikálne boxy vedľa seba */
+        .grid-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* Responzivita pre mobilné zariadenia */
+        @media (max-width: 768px) {
+            .grid-top, .grid-bottom {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* ARCHITEKTÚRA BOXOV */
         .collection-item {
+            background-color: #ffffff; /* Čistý biely podklad */
+            border: 1px solid #e6ded4; /* Tenký zlatisto-pieskový rámček */
+            padding: 24px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
+            align-items: center;
+            box-sizing: border-box;
         }
 
         .collection-title {
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 12px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            color: #8c8c8c;
-            margin-bottom: 16px;
-            font-weight: 500;
+            color: #6e6156;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.5;
         }
 
         .collection-image {
             width: 100%;
             height: auto;
             cursor: pointer;
-            filter: grayscale(15%);
-            transition: all 0.4s ease;
-            border: 1px solid #141414;
+            transition: opacity 0.3s ease;
         }
 
         .collection-image:hover {
-            filter: grayscale(0%);
-            border: 1px solid #333333;
+            opacity: 0.9;
         }
 
-        /* INTERACTIVE BUTTONS: Na stiahnutie a na list */
+        /* CENTROVANÁ AKČNÁ ZÓNA POD MRIEŽKOU */
         .action-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-            margin-top: 60px;
-            margin-bottom: 60px;
-            border-top: 1px solid #161616;
-            padding-top: 60px;
+            gap: 24px;
+            margin-top: 20px;
             width: 100%;
+            clear: both;
         }
 
+        /* ŠTÍHLE ELEGANTNÉ TLAČIDLÁ V ZÁVORKÁCH */
         .luxury-btn {
-            display: inline-block;
-            background-color: #0f0f0f;
-            color: #ffffff;
-            border: 1px solid #262626;
-            padding: 16px 32px;
+            background: none;
+            border: 1px solid #d1c7bd;
+            color: #6e6156;
+            padding: 14px 28px;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
-            width: 100%;
-            max-width: 400px;
+            display: inline-block;
             text-align: center;
+            width: 100%;
+            max-width: 380px;
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
 
         .luxury-btn:hover {
-            color: #ffffff;
-            border: 1px solid #ffffff;
-            background-color: #161616;
+            border: 1px solid #3d352e;
+            color: #3d352e;
+            background-color: #fdfcfb;
         }
 
-        /* TEXT OF THE LETTER */
+        /* DIZAJN PRE KURIÉRSKY LIST */
         .letter-content {
             display: none;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
             margin-top: 20px;
             text-align: left;
             font-size: 14px;
-            line-height: 1.8;
-            color: #cccccc;
+            line-height: 1.9;
+            color: #4a4037;
             white-space: pre-line;
-            font-family: "Courier New", Courier, monospace; /* Tvoj Triumph kód */
-            background-color: #0f0f0f;
+            font-family: "Courier New", Courier, monospace;
+            background-color: #ffffff;
             padding: 40px;
-            border: 1px solid #141414;
+            border: 1px solid #e6ded4;
             box-sizing: border-box;
         }
 
@@ -135,20 +154,21 @@
         .lightbox {
             display: none;
             position: fixed;
-            z-index: 999;
+            z-index: 1000;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(5, 5, 5, 0.97);
+            background-color: rgba(250, 246, 240, 0.98);
             justify-content: center;
             align-items: center;
         }
 
         .lightbox-img {
-            max-width: 92%;
-            max-height: 92%;
+            max-width: 90%;
+            max-height: 90%;
             object-fit: contain;
+            border: 1px solid #e6ded4;
         }
     </style>
 </head>
@@ -156,37 +176,54 @@
 
 <div class="collection-container">
     
-    <!-- TLAČIDLO SPÄŤ (Hore) -->
-    <a href="index.html" class="nav-back-link">← Back to Gallery</a>
+    <!-- HORNÉ TLAČIDLO SPÄŤ -->
+    <a href="index.html" class="nav-back-link">← [ BACK TO MAIN GALLERY ]</a>
     
-    <!-- VERTIKÁLNY ZOZNAM SAMOSTATNÝCH OBRAZKOV -->
-    <div class="collection-vertical-list">
+    <!-- LEVEL 1: HORNÝ RIADOK (Dva veľké Tech Packy) -->
+    <div class="grid-top">
         
         <!-- 1. MUŽSKÝ TECH PACK -->
         <div class="collection-item">
-            <div class="collection-title">[ Men's Collection Tech Pack ]</div>
+            <div class="collection-title">[ Men's Tech Pack ]</div>
             <img src="./paul-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Men's Tech Pack">
         </div>
 
-        <!-- 2. ŽENSKÝ TECH PACK - TRIČKO -->
+        <!-- 2. ŽENSKÝ TECH PACK (Celkový / Pôvodný) -->
         <div class="collection-item">
-            <div class="collection-title">[ Women's Tee Tech Pack ]</div>
-            <img src="./paul-women-tee-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Tee Tech Pack">
-        </div>
-
-        <!-- 3. ŽENSKÝ TECH PACK - MIKINA -->
-        <div class="collection-item">
-            <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
-            <img src="./paul-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Hoodie Tech Pack">
+            <div class="collection-title">[ Women's Tech Pack ]</div>
+            <img src="./women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Tech Pack">
         </div>
 
     </div>
 
-    <!-- CENTRÁLNY BLOK PRE AKCIE -->
+    <!-- LEVEL 2: SPODNÝ RIADOK (Tri úzke, samostatné produkty vedľa seba) -->
+    <div class="grid-bottom">
+        
+        <!-- 3. SAMOSTATNÁ ŽENSKÁ MIKINA (Nová) -->
+        <div class="collection-item">
+            <div class="collection-title">[ Trotuár<br>Tech Pack<br>Sweatshirt ]</div>
+            <img src="./paul-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Hoodie Tech Pack">
+        </div>
+
+        <!-- 4. ŠILTOVKA (Pôvodná / Unisex) -->
+        <div class="collection-item">
+            <div class="collection-title">[ Trotuár<br>Tech Pack<br>Cap ]</div>
+            <img src="./Trutoar Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Trotuár Cap Tech Pack">
+        </div>
+
+        <!-- 5. SAMOSTATNÉ ŽENSKÉ TRIČKO (Nové) -->
+        <div class="collection-item">
+            <div class="collection-title">[ Trotuár<br>Tech Pack<br>T-Shirt ]</div>
+            <img src="./paul-women-tee-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)" alt="Women's Tee Tech Pack">
+        </div>
+
+    </div>
+
+    <!-- CENTRÁLNY BLOK PRE TLAČIDLÁ (Už žiadne odstreľovanie doprava!) -->
     <div class="action-container">
         
         <!-- TLAČIDLO NA STIAHNUTIE PDF -->
-        <a href="./paul-collection-complete.pdf" download class="luxury-btn">[ Download Complete Tech Pack PDF ]</a>
+        <a href="./paul-collection-complete.pdf" download class="luxury-btn">[ Download Complete Tech Pack - PDF ]</a>
         
         <!-- TLAČIDLO PRE LIST -->
         <button class="luxury-btn" id="story-trigger" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
@@ -206,20 +243,19 @@
         
     </div>
 
-    <!-- TLAČIDLO SPÄŤ (Dole) -->
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html" class="nav-back-link">← Back to Main Gallery</a>
+    <!-- DOLNÉ TLAČIDLO SPÄŤ -->
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="index.html" class="nav-back-link">[ BACK TO GALLERY ]</a>
     </div>
 
 </div>
 
-<!-- LIGHTBOX ELEMENT FOR IMAGE ZOOM -->
+<!-- LIGHTBOX ELEMENT -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Visual">
 </div>
 
 <script>
-    /* INTERACTIVE JAVASCRIPT FUNCTIONS */
     function toggleStory() {
         const letter = document.getElementById('paul-letter');
         const btn = document.getElementById('story-trigger');
@@ -227,7 +263,6 @@
         if (letter.style.display === 'none' || letter.style.display === '') {
             letter.style.display = 'block';
             btn.innerText = '[ Close the Letter ]';
-            // Plynulé odrolovanie k otvorenému listu
             letter.scrollIntoView({ behavior: 'smooth' });
         } else {
             letter.style.display = 'none';
