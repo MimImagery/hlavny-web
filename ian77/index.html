@@ -29,7 +29,6 @@
         .story-section p { margin-bottom: 20px; }
 
         .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
-        .collection-grid-three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
         
         .collection-item { background-color: #FAF6F0; border: 1px solid #E4E1D4; padding: 20px; text-align: center; }
         .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #281E17; font-weight: bold; }
@@ -49,7 +48,6 @@
 
         @media (max-width: 750px) {
             .collection-grid { grid-template-columns: 1fr; }
-            .collection-grid-three { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -63,35 +61,47 @@
 
     <main>
 
-        <!-- 1. RAD: 2 veľké široké Tech Packy -->
+        <!-- 1. BLOK: MEN'S LINE (Symetrická mriežka 1fr 1fr) -->
+        <div style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; color: #281E17; margin-bottom: 20px; border-bottom: 1px solid #281E17; padding-bottom: 5px;">[ Men's Capsule ]</div>
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">Men's Tech Pack</div>
                 <img src="./ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
-                <div class="collection-title">Women's Tech Pack</div>
-                <img src="./ian-women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
-            </div>
-        </div>
-
-        <!-- 2. RAD: 3 úzke produktové detaily -->
-        <div class="collection-grid-three">
-            <div class="collection-item">
                 <div class="collection-title">Kiss the Ground Cap</div>
                 <img src="./ian-cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
-                <div class="collection-title">Kiss the Ground T-Shirt</div>
+                <div class="collection-title">Men's T-Shirt</div>
                 <img src="./ian-tshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
             <div class="collection-item">
-                <div class="collection-title">Kiss the Ground Sweatshirt</div>
-                <img src="./ian-sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
+                <div class="collection-title">Men's Sweatshirt</div>
+                <!-- Opravený názov bez t -->
+                <img src="./ian-sweatshir.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
         </div>
 
-        <!-- TLAČIDLÁ: IBA LIST A TECH PACK PDF -->
+        <!-- 2. BLOK: WOMEN'S LINE (Symetrická mriežka 1fr 1fr) -->
+        <div style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; color: #281E17; margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid #281E17; padding-bottom: 5px;">[ Women's Capsule ]</div>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">Women's Tech Pack</div>
+                <img src="./women-ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">Women's T-Shirt</div>
+                <img src="./women-ian-tshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="collection-item" style="grid-column: span 2;">
+                <!-- Roztiahnuté cez 2 stĺpce kvôli symetrii, ak zatiaľ nemáš šiltovku pre ženy -->
+                <div class="collection-title">Women's Sweatshirt</div>
+                <img src="./women-ian-sweatshir.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <!-- TLAČIDLÁ -->
         <div class="toggle-btn-container">
             <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
             <a href="./ian-collection-complete.pdf" download class="toggle-story-btn">[ Download Complete Tech Pack - PDF ]</a>
