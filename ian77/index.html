@@ -135,16 +135,18 @@
         </div>
     </main>
 
-    <!-- LIGHTBOX PRE VYVETRANIE ZOOMU -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="Lightbox View">
     </div>
 
-    <!-- STOPERCENTNE OBNOVENÝ JAVASCRIPT PRE INTERAKTIVITU -->
+    <!-- IDENTICKÝ JAVASCRIPT BLOK S FUNKCIAMI PRE ZRKADLOVÚ SYMETRIU -->
     <script>
         function toggleStory() {
             var story = document.getElementById("privateStory");
             var btn = document.querySelector(".toggle-story-btn");
             if (story.style.display === "block") {
                 story.style.display = "none";
+                btn.textContent = "[ Open the Letter from Tina ]";
+            } else {
+
 
