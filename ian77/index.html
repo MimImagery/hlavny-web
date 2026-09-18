@@ -131,21 +131,20 @@
         </div>
 
         <div class="back-container">
-               <div class="back-container"><a href="../" class="back-button">[ Back to Atelier Home ]</a></div>
+            <a href="https://github.io" class="back-button">[ BACK TO ATELIER HOME ]</a>
         </div>
     </main>
 
+    <!-- LIGHTBOX PRE VYVETRANIE ZOOMU -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="Lightbox View">
     </div>
 
+    <!-- STOPERCENTNE OBNOVENÝ JAVASCRIPT PRE INTERAKTIVITU -->
     <script>
         function toggleStory() {
             var story = document.getElementById("privateStory");
             var btn = document.querySelector(".toggle-story-btn");
             if (story.style.display === "block") {
                 story.style.display = "none";
-                btn.textContent = "[ Open the Letter from Tina ]";
-            } else {
-                story.style.display = "block";
 
