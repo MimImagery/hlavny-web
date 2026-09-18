@@ -1,254 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://googletagmanager.com"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-P3ZJMBKSYD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIM IMAGERY — Private Collection / Chapter II</title>
+    <title>The Earth Regenerative Collection | MIM IMAGERY</title>
     <style>
-        :root {
-            --bg-color: #fcfbfa;
-            --text-color: #121212;
-            --border-color: #e5e2dd;
-            --muted-text: #6b6660;
-            --accent-dark: #0d0d0d;
-            --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
+        body { background-color: #FDFBF7; color: #281E17; font-family: 'Didot', serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { text-align: center; padding: 60px 20px 20px 20px; letter-spacing: 4px; }
+        header h1 { font-size: 2.2rem; font-weight: 300; margin: 0; text-transform: uppercase; color: #281E17; }
+        header p { font-size: 0.9rem; font-style: italic; color: #8A766A; margin-top: 10px; }
+        .divider { width: 60px; height: 1px; background-color: #281E17; margin: 30px auto; }
+        main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .toggle-btn-container { text-align: center; margin: 40px auto; }
+        
+        .toggle-story-btn { background: none; border: 1px solid #281E17; color: #281E17; padding: 12px 30px; margin: 5px; text-transform: uppercase; font-family: 'Didot', serif; font-size: 0.8rem; cursor: pointer; transition: all 0.3s; display: inline-block; text-decoration: none; }
+        .toggle-story-btn:hover { background-color: #281E17; color: #FDFBF7; }
+        
+        .story-section { display: none; text-align: justify; max-width: 650px; margin: 30px auto; font-size: 1.05rem; border-top: 1px solid #281E17; border-bottom: 1px solid #281E17; padding: 30px 0; }
+        .story-section p { margin-bottom: 20px; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
+        .collection-grid-three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin: 40px 0 60px 0; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-family);
-            letter-spacing: 0.06em;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        /* JEDNOTNÝ KRÉMOVÝ PODKLAD BOXU */
+        .collection-item { background-color: #FAF6F0; border: 1px solid #E4E1D4; padding: 20px; text-align: center; }
+        .collection-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #281E17; font-weight: bold; }
+        
+        /* MULTIPLY BLEND MÓD ZJEDNOTÍ POZADIA VŠETKÝCH OBRÁZKOV NA KRÉMOVÚ */
+        .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #281E17; cursor: zoom-in; mix-blend-mode: multiply; }
+        
+        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
+        
+        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; }
+        .back-button:hover { background-color: #281E17; color: #FDFBF7; }
+        
+        .atelier-contact { text-align: center; font-family: 'Didot', serif; margin: 50px auto 20px auto; color: #281E17; font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8; }
+        .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-style: italic; }
+        .contact-details a { color: #281E17; text-decoration: none; border-bottom: 1px solid #281E17; padding-bottom: 2px; }
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
+        .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; }
+        .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #FAF6F0; }
 
-        header {
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .brand-title {
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        .chapter-title {
-            font-size: 11px;
-            color: var(--muted-text);
-            text-transform: uppercase;
-        }
-
-        .techpack-grid {
-            width: 100%;
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: repeat(2, 11fr);
-            gap: 30px;
-        }
-
-        @media (max-width: 900px) {
-            .techpack-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .tech-card {
-            background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-header {
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            color: var(--accent-dark);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .visual-container {
-            width: 100%;
-            margin-bottom: 20px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            background-color: #fcfbfa;
-        }
-
-        .visual-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .specs-table {
-            width: 100%;
-            margin-top: auto;
-        }
-
-        .spec-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 11px;
-            padding: 10px 0;
-            border-bottom: 1px solid #f2effa;
-        }
-
-        .spec-row:last-child {
-            border-bottom: none;
-        }
-
-        .label {
-            color: var(--muted-text);
-            text-transform: uppercase;
-        }
-
-        .value {
-            font-weight: 500;
-            text-align: right;
-        }
-
-        /* Spodná trojdielna sekcia pre detailné hárky */
-        .details-row {
-            width: 100%;
-            max-width: 1200px;
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .details-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .detail-mini-card {
-            border: 1px solid var(--border-color);
-            background: #ffffff;
-            padding: 20px;
-        }
-
-        footer {
-            margin-top: 60px;
-            font-size: 10px;
-            color: var(--muted-text);
-            text-transform: uppercase;
+        @media (max-width: 750px) {
+            .collection-grid { grid-template-columns: 1fr; }
+            .collection-grid-three { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="brand-title">MIM IMAGERY</div>
-        <div class="chapter-title">Private Collection — Chapter II / Earth</div>
+        <h1>M I M &nbsp; I M A G E R Y</h1>
+        <p>The Earth Regenerative Collection - Specially Crafted for Ian Somerhalder</p>
+        <div class="divider"></div>
     </header>
 
-    <!-- Hlavná dvojdielna sekcia s identickým layoutom -->
-    <div class="techpack-grid">
-        
-        <!-- MATRICA CHRBTA (MENS BLUEPRINT) -->
-        <div class="tech-card">
-            <div class="card-header">
-                <span>[ Men's Tech Pack ]</span>
-                <span>Ch. II / Back</span>
+    <main>
+        <!-- 1. RAD: 2 veľké široké Tech Packy pre Iana -->
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">[ Men's Tech Pack ]</div>
+                <img src="./ian-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
-            <div class="visual-container">
-                <!-- Tu načítame orezaný WebP súbor Ianovho chrbta s poctivým podpisom -->
-                <img src="assets/ian_back_techpack.webp" alt="Ian Back Tech Pack Component">
-            </div>
-            <div class="specs-table">
-                <div class="spec-row">
-                    <span class="label">Project Code</span>
-                    <span class="value">BB-CHII-EARTH-B</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Print Dimension</span>
-                    <span class="value">30 cm Width / Centered</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Matrix Resolution</span>
-                    <span class="value">300 DPI Transparent PNG-to-WebP</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Ink Compound</span>
-                    <span class="value">DTG Matt Cream White Base</span>
-                </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tech Pack ]</div>
+                <img src="./ian-women-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
         </div>
 
-        <!-- MATRICA PREDNÉHO LOGA (WOMENS BLUEPRINT) -->
-        <div class="tech-card">
-            <div class="card-header">
-                <span>[ Women's Tech Pack ]</span>
-                <span>Ch. II / Front</span>
+        <!-- 2. RAD: 3 úzke produktové detaily pre Iana -->
+        <div class="collection-grid-three">
+            <div class="collection-item">
+                <div class="collection-title">[ Earth Tech Pack Sweatshirt ]</div>
+                <img src="./Earth Tech Pac Sweatshirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
-            <div class="visual-container">
-                <!-- Tu načítame orezaný WebP súbor Ianovho predku nad srdcom -->
-                <img src="assets/ian_front_techpack.webp" alt="Ian Front Tech Pack Component">
+            <div class="collection-item">
+                <div class="collection-title">[ Earth Tech Pack Cap ]</div>
+                <img src="./Earth Techpac cap.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
-            <div class="specs-table">
-                <div class="spec-row">
-                    <span class="label">Project Code</span>
-                    <span class="value">BB-CHII-EARTH-F</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Print Dimension</span>
-                    <span class="value">9 cm Width / Heart Alignment</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Textile Base</span>
-                    <span class="value">240 GSM Heavyweight Brushed Cotton</span>
-                </div>
-                <div class="spec-row">
-                    <span class="label">Colorway</span>
-                    <span class="value">Washed Charcoal Mat</span>
-                </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Earth Tech Pack T-Shirt ]</div>
+                <img src="./earth_techpac_t-shirt.jpg" class="collection-image" onclick="openLightbox(this.src)">
             </div>
         </div>
 
+        <!-- 3. RAD: 2 nové samostatné ženské Tech Packy pre Iana -->
+        <div class="collection-grid">
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
+                <img src="./ian-women-hoodie-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="collection-item">
+                <div class="collection-title">[ Women's Tee Tech Pack ]</div>
+                <img src="./ian-women-tee-techpack.jpg" class="collection-image" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <!-- TLAČIDLÁ PRE PRÍBEH A PDF -->
+        <div class="toggle-btn-container">
+            <button class="toggle-story-btn" onclick="toggleStory()">[ Open the Letter from Tina ]</button>
+            <a href="./ian-collection-complete.pdf" download class="toggle-story-btn">[ Download Complete Tech Pack - PDF ]</a>
+        </div>
+
+        <!-- SEKCE OSOBNÉHO LISTU PRE IANA -->
+        <section id="privateStory" class="story-section">
+            <p><i>[ Private Client Zone ]</i></p>
+            <p>This capsule represents a deep, full-circle return to the pillars that have shaped my entire life. My background has always been divided between two core worlds: graduating in Fashion Design in my youth, followed by a University Degree in Acting. For years, these twin passions defined my reality, shaping how I perceive raw emotion and form.</p>
+            <p>Following major spinal surgery, I spent six long weeks completely immobile. No movement. Just me and the ceiling. During that dark time, visual storytelling became my ultimate canvas. The absolute belief that even after the deepest darkness there will always be light kept me alive.</p>
+            <p>Your lifelong dedication to soil regeneration, the environment, and the powerful message of <i>Kiss the Ground</i> deeply resonated with my own 7-year vegan lifestyle and values. It inspired me to anchor this entire capsule in raw, organic elements, unrefined geometries, and natural textures. This collection is an artistic celebration of that raw connection between earth and human presence.</p>
+            <p>Stepping recently into the historic, cinematic landscape reawakened that dormant universe. Observing the raw textures brought me straight back to my tailoring roots, where we value the touch of the physical fiber and the truth told by shadows.</p>
+        </section>
+
+        <div class="back-container">
+            <a href="https://mimimagery.com" class="back-button">← Return to Main Atelier</a>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox View">
     </div>
 
-    <!-- Spodná trojdielna línia pre doplňujúce hárky materiálov -->
-    <div class="details-row">
-        <div class="detail-mini-card">
-            <div class="card-header" style="font-size:10px; margin-bottom:10px;">[ Scent Infusion ]</div>
-            <div class="visual-container" style="margin-bottom:10px;"><img src="assets/ian_detail_1.webp" alt="Scent Blueprint"></div>
-            <div class="spec-row" style="padding:4px 0;"><span class="label">Infusion</span><span class="value">Shadows on Walls</span></div>
-        </div>
-        <div class="detail-mini-card">
-            <div class="card-header" style="font-size:10px; margin-bottom:10px;">[ Material Focus ]</div>
-            <div class="visual-container" style="margin-bottom:10px;"><img src="assets/ian_detail_2.webp" alt="Fiber Blueprint"></div>
-            <div class="spec-row" style="padding:4px 0;"><span class="label">Fiber</span><span class="value">Unrefined Organic</span></div>
-        </div>
-        <div class="detail-mini-card">
-            <div class="card-header" style="font-size:10px; margin-bottom:10px;">[ Identity Tag ]</div>
-            <div class="visual-container" style="margin-bottom:10px;"></div>
-            <div class="spec-row" style="padding:4px 0;"><span class="label">Sign</span><span class="value">Hand-Signed MiM</span></div>
-        </div>
-    </div>
+    <script>
+        function toggleStory() {
+            var story = document.getElementById("privateStory");
+            var btn = document.querySelector(".toggle-story-btn");
+            if (story.style.display === "block") {
+                story.style.display = "none";
+                btn.textContent = "[ Open the Letter from Tina ]";
+            } else {
+                story.style.display = "block";
+                btn.textContent = "[ Close the Letter ]";
+            }
+        }
+
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
 
     <footer>
         &copy; 2026 MIM IMAGERY. All Rights Reserved. Private Exhibition Copy.
