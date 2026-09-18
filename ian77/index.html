@@ -37,17 +37,15 @@
         /* MULTIPLY BLEND MÓD ZJEDNOTÍ POZADIA VŠETKÝCH OBRÁZKOV NA KRÉMOVÚ */
         .collection-image { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto; border: 1px solid #281E17; cursor: zoom-in; mix-blend-mode: multiply; }
         
-        .back-container { text-align: center; margin-top: 40px; margin-bottom: 20px; }
+        .back-container { text-align: center; margin-top: 60px; margin-bottom: 20px; }
         
-        .back-button { display: inline-block; padding: 12px 30px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; font-family: 'Didot', serif; }
+        .back-button { display: inline-block; padding: 10px 25px; border: 1px solid #281E17; color: #281E17; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; }
         .back-button:hover { background-color: #281E17; color: #FDFBF7; }
         
         .atelier-contact { text-align: center; font-family: 'Didot', serif; margin: 50px auto 20px auto; color: #281E17; font-size: 0.95rem; letter-spacing: 1px; line-height: 1.8; }
-        .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; font-style: italic; color: #8A766A; }
-        .contact-details { margin-bottom: 30px; letter-spacing: 2px; font-size: 0.9rem; }
+        .contact-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-style: italic; }
         .contact-details a { color: #281E17; text-decoration: none; border-bottom: 1px solid #281E17; padding-bottom: 2px; }
-        
-        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; text-transform: uppercase; }
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; letter-spacing: 2px; color: #8A766A; }
         .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(43, 30, 23, 0.96); align-items: center; justify-content: center; }
         .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; border: 1px solid #FAF6F0; }
 
@@ -66,7 +64,7 @@
     </header>
 
     <main>
-        <!-- 1. RAD: 2 veľké široké Tech Packy pre Iana -->
+        <!-- 1. RAD: 2 veľké široké Tech Packy -->
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Men's Tech Pack ]</div>
@@ -78,7 +76,7 @@
             </div>
         </div>
 
-        <!-- 2. RAD: 3 úzke produktové detaily pre Iana -->
+        <!-- 2. RAD: 3 úzke produktové detaily -->
         <div class="collection-grid-three">
             <div class="collection-item">
                 <div class="collection-title">[ Earth Tech Pack Sweatshirt ]</div>
@@ -94,7 +92,7 @@
             </div>
         </div>
 
-        <!-- 3. RAD: 2 samostatné ženské Tech Packy pre Iana -->
+        <!-- 3. RAD: 2 nové samostatné ženské Tech Packy -->
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="collection-title">[ Women's Hoodie Tech Pack ]</div>
@@ -120,18 +118,8 @@
             <p>Stepping recently into the historic atmosphere of Banská Štiavnica for the live film set reawakened that dormant universe. Observing the costume artistry brought me straight back to my roots in tailoring, while the cinematic energy of the set provided the final catalyst to weave design, acting, and my lifestyle of sustainable luxury innovation into the organic soul of the <i>Kiss the Ground</i> collection, custom-crafted exclusively for you.</p>
         </section>
 
-        <!-- PREKRÁSNA CENTROVANÁ ATELIÉROVÁ SEKCOVÁ PÄTKA S TLAČIDLOM (ZRKADLOVÝ DIZAJN) -->
-        <div class="atelier-contact">
-            <div class="contact-title">[ FOR FURTHER CREATIVE EVALUATION, DIRECT COMMISSIONS, OR PERSONAL INQUIRIES ]</div>
-            <div class="contact-details">
-                <a href="mailto:mimimagerytn@gmail.com">mimimagerytn@gmail.com</a> &nbsp;|&nbsp; +421 944 442 276
-                <br>
-                <span style="font-size: 0.8rem; color: #8A766A; display: inline-block; margin-top: 5px;">CREATIVE DIRECTOR ZONE | CENTRAL EUROPE</span>
-            </div>
-        </div>
-
         <div class="back-container">
-            <a href="https://github.io" class="back-button">[ BACK TO ATELIER HOME ]</a>
+            <a href="../" class="back-button">[ BACK TO ATELIER HOME ]</a>
         </div>
     </main>
 
@@ -139,7 +127,6 @@
         <img id="lightbox-img" src="" alt="Lightbox View">
     </div>
 
-    <!-- TENTO SCRIPT BLOK TERAZ STOPERCENTNE SSEDÍ S NÁZVAMI FUNKCIÍ V GRIDOCH -->
     <script>
         function toggleStory() {
             var story = document.getElementById("privateStory");
@@ -149,4 +136,23 @@
                 btn.textContent = "[ Open the Letter from Tina ]";
             } else {
                 story.style.display = "block";
+                btn.textContent = "[ Close the Letter ]";
+            }
+        }
 
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    <footer>
+        &copy; 2026 MIM IMAGERY. All rights reserved.
+    </footer>
+
+</body>
+</html>
